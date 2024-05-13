@@ -2,8 +2,6 @@
 layout: homepage
 ---
 
-## About Me
-
 <h1 align="center">Hey there, I'm Taehyun Yang! 👋</h1>
 
 <p align="center">
