@@ -10,7 +10,7 @@ layout: homepage
   Specializing in <strong>Data Visualization</strong> within <strong>Human-Computer Interaction</strong>
 </p>
 
-I'm passionate about creating meaningful interactions between humans and computers and exploring human behavior. My academic journey in **Computer Science and Engineering** has given me interest for **Data Visualization**, **HCI**, and **System Building**
+I'm passionate about creating meaningful interactions between humans and computers and exploring human behavior. My academic journey in **Computer Science and Engineering** has given me interest for **Data Visualization**, **Social Computing**, and **System Building**
 
 Currently I am focused on two main topics:
 
