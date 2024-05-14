@@ -14,7 +14,7 @@ I'm passionate about creating meaningful interactions between humans and compute
 
 Currently I am focused on two main topics:
 
-1. **Learning how to help visualization researchers trust machine learning** through a case study on dimensionality reduction.
+1. **Addressing misinformation in community services** such as Reddit and Everytime, focusing on identifying and managing false information.
 2. **Enhancing the management of mass group chats** in educational and large group settings by addressing the challenges of asynchronous communication.
 
 {% include_relative _includes/publications.md %}
