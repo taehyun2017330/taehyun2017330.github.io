@@ -1,0 +1,163 @@
+{% assign projects = site.data.project.project %}
+
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+<!-- Include Bootstrap Bundle JS (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<div class="container py-4">
+  <p style="font-weight: 500 !important; text-transform: uppercase">Project</p>
+  <div class="row mt-3 g-3 grid">
+    {% for proj in projects %}
+    <div class="col-12 col-sm-6 col-md-4 col-lg-4 grid-item">
+      <div
+        class="archive-container"
+        data-bs-toggle="modal"
+        data-bs-target="#modal{{ forloop.index }}"
+      >
+        <img
+          class="archive-img"
+          src="{{ proj.image | prepend: '/assets/images/project/' | relative_url }}"
+        />
+        <div class="archive-container-inner">
+          <p class="archive-title">{{ proj.title }}</p>
+          <p class="archive-description">{{ proj.description }}</p>
+          <div class="tags">
+            <p>
+              {% for tag in proj.tags %}
+              <a title="" href="">{{ tag }}</a>
+              {% endfor %}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="modal{{ forloop.index }}"
+      tabindex="-1"
+      aria-labelledby="exampleModal{{ forloop.index }}"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div style="display: block !important">
+              <h5 class="modal-title" id="exampleModalLabel">
+                {{ proj.title }}
+              </h5>
+              <p class="modal-description">{{ proj.description }}</p>
+              <p class="modal-link">
+                {% if proj.paper %}<a
+                  href="{% if proj.paper contains 'http' %} {{ proj.paper }} {% else %} /assets/pdf/{{ proj.paper }} {% endif %}"
+                  ><i class="fas fa-book"></i>&nbsp; Paper</a
+                >
+                &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.video %}<a
+                  href="{{ proj.video }}"
+                  ><i class="fas fa-play"></i>&nbsp; Video</a
+                >
+                &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.slide %}<a
+                  href="/assets/pdf/{{ proj.slide }}"
+                  ><i class="fas fa-poll-h"></i>&nbsp; Slide</a
+                >
+                &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.appstore %}<a
+                  href="{{ proj.appstore }}"
+                  ><i class="fab fa-app-store-ios"></i>&nbsp; App Store</a
+                >
+                &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.code %}<a
+                  href="{{ proj.code }}"
+                  ><i class="fab fa-github"></i>&nbsp; Code</a
+                >
+                &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.link %}<a
+                  href="{{ proj.link }}"
+                  ><i class="fas fa-external-link"></i>&nbsp; Link</a
+                >{% endif %}
+              </p>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            {{ proj.detail | replace: 'site.baseurl', site.baseurl }}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  var grid = document.querySelector(".grid");
+  var msnry = new Masonry(grid, {
+    percentPosition: true,
+    itemSelector: ".grid-item",
+  });
+  imagesLoaded(grid).on("progress", function () {
+    msnry.layout();
+  });
+</script>
+
+<script type="module">
+  import { Toast } from "bootstrap.esm.min.js";
+
+  Array.from(document.querySelectorAll(".toast")).forEach(
+    (toastNode) => new Toast(toastNode)
+  );
+</script>
+
+<style>
+  .archive-container {
+    border: 1px solid black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px; /* Adds rounded corners */
+    color: black; /* Ensures text inside the container is black */
+  }
+
+  .archive-title {
+    font-weight: bold;
+    color: #20212b; /* Makes title text black */
+  }
+
+  .modal-description,
+  .modal-link,
+  .modal-body {
+    color: black !important;
+  }
+  .modal-content,
+  .modal-content strong {
+    color: #3fb7f0; /* Ensures all text within modals is black, including strong tags */
+  }
+
+  .archive-description {
+    font-size: 0.8rem; /* Smaller font size for description */
+    color: black; /* Makes description text black */
+  }
+
+  .tags a {
+    display: inline-block;
+    background-color: #f0f0f0; /* Light grey background for tags */
+    border-radius: 5px; /* Slightly rounded borders for a more square appearance */
+    padding: 2px 8px; /* Adjust padding for a squarer look */
+    margin-right: 5px; /* Space between tags */
+    text-decoration: none; /* Removes underline from links */
+    color: black; /* Text color for tags */
+    font-size: 0.7rem; /* Even smaller font size for tags */
+  }
+
+  .tags a::before {
+    content: "#"; /* Adds # before each tag */
+  }
+  @media (min-width: 960px) {
+    .container.py-4 {
+      width: 120%;
+      margin-left: -20px;
+    }
+  }
+</style>

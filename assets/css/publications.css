@@ -11,6 +11,7 @@
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+
 .badge {
     color: #fff !important;
     border-radius: 0.125rem;
@@ -80,3 +81,119 @@ blockquote { background: var(--global-bg-color); border-left: 2px solid var(--gl
 .publications ol.bibliography li div.abstract.hidden.open { border-color: var(--global-text-color); }
 
 .publications ol.bibliography li .teaser { border-radius: 8px; box-shadow: 3px 3px 6px #888; height: 123px; width: 270px; margin-top: 5px; margin-left: 5px; margin-bottom: 5px; object-fit: cover; }
+
+nav {
+  position:fixed;
+  text-align: center;
+  padding: 0px 0;
+  width: 90%;
+  z-index: 1000 !important;
+}
+.header-content {
+  padding-top: 40px; /* Adjust this value to the height of your navbar */
+}
+
+nav ul {
+  background: transparent;
+  border: none ;
+  box-shadow: none;
+  margin: 0; 
+  padding: 0;
+  list-style: none; /* Removes bullet points from the list */
+}
+
+/* Resets border-radius for all states */
+nav, nav ul, nav ul li, nav ul li a {
+  border-radius: 0 !important; /* Forcefully removes any border radius */
+}
+
+@media (max-width: 960px) {
+  nav ul, nav ul li, nav ul li a {
+    border-radius: 0 !important; /* Ensures no rounding on mobile as well */
+  }
+}
+
+
+
+nav ul li a {
+  color: var(--global-theme-color); /* Define this variable in your CSS or use a direct color value */
+  text-decoration: none;
+  font-weight: normal;
+  background: none;
+  display: block;
+  line-height: 20px;
+}
+
+@media (max-width: 960px) {
+  nav {
+    position: fixed;  /* Fixes the navbar at the top */
+    top: -53px;           /* Locks the navbar at the top of the viewport */
+    left: 50px;          /* Ensures the navbar starts from the left edge */
+    width: 100%;      /* Ensures the navbar spans the full width of the screen */
+    
+  }
+
+  nav ul {
+    display: flex;    /* Changes the layout of the list to horizontal */
+    flex-direction: row; /* Stacks items vertically */
+    width: 100%;
+    background: #7b80ac; /* Adds a solid background */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds shadow for better visibility */
+    z-index: 9999;
+  }
+  nav ul li {
+    flex: 1;  /* Each li will take up equal space */
+    text-align: center;
+  }
+  nav ul li a {
+    padding-top: 8px; /* Adds 3px padding at the top to push text down */
+  }
+
+  /* Adjusting padding to avoid content being hidden behind the fixed navbar */
+
+
+  nav ul li.active a {
+    color: #FFFFFF; /* or any contrasting color */
+    background-color: #333333; /* a noticeable change to indicate selection */
+    font-weight: bold; /* make the active link bold */
+    text-decoration:underline;
+    
+  }
+  nav ul li:hover, nav ul li:focus-within {
+    background-color: #a8b1f4;
+    color: black;
+    text-decoration:underline;
+    
+    
+  }
+  
+  
+}
+
+/* Adjust hover styles only applicable to desktop */
+@media (min-width: 960px) {
+  nav ul li:hover, nav ul li:focus-within {
+    background-color: #7b80ac;
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  nav ul li.active a {
+    color: black; /* or any contrasting color */
+    background-color: #a8b1f4; /* a noticeable change to indicate selection */
+    font-weight: bold; /* make the active link bold */
+    text-decoration:underline;
+  }
+}
+
+/* Hover, focus, and active styles for <a> */
+nav ul li a, nav ul li a:hover{
+  color: inherit; /* Keeps the color the same in all states */
+  text-decoration: none; /* No text decoration in any state */
+}
+
+
+
+
+
+

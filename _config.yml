@@ -4,11 +4,22 @@ position: Undergraduate Student
 affiliation: Seoul National University
 email: taehyun2017330@gmail.com
 
+navigation:
+  - title: "Home"
+    url: /
+  - title: "Other Projects"
+    url: /projects
+  - title: "Fun"
+    url: /fun
+
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
 keywords: Taehyun, HCI, Seoul National University, SNU, Undergraduate Student
 description: Taehyun's Personal Portfolio
 canonical: https://minimal-light-theme.yliu.me/
+
+kramdown:
+  parse_block_html: true
 
 # Links
 # If you don't need one of them, you may delete the corresponding line.

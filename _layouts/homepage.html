@@ -3,6 +3,8 @@
   <head>
     <title>{{ site.title }} | {{site.affiliation}}</title>
 
+    
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,10 +15,11 @@
     {% if site.canonical %}
     <link rel="canonical" href="{{ site.canonical }}"/>
     {% endif %}
-
     <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark }}" type="image/png" />
     <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" />
     <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
 
     <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
     <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin=anonymous>
@@ -32,14 +35,35 @@
     {% else %}
     <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
     <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
+    <!-- Add this in the head section of your HTML -->
+
+
     {% endif %}
+    
 
   </head>
+
+ 
   <body>
     <div class="wrapper">
-      <header>
+      <header >
+
+        <nav>
+          <ul>
+            <li class="active"><a href="javascript:showContent('home');">Home</a></li>
+            <li><a href="javascript:showContent('projects');">Other Projects</a></li>
+            <li><a href="javascript:showContent('fun');">Fun</a></li>
+          </ul>
+        </nav>
+        
+      
+        
+        
+        
+        <div class="header-content">
         
         {% if site.avatar %}
+        
         <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" style="width: 95%; height: auto;"></a>
         {% endif %}
         <h1>{{ site.title }}</h1>
@@ -90,22 +114,95 @@
         {% endif %}
         </div>
         <br>
+      </div>
 
       </header>
       <section>
 
-      {{ content }}
+  
+
+          {{ content }}
+
+        
+
+    
 
       <br>
 
       {% if site.enable_footnote %}
-      <p><small>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
+      
       {% endif %}
 
       </section>
       <footer>
         
       </footer>
+    
+    
+      
+
+      <script>
+function showContent(section) {
+    console.log("Selected section:", section); // This logs the section each time a link is clicked
+
+    var sections = ['home-content', 'projects-content', 'fun-content'];
+    sections.forEach(function(id) {
+        var element = document.getElementById(id);
+        if (element) {
+            element.style.display = (id === section + '-content') ? 'block' : 'none';
+        }
+    });
+
+    var headerContent = document.querySelector('.header-content');
+    headerContent.style.display = (section !== 'fun') ? 'block' : 'none';
+
+    document.body.style.overflow = (section === 'fun') ? 'hidden' : 'auto';
+    if (section === 'fun') {
+        window.scrollTo(0, 0);
+    }
+
+    var links = document.querySelectorAll('nav ul li a');
+    links.forEach(function(link) {
+        var currentSection = link.getAttribute('href').split('\'')[1];
+        if (currentSection === section) {
+            link.parentElement.classList.add('active');
+        } else {
+            link.parentElement.classList.remove('active');
+        }
+    });
+
+    // Reinitialize Masonry layout if projects content is displayed
+    if (section === 'projects') {
+        var grid = document.querySelector('.grid');
+        if (grid) {
+            imagesLoaded(grid, function() {
+                new Masonry(grid, {
+                    itemSelector: '.grid-item',
+                    percentPosition: true
+                }).layout();
+            });
+        }
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            var section = this.getAttribute('href').split('\'')[1];
+            showContent(section);
+            event.preventDefault(); // Prevents default navigation behavior
+        });
+    });
+    // Initialize the content display and active state
+    showContent('home');
+});
+
+
+      </script>
+      
+        
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     {% if site.google_analytics %}
