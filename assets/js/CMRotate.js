@@ -235,6 +235,7 @@ var CMRotate = CMRotate || ( function () {
     }
     function onTouchMove(event) {
         event.preventDefault();
+        event.stopPropagation(); 
         var mx = event.touches[0].pageX;
         onMove(mx);
     }
