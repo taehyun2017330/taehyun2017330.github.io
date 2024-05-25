@@ -36,6 +36,16 @@
           // Continue adding your images
         ];
 
+        function preventDefaultHandler(event) {
+          event.preventDefault();
+        }
+
+        document
+          .getElementById("rotate-div")
+          .addEventListener("touchmove", preventDefaultHandler, {
+            passive: false,
+          });
+
         function initializeCMRotate() {
           // Default settings
           var settings = {
