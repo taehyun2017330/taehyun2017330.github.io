@@ -70,9 +70,14 @@
             settings.onClick,
             settings.scale
           );
+
+          var rotateDiv = document.getElementById("rotate-div");
+          rotateDiv.style.visibility = "visible";
         }
         document.addEventListener("DOMContentLoaded", function () {
-          initializeCMRotate(); // Initialize your function after the DOM is fully loaded
+          window.onload = function () {
+            initializeCMRotate(); // Initialize your function after the DOM is fully loaded
+          };
         });
       </script>
 
@@ -85,6 +90,8 @@
           height: 110%;
           z-index: -1; /* Ensure it's below the nav */
           touch-action: none;
+
+          visibility: hidden; /* Hide until initialized */
         }
         @media (max-width: 960px) {
           #rotate-div {
