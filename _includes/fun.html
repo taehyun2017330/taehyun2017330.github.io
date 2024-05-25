@@ -1,86 +1,97 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <title>Document</title>
+<!-- If you have an external CSS file -->
 
-    <!-- If you have an external CSS file -->
-  </head>
-  <body>
-    <div class="no-scroll">
-      <div class="projects-container">
-        <div id="rotate-div" class="chand"></div>
+<body>
+  <div class="no-scroll">
+    <div class="projects-container">
+      <div id="rotate-div" class="chand"></div>
 
-        <p>
-          Currently in development. Things I do for fun Music Creation, Live
-          Concert, Outdoors Climbing, Card collecting... visualize these things
-          as clickable/scrollable interactable playing cards. more coming soon!
-        </p>
-        <div class="rotate-div-placeholder"></div>
+      <p>
+        Currently in development. Things I do for fun Music Creation, Live
+        Concert, Outdoors Climbing, Card collecting... visualize these things as
+        clickable/scrollable interactable playing cards. more coming soon!
+      </p>
+      <div class="rotate-div-placeholder"></div>
 
-        <script src="{{ '/assets/js/CMRotate.js' | relative_url }}"></script>
+      <script src="{{ '/assets/js/CMRotate.js' | relative_url }}"></script>
 
-        <script type="text/javascript">
-          var backgroundImages = [
-            "{{ '/assets/img/img1.jpg' | relative_url }}",
-            "{{ '/assets/img/img2.jpg' | relative_url }}",
-            "{{ '/assets/img/img3.jpg' | relative_url }}",
-            "{{ '/assets/img/img4.jpg' | relative_url }}",
-            "{{ '/assets/img/img5.jpg' | relative_url }}",
-            "{{ '/assets/img/img6.jpg' | relative_url }}",
-            "{{ '/assets/img/img7.jpg' | relative_url }}",
-            "{{ '/assets/img/img8.jpg' | relative_url }}",
-            "{{ '/assets/img/img9.jpg' | relative_url }}",
-            "{{ '/assets/img/img10.jpg' | relative_url }}",
-            "{{ '/assets/img/img11.jpg' | relative_url }}",
-            "{{ '/assets/img/img12.jpg' | relative_url }}",
-            "{{ '/assets/img/img13.jpg' | relative_url }}",
-            "{{ '/assets/img/img14.jpg' | relative_url }}",
-            "{{ '/assets/img/img15.jpg' | relative_url }}",
-            "{{ '/assets/img/img16.jpg' | relative_url }}",
+      <script type="text/javascript">
+        var backgroundImages = [
+          "{{ '/assets/img/img1.jpg' | relative_url }}",
+          "{{ '/assets/img/img2.jpg' | relative_url }}",
+          "{{ '/assets/img/img3.jpg' | relative_url }}",
+          "{{ '/assets/img/img4.jpg' | relative_url }}",
+          "{{ '/assets/img/img5.jpg' | relative_url }}",
+          "{{ '/assets/img/img6.jpg' | relative_url }}",
+          "{{ '/assets/img/img7.jpg' | relative_url }}",
+          "{{ '/assets/img/img8.jpg' | relative_url }}",
+          "{{ '/assets/img/img9.jpg' | relative_url }}",
+          "{{ '/assets/img/img10.jpg' | relative_url }}",
+          "{{ '/assets/img/img11.jpg' | relative_url }}",
+          "{{ '/assets/img/img12.jpg' | relative_url }}",
+          "{{ '/assets/img/img13.jpg' | relative_url }}",
+          "{{ '/assets/img/img14.jpg' | relative_url }}",
+          "{{ '/assets/img/img15.jpg' | relative_url }}",
+          "{{ '/assets/img/img16.jpg' | relative_url }}",
 
-            // Continue adding your images
-          ];
+          // Continue adding your images
+        ];
 
-          function initializeCMRotate() {
-            CMRotate.init(
-              "rotate-div",
-              200,
-              300,
-              100,
-              12,
-              600,
-              backgroundImages,
-              function clickFn(no) {
-                alert("Click number - " + (no + 1));
-              }
-            );
+        function initializeCMRotate() {
+          // Default settings
+          var settings = {
+            containerId: "rotate-div",
+            radiusX: 200,
+            radiusY: 300,
+            radiusZ: 100,
+            itemNum: 12,
+            animationSpeed: 600,
+            images: backgroundImages,
+            onClick: function (no) {
+              alert("Click number - " + (no + 1));
+            },
+            scale: 1,
+          };
+
+          // Check if the viewport width is 960px or less
+          if (window.innerWidth <= 960) {
+            // Adjust settings for mobile
+            settings.scale = 0.8;
           }
-          initializeCMRotate();
-        </script>
 
-        <style>
+          // Initialize CMRotate with the defined settings
+          CMRotate.init(
+            settings.containerId,
+            settings.radiusX,
+            settings.radiusY,
+            settings.radiusZ,
+            settings.itemNum,
+            settings.animationSpeed,
+            settings.images,
+            settings.onClick,
+            settings.scale
+          );
+        }
+        initializeCMRotate();
+      </script>
+
+      <style>
+        #rotate-div {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%); /* Center horizontally */
+          width: 100%; /* Full width of the viewport */
+          height: 110%;
+          z-index: -1; /* Ensure it's below the nav */
+        }
+        @media (max-width: 960px) {
           #rotate-div {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%); /* Center horizontally */
-            width: 100%; /* Full width of the viewport */
-            height: 110%;
-            z-index: -1; /* Ensure it's below the nav */
+            top: 20%; /* Lower the position */
           }
-          @media (max-width: 960px) {
-            #rotate-div {
-              top: 40%; /* Lower the position */
-            }
-            .rotate-div-placeholder {
-              height: 650px;
-            }
+          .rotate-div-placeholder {
+            height: 650px;
           }
-        </style>
-      </div>
+        }
+      </style>
     </div>
-  </body>
-</html>
+  </div>
+</body>
