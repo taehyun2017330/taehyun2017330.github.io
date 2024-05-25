@@ -28,66 +28,6 @@ layout: homepage
 
 <div id="fun-content" style="display:none;">
 
-    <div class="no-scroll">
-      <div class="projects-container">
-        <div id="rotate-div" class="chand"></div>
-      </div>
-
-      Currently in development. Things I do for fun Music Creation, Live
-      Concert, Outdoors Climbing, Card collecting... visualize these things as
-      clickable/scrollable interactable playing cards more coming soon!
-
-      <script src="{{ '/assets/js/CMRotate.js' | relative_url }}"></script>
-
-      <script type="text/javascript">
-        var backgroundImages = [
-          "{{ '/assets/img/img1.jpg' | relative_url }}",
-          "{{ '/assets/img/img2.jpg' | relative_url }}",
-          "{{ '/assets/img/img3.jpg' | relative_url }}",
-          "{{ '/assets/img/img4.jpg' | relative_url }}",
-          "{{ '/assets/img/img5.jpg' | relative_url }}",
-          "{{ '/assets/img/img6.jpg' | relative_url }}",
-          "{{ '/assets/img/img7.jpg' | relative_url }}",
-          "{{ '/assets/img/img8.jpg' | relative_url }}",
-          "{{ '/assets/img/img9.jpg' | relative_url }}",
-          "{{ '/assets/img/img10.jpg' | relative_url }}",
-          "{{ '/assets/img/img11.jpg' | relative_url }}",
-          "{{ '/assets/img/img12.jpg' | relative_url }}",
-          "{{ '/assets/img/img13.jpg' | relative_url }}",
-          "{{ '/assets/img/img14.jpg' | relative_url }}",
-          "{{ '/assets/img/img15.jpg' | relative_url }}",
-          "{{ '/assets/img/img16.jpg' | relative_url }}",
-
-          // Continue adding your images
-        ];
-
-        function initializeCMRotate() {
-          CMRotate.init(
-            "rotate-div",
-            200,
-            300,
-            100,
-            12,
-            600,
-            backgroundImages,
-            function clickFn(no) {
-              alert("Click number - " + (no + 1));
-            }
-          );
-        }
-        initializeCMRotate();
-      </script>
-
-      <style>
-        #rotate-div {
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%); /* Center horizontally */
-          width: 100%; /* Full width of the viewport */
-          height: 110%;
-          z-index: -1; /* Ensure it's below the nav */
-        }
-      </style>
-    </div>
+{% include fun.html %}
 
 </div>

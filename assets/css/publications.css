@@ -1,31 +1,63 @@
+body, body {
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out !important;
+}
+
 .badge {
-    display: inline-block;
-    padding: 0.25em 0.4em;
-    font-size: 75%;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: 0.25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.badge {
+  color: #fff !important;
+  border-radius: 0.125rem;
+  -webkit-box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
 }
 
 
-.badge {
-    color: #fff !important;
-    border-radius: 0.125rem;
-    -webkit-box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+/* Default Light Theme Variables */
+:root {
+  --global-bg-color: #ffffff;
+  --global-code-bg-color: rgba(181, 9, 172, 0.05);
+  --global-text-color: #303030;
+  --global-text-color-light: #828282;
+  --global-theme-color: #002D72;
+  --global-text-strong: #000000;
+  --global-hover-color: #ffb81c;
+  --global-footer-bg-color: #1c1c1c;
+  --global-footer-text-color: #e8e8e8;
+  --global-footer-link-color: #ffffff;
+  --global-distill-app-color: #828282;
+  
 }
 
-:root { --global-bg-color: #ffffff; --global-code-bg-color: rgba(181, 9, 172, 0.05); --global-text-color: #000000; --global-text-color-light: #828282; --global-theme-color: #002D72; --global-hover-color: #ffb81c; --global-footer-bg-color: #1c1c1c; --global-footer-text-color: #e8e8e8; --global-footer-link-color: #ffffff; --global-distill-app-color: #828282; }
-
-@media (prefers-color-scheme: dark) { :root { --global-theme-color: rgb(36, 150, 203);}}
+/* Dark Theme Variables */
+:root.dark-theme {
+  --global-bg-color: #20212b; /* Assuming a darker background for dark mode */
+  --global-code-bg-color: rgba(50, 50, 60, 0.1); /* Darker variant for code blocks */
+  --global-text-color: #d1d1d1;
+  --global-text-strong: #ffffff;
+  --global-text-color-light: #aaaaaa;
+  --global-theme-color: #3eb7f0 !important; /* Specific override for dark theme */
+  --global-hover-color: #ffcc33;
+  --global-footer-bg-color: #282828;
+  --global-footer-text-color: #cccccc;
+  --global-footer-link-color: #dddddd;
+  --global-distill-app-color: #999999;
+  
+}
 
 blockquote { background: var(--global-bg-color); border-left: 2px solid var(--global-theme-color); margin: 1.5em 10px; padding: 0.5em 10px; font-size: 1.2rem; }
 
-@media print, screen and (min-width: 480px) {.col-sm-9 {width: 100%;}}
+@media print, screen and (min-width: 480px) {.col-sm-9 {width: 85%;}}
 
 .publications { margin-top: 2rem; }
 
@@ -59,14 +91,9 @@ blockquote { background: var(--global-bg-color); border-left: 2px solid var(--gl
 
 .publications ol.bibliography li .author > em { border-bottom: 1px solid; font-style: normal; }
 
-.publications ol.bibliography li .links a.btn { color: #000000; border: 1px solid #000000; padding-left: 0.5rem; padding-right: 0.5rem; padding-top: 0.1rem; padding-bottom: 0.1rem; }
+.publications ol.bibliography li .links a.btn { color: var(--global-text-color); border: 2px solid var(--global-text-color); padding-left: 0.5rem; padding-right: 0.5rem; padding-top: 0.1rem; padding-bottom: 0.1rem; }
 
-@media (prefers-color-scheme: dark) {
-.publications ol.bibliography li .links a.btn { color: #FFFFFF; border: 1px solid #FFFFFF; padding-left: 0.5rem; padding-right: 0.5rem; padding-top: 0.1rem; padding-bottom: 0.1rem; }
-
-  }
-
-.publications ol.bibliography li .links a.btn:hover { color: var(--global-theme-color); border-color: var(--global-theme-color); }
+.publications ol.bibliography li .links a.btn:hover { color: #3eb7f0; border-color: #3eb7f0; }
 
 .publications ol.bibliography li .hidden { font-size: 0.875rem; max-height: 0px; overflow: hidden; text-align: justify; -webkit-transition: 0.15s ease; -moz-transition: 0.15s ease; -ms-transition: 0.15s ease; -o-transition: 0.15s ease; transition: all 0.15s ease; }
 
@@ -82,24 +109,42 @@ blockquote { background: var(--global-bg-color); border-left: 2px solid var(--gl
 
 .publications ol.bibliography li .teaser { border-radius: 8px; box-shadow: 3px 3px 6px #888; height: 123px; width: 270px; margin-top: 5px; margin-left: 5px; margin-bottom: 5px; object-fit: cover; }
 
+body {
+  background-color: var(--global-bg-color);
+  color: var(--global-text-color);
+
+
+}
+strong{
+  color: var(--global-text-strong) !important;
+
+}
+h1 {
+
+      color: var(--global-theme-color);
+
+}
 nav {
-  position:fixed;
+  position: relative;
+  top: 0;
+  left: 5%; /* Centering the nav bar (90% width with 5% left and right margin) */
   text-align: center;
-  padding: 0px 0;
+  padding: 0;
   width: 90%;
-  z-index: 1000 !important;
+  z-index: 1000; /* removed !important for best practices unless absolutely necessary */
 }
-.header-content {
-  padding-top: 40px; /* Adjust this value to the height of your navbar */
-}
+
 
 nav ul {
   background: transparent;
-  border: none ;
+  border: none;
   box-shadow: none;
-  margin: 0; 
+  margin: 0;
   padding: 0;
   list-style: none; /* Removes bullet points from the list */
+  display: flex; /* Makes the ul a flex container */
+  justify-content: space-between; /* Distributes space between children equally */
+  align-items: center; /* Vertically centers the items */
 }
 
 /* Resets border-radius for all states */
@@ -112,6 +157,25 @@ nav, nav ul, nav ul li, nav ul li a {
     border-radius: 0 !important; /* Ensures no rounding on mobile as well */
   }
 }
+
+nav ul li {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  display: block; /* Ensure li is a block to fill the nav */
+  text-align: center; /* Center the text */
+  background-color: transparent; /* Default background */
+}
+
+nav ul li a {
+  display: block; /* Make sure anchor fills the li */
+  width: 100%; /* Full width of li */
+  padding: 10px 0; /* Adequate padding for clickability */
+  text-decoration: none; /* No underline by default */
+  color: inherit; /* Inherits color from li or manually set */
+}
+
+
 
 
 
@@ -132,7 +196,6 @@ nav ul li a {
     width: 100%;      /* Ensures the navbar spans the full width of the screen */
     
   }
-
   nav ul {
     display: flex;    /* Changes the layout of the list to horizontal */
     flex-direction: row; /* Stacks items vertically */
@@ -141,10 +204,13 @@ nav ul li a {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds shadow for better visibility */
     z-index: 9999;
   }
+  
   nav ul li {
-    flex: 1;  /* Each li will take up equal space */
+    flex: 1;  /* Each li will take up equal space, previously this ensured each took 1/3 */
     text-align: center;
   }
+  
+
   nav ul li a {
     padding-top: 8px; /* Adds 3px padding at the top to push text down */
   }
@@ -165,35 +231,128 @@ nav ul li a {
     text-decoration:underline;
     
     
+    
   }
+  #theme-toggle, #theme-toggle:active, #theme-toggle:focus {
+    background-color: transparent !important; /* Keeping background the same as normal state */
+    color: inherit; /* Text color remains consistent */
+    outline: none; /* Removes focus outline if any */
+  }
+  
+  /* Ensure that the icon within the toggle also does not change */
+  #theme-icon, #theme-toggle:active #theme-icon, #theme-toggle:focus #theme-icon {
+    color: inherit; /* Icon color remains consistent */
+  }
+  
   
   
 }
 
 /* Adjust hover styles only applicable to desktop */
 @media (min-width: 960px) {
-  nav ul li:hover, nav ul li:focus-within {
+  /* Apply styles to nav items except the theme toggle */
+  nav ul li:not(.theme-toggle):hover,
+  nav ul li:not(.theme-toggle) a:hover,
+  nav ul li:not(.theme-toggle):focus-within,
+  nav ul li:not(.theme-toggle) a:focus {
     background-color: #7b80ac;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  /* Apply active state styles to nav items except the theme toggle */
+  nav ul li:not(.theme-toggle).active,
+  nav ul li:not(.theme-toggle) a.active {
+    background-color: #a8b1f4 !important;
     color: black;
     font-weight: bold;
     text-decoration: underline;
+    transition: transform 0.2s;
   }
-  nav ul li.active a {
-    color: black; /* or any contrasting color */
-    background-color: #a8b1f4; /* a noticeable change to indicate selection */
-    font-weight: bold; /* make the active link bold */
-    text-decoration:underline;
+
+  /* Override any styles for the theme toggle to keep it consistent */
+  nav ul li:theme-toggle:hover,
+  nav ul li:theme-toggle a:hover,
+  nav ul li:theme-toggle:focus-within,
+  nav ul li:theme-toggle a:focus {
+    background-color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   }
 }
+
 
 /* Hover, focus, and active styles for <a> */
 nav ul li a, nav ul li a:hover{
+
   color: inherit; /* Keeps the color the same in all states */
   text-decoration: none; /* No text decoration in any state */
+  transition: transform 0.2s; /* Smooth transform on click */
+  background-color: transparent !important;
 }
 
 
 
+
+
+.archive-container {
+  border: 1px solid rgb(125, 125, 125);
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px; /* Adds rounded corners */
+  color: black; /* Ensures text inside the container is black */
+}
+
+.archive-title {
+  font-weight: bold;
+  color: #002D72; /* Makes title text black */
+}
+.modal-title{
+  color: #002D72;
+  font-weight: 500;
+}
+.modal-description{
+  font-size: 80%;
+}
+
+.modal-description,
+.modal-link,
+
+.modal-body {
+  color: black !important;
+}
+.modal-content,
+.modal-content strong {
+  color: #002D72 !important; /* Ensures all text within modals is black, including strong tags */
+}
+
+.archive-description {
+  font-size: 80%; /* Smaller font size for description */
+  color: black; /* Makes description text black */
+}
+
+.tags a {
+  display: inline-block;
+  background-color: #f0f0f0; /* Light grey background for tags */
+  border-radius: 5px; /* Slightly rounded borders for a more square appearance */
+  padding: 2px 8px; /* Adjust padding for a squarer look */
+  margin-right: 5px; /* Space between tags */
+  text-decoration: none; /* Removes underline from links */
+  color: black; /* Text color for tags */
+  font-size: 0.7rem; /* Even smaller font size for tags */
+}
+
+.tags a::before {
+  content: "#"; /* Adds # before each tag */
+}
+@media (min-width: 960px) {
+  .container.py-4 {
+    width: 120%;
+    margin-left: -20px;
+  }
+}
 
 
 

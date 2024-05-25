@@ -1,3 +1,37 @@
+:root {
+  --global-bg-color: #ffffff;
+  --global-code-bg-color: rgba(181, 9, 172, 0.05);
+  --global-text-color: #000000;
+  --global-strong-color:#002D72
+  --global-text-color-light: #828282;
+  --global-theme-color: #002D72;
+  --global-hover-color: #ffb81c;
+  --global-footer-bg-color: #1c1c1c;
+  --global-footer-text-color: #e8e8e8;
+  --global-footer-link-color: #ffffff;
+  --global-distill-app-color: #828282;
+}
+
+/* Dark Theme Variables */
+:root.dark-theme {
+  --global-bg-color: #20212b; /* Assuming a darker background for dark mode */
+  --global-code-bg-color: rgba(50, 50, 60, 0.1); /* Darker variant for code blocks */
+  --global-text-color: #d1d1d1;
+  --global-strong-color:#002D72
+  --global-text-color-light: #aaaaaa;
+  --global-theme-color: #3eb7f0 !important; /* Specific override for dark theme */
+  --global-hover-color: #ffcc33;
+  --global-footer-bg-color: #282828;
+  --global-footer-text-color: #cccccc;
+  --global-footer-link-color: #dddddd;
+  --global-distill-app-color: #999999;
+}
+
+
+
+
+
+
 .pub-row {
   display: flex; 
   align-items: center;}
@@ -7,7 +41,7 @@
   height:2.4rem;
   width:2.4rem;
   background-color:transparent;
-  color:#043361!important;
+  color:var(--global-theme-color)!important;
   border-radius:100%;
   text-align:center;
   font-size:1.15rem;
@@ -116,7 +150,7 @@ email {
 .icon-button:hover .icon-twitter,.icon-button:hover .icon-facebook,.icon-button:hover .icon-github,.icon-button:hover .icon-linkedin{color:white}
 
 autocolor{
-  color:#595959;
+  color:var(--global-text-color-light);
 }
 
 lightonly {
@@ -181,20 +215,16 @@ papertitle {
       width: 8.00em;
     }
 
-h3, h4, h5, h6 {
-  font-weight: 600;
-  color:#043361;
-  margin:0 0 20px;
-}
+    h3, h4, h5, h6 {
+      font-size:120%;
+      font-weight: 300;
+      color:var(--global-theme-color);
+      margin:0 0 20px;
+    }
 
-h1 {
-  font-weight: 500;
-  color:#043361;
-  margin:0 0 20px;
-}
 
 h2 {
-  color:#043361;
+  color:var(--global-theme-color);
   font-weight: 500;
   margin:2px 0px 15px;
   font-size: 157%;
@@ -233,7 +263,7 @@ a:hover small {
 }
 
 .wrapper {
-  width:960px;
+  width:1000px;
   margin:0 auto;
 }
 
@@ -283,12 +313,13 @@ img {
 }
 
 header {
-  width:232px;
+  width:300px;
   float:left;
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
   padding-top:4.0em;
-  text-align:center
+  text-align:center;
+  
 }
 
 
@@ -337,7 +368,7 @@ header ul a:active {
 }
 
 strong {
-  color:#222;
+  color:var(--global-strong-color) !important;
   font-weight:500;
 }
 
@@ -349,7 +380,7 @@ header ul li + li + li {
 header ul a strong {
   font-size:14px;
   display:block;
-  color:#222;
+  color: var(--global-strong-color);
 }
 
 section {

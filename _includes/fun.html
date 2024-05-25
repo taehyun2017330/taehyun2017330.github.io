@@ -1,7 +1,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
     <!-- If you have an external CSS file -->
@@ -10,63 +13,69 @@
     <div class="no-scroll">
       <div class="projects-container">
         <div id="rotate-div" class="chand"></div>
-      </div>
+        <p>
+          Currently in development. Things I do for fun Music Creation, Live
+          Concert, Outdoors Climbing, Card collecting... visualize these things
+          as clickable/scrollable interactable playing cards. more coming soon!
+        </p>
 
-      Currently in development. Things I do for fun Music Creation, Live
-      Concert, Outdoors Climbing, Card collecting... visualize these things as
-      clickable/scrollable interactable playing cards more coming soon!
+        <script src="{{ '/assets/js/CMRotate.js' | relative_url }}"></script>
 
-      <script src="{{ '/assets/js/CMRotate.js' | relative_url }}"></script>
+        <script type="text/javascript">
+          var backgroundImages = [
+            "{{ '/assets/img/img1.jpg' | relative_url }}",
+            "{{ '/assets/img/img2.jpg' | relative_url }}",
+            "{{ '/assets/img/img3.jpg' | relative_url }}",
+            "{{ '/assets/img/img4.jpg' | relative_url }}",
+            "{{ '/assets/img/img5.jpg' | relative_url }}",
+            "{{ '/assets/img/img6.jpg' | relative_url }}",
+            "{{ '/assets/img/img7.jpg' | relative_url }}",
+            "{{ '/assets/img/img8.jpg' | relative_url }}",
+            "{{ '/assets/img/img9.jpg' | relative_url }}",
+            "{{ '/assets/img/img10.jpg' | relative_url }}",
+            "{{ '/assets/img/img11.jpg' | relative_url }}",
+            "{{ '/assets/img/img12.jpg' | relative_url }}",
+            "{{ '/assets/img/img13.jpg' | relative_url }}",
+            "{{ '/assets/img/img14.jpg' | relative_url }}",
+            "{{ '/assets/img/img15.jpg' | relative_url }}",
+            "{{ '/assets/img/img16.jpg' | relative_url }}",
 
-      <script type="text/javascript">
-        var backgroundImages = [
-          "{{ '/assets/img/img1.jpg' | relative_url }}",
-          "{{ '/assets/img/img2.jpg' | relative_url }}",
-          "{{ '/assets/img/img3.jpg' | relative_url }}",
-          "{{ '/assets/img/img4.jpg' | relative_url }}",
-          "{{ '/assets/img/img5.jpg' | relative_url }}",
-          "{{ '/assets/img/img6.jpg' | relative_url }}",
-          "{{ '/assets/img/img7.jpg' | relative_url }}",
-          "{{ '/assets/img/img8.jpg' | relative_url }}",
-          "{{ '/assets/img/img9.jpg' | relative_url }}",
-          "{{ '/assets/img/img10.jpg' | relative_url }}",
-          "{{ '/assets/img/img11.jpg' | relative_url }}",
-          "{{ '/assets/img/img12.jpg' | relative_url }}",
-          "{{ '/assets/img/img13.jpg' | relative_url }}",
-          "{{ '/assets/img/img14.jpg' | relative_url }}",
-          "{{ '/assets/img/img15.jpg' | relative_url }}",
-          "{{ '/assets/img/img16.jpg' | relative_url }}",
+            // Continue adding your images
+          ];
 
-          // Continue adding your images
-        ];
+          function initializeCMRotate() {
+            CMRotate.init(
+              "rotate-div",
+              200,
+              300,
+              100,
+              12,
+              600,
+              backgroundImages,
+              function clickFn(no) {
+                alert("Click number - " + (no + 1));
+              }
+            );
+          }
+          initializeCMRotate();
+        </script>
 
-        function initializeCMRotate() {
-          CMRotate.init(
-            "rotate-div",
-            200,
-            300,
-            100,
-            12,
-            600,
-            backgroundImages,
-            function clickFn(no) {
-              alert("Click number - " + (no + 1));
+        <style>
+          #rotate-div {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%); /* Center horizontally */
+            width: 100%; /* Full width of the viewport */
+            height: 110%;
+            z-index: -1; /* Ensure it's below the nav */
+          }
+          @media (max-width: 960px) {
+            #rotate-div {
+              top: 20%; /* Lower the position */
             }
-          );
-        }
-        initializeCMRotate();
-      </script>
-
-      <style>
-        #rotate-div {
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%); /* Center horizontally */
-          width: 100%; /* Full width of the viewport */
-          height: 110%;
-          z-index: -1; /* Ensure it's below the nav */
-        }
-      </style>
+          }
+        </style>
+      </div>
     </div>
   </body>
 </html>

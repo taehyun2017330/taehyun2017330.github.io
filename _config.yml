@@ -2,7 +2,10 @@
 title: Taehyun Yang
 position: Undergraduate Student
 affiliation: Seoul National University
-email: taehyun2017330@gmail.com
+email: >
+  (myname lowercase)201733 at
+
+  gmaildotcom
 
 navigation:
   - title: "Home"
@@ -16,7 +19,7 @@ navigation:
 # The following information is used to improve the website traffic from search engines, e.g., Google.
 keywords: Taehyun, HCI, Seoul National University, SNU, Undergraduate Student
 description: Taehyun's Personal Portfolio
-canonical: https://minimal-light-theme.yliu.me/
+canonical: https://taehyun2017330.github.io/
 
 kramdown:
   parse_block_html: true
