@@ -28,8 +28,8 @@ var CMRotate = CMRotate || ( function () {
      * bg - Background image Array
      * fn - Mouse click function on each Plane
      */
-    function init(div, tw, th, ty, gap, radius, bg, fn) {
-        var scale = 1;  // Scale factor to reduce the size by 70%
+    function init(div, tw, th, ty, gap, radius, bg, fn,scale=1) {
+        
         
         $contaier = document.getElementById(div);
     
