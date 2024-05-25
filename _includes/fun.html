@@ -82,7 +82,6 @@
           );
 
           var rotateDiv = document.getElementById("rotate-div");
-          rotateDiv.style.visibility = "visible";
         }
         document.addEventListener("DOMContentLoaded", function () {
           window.onload = function () {
@@ -100,11 +99,10 @@
           height: 110%;
           z-index: -1; /* Ensure it's below the nav */
           touch-action: none;
-
-          visibility: hidden; /* Hide until initialized */
         }
         @media (max-width: 960px) {
           #rotate-div {
+            visibility: hidden; /* Hide until initialized */
           }
           .rotate-div-placeholder {
             height: 650px;
