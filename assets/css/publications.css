@@ -137,6 +137,15 @@ nav {
   width: 90%;
   z-index: 1000; /* removed !important for best practices unless absolutely necessary */
 }
+.category {
+  margin-bottom: 10px; /* Adds space between categories */
+}
+
+.project-tag.active {
+  background-color: var(--global-theme-color); /* Blue background for active state */
+  color: white;
+}
+
 
 
 nav ul {

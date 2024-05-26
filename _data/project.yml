@@ -9,9 +9,10 @@ project:
       <strong>My role in this project:</strong> Third author in helping build evaluation to what it means to trust a machine-learning techniques and automatically detect them in papers.
     tags:
       - Visualization
-      - Research
+      - Researcher
       - Work in Progress
       - Internship
+      - Cocurricular
     description: "Analyzed VIS papers to assess hyperparameter reporting and optimization, highlighting gaps in research practices."
 
   - title: "Question, Answer, and Connect: Creating Easily Digestible Mass Group Chats with AI-Driven Conversation Linking"
@@ -23,10 +24,12 @@ project:
       <p>For the "Question, Answer, and Connect" project, I led the design and implementation of an AI-driven system to streamline mass group chats. I conducted a needs analysis to identify user challenges in asynchronous Q&A environments, designed the system architecture, and selected the technology stack, including React for the frontend and Node.js for the backend. I developed algorithms to automatically link related questions and answers, ensuring contextual coherence. Additionally, I integrated natural language processing (NLP) techniques to enhance the system's ability to understand and match conversational elements, and conducted extensive testing to refine its accuracy and user experience.</p>
       <strong>My role in this project:</strong> Project lead.
     tags:
-      - Work In Progress
-      - Research
-      - HCI
+      - HAI
+      - Researcher
       - LLM
+      - Systembuilding
+      - Lead
+      - Work in Progress
     description: "Developed an AI-driven system to streamline mass group chats by linking related questions and answers."
 
   - title: "JDnews: Engaging Middle Schoolers with AI-Powered News Summaries"
@@ -39,10 +42,10 @@ project:
       <strong>My role in this project:</strong> Advisor, mentor, and project lead.
     link: "www.jdnews2024.com"
     tags:
+      - HCI
       - Learning
-      - Systembuilding
+      - Lead
       - LLM
-      - Advisor
       - Cocurricular
     description: "Led a project to create AI-powered news summaries tailored for middle schoolers, winning a runner-up award."
 
@@ -55,13 +58,15 @@ project:
       <p>FashionAlign is a new AI system to guide the way novice users search for fashion items by bridging the gap between abstract style descriptions and practical search capabilities. Utilizing natural language processing and advanced visualization techniques, the system transforms vague style inputs into a curated visual display of fashion items, significantly improving the search experience. This approach allows users to search using intuitive, everyday language, aligning textual descriptions with visual features to ensure that results closely match user queries. The system's use of UMAP (Uniform Manifold Approximation and Projection) for dimensionality reduction facilitates an organized and visually appealing presentation of search results. Designed with a focus on user-centric principles, FashionAlign has demonstrated improved match accuracy and query refinement in user studies, making it a valuable tool for simplifying the fashion search process.</p>
       <strong>My role in this project:</strong> Coresearcher, writing and developing the dimensionality reduction and automatic clothing feature selection using SAM segmentation.
     tags:
+      - Visualization
+      - HAI
       - LLM
       - Systembuilding
-      - Visualization
       - Curricular
-      - Design
-      - Develop
-      - Research
+      - Designer
+      - Developer
+      - Researcher
+      - D3
     description: "Developed an AI system to enhance fashion search by aligning textual descriptions with visual features."
 
   - title: "Nostalgia VS Hype? Understanding how user sentiment changes with these features in video games."
@@ -73,12 +78,11 @@ project:
       <p>"Nostalgia vs. Hype? Understanding User Sentiment in Video Games" was a project born out of a personal bet to determine which video game had a more significant social impact: the classic 'MapleStory' or the more contemporary 'Overwatch'. Conducted in 2016, this study involved analyzing a large corpus of Korean language data sourced from social media to conduct sentiment analysis. The objective was to assess whether nostalgia or hype more strongly influences user sentiment towards these games. This solo project not only fulfilled a personal curiosity but also contributed insights into the dynamics of player engagement and emotional responses within the gaming community.</p>
       <strong>My role in this project:</strong> Solo project based on my own interest.
     tags:
-      - Socialcomputing
+      - Social Computing
       - LLM
-      - Sentiment Analysis
-      - Research
+      - Lead
+      - Researcher
       - Cocurricular
-      - Videogame
     description: "Analyzed social media data to compare user sentiment towards 'MapleStory' and 'Overwatch'."
 
   - title: "LLM Taxonomy Classifier"
@@ -90,10 +94,10 @@ project:
       <p>In our research paper on conversational LLM agents, we focused on developing a scalable and accurate LLM Taxonomy Classifier to analyze a large corpus of real and lab conversational data. The project involved iteratively designing and refining a GPT-4 based classifier to automatically categorize each conversational tuple according to our taxonomy, which was derived from existing qualitative coding practices with LLMs. We aimed to optimize the classifier for comprehensive coverage, high accuracy, and efficiency. Initial versions tested against manually coded data revealed gaps, which led us to expand our taxonomy to include overlooked conversational elements like casual chatting. To improve accuracy, we refined taxonomy definitions, prioritized classification types, and utilized few-shot learning with precisely chosen examples to correct frequent misclassifications. Efficiency was enhanced by optimizing prompt lengths and eliminating non-essential elements, ensuring the classifier was suitable for large-scale applications. The refined classifier underwent rigorous testing to confirm its effectiveness, comparing its performance to human-labeled data with a focus on user motivations and patterns of follow-up queries. The final system achieved substantial accuracies of 74.39% and 71.11% in these areas, respectively. This project not only advanced our understanding of LLM-based conversation analysis but also demonstrated the potential of machine learning in enhancing the accuracy and efficiency of qualitative research tools.</p>
       <strong>My role in this project:</strong> Came up with the idea and solved the problem that the research was currently stuck in.
     tags:
+      - HAI
       - LLM
-      - Research
-      - Conversation
-      - Human AI
+      - Researcher
+      - Developer
       - Internship
     description: "Developed a scalable GPT-4 based classifier for categorizing conversational data, achieving high accuracy."
 
@@ -106,9 +110,10 @@ project:
       <p>In the project "Modeling Character Interactions Using Graph Theory Analysis," I applied graph theory—originally learned through analyzing social networks on Twitter—to explore the intricate character dynamics in "Les Misérables." Known for its complex and lengthy character interactions, this classic novel provided a rich field for examining how fictional relationships can be systematically mapped and understood. Employing graph theory metrics such as closeness, betweenness, and eigenvector centrality, I was able to identify key characters like Jean Valjean, Marius, and Gavroche, highlighting their crucial roles in connecting and influencing the story's development. This analysis delineated distinct communities within the narrative, such as revolutionary students and authority figures, showcasing how various character groups contribute to the novel's elaborate social dynamics. Through this comprehensive network analysis, I gained deep insights into the structural and thematic components of the narrative, significantly enhancing the understanding of character influence and community interactions within the text. This project demonstrates the utility of graph theory as a powerful tool for unraveling and understanding key interactions in any fictional work, opening avenues for deeper literary analysis and interpretation.</p>
       <strong>My role in this project:</strong> Lead of project.
     tags:
+      - Social Computing
       - Visualization
-      - Socialcomputing
       - Curricular
+      - Lead
     description: "Used graph theory to analyze character relationships in 'Les Misérables,' revealing key roles and community structures."
 
   - title: "Using PageRank and MapReduce to Identify Key Characters in Fiction Novels"
@@ -120,7 +125,8 @@ project:
       <p>In this project, I implemented the PageRank algorithm using MapReduce to analyze character significance in fiction novels. By adapting a web page ranking technique to literary analysis, this method allows us to determine the importance of characters based on their interactions within the story. This approach not only highlights which characters are central to the narrative but also provides a scalable, efficient way to handle large datasets, making it suitable for examining complex novels with multiple characters and intricate relationships. This innovative application of PageRank and MapReduce opens new possibilities for deepening our understanding of character dynamics in literature.</p>
       <strong>My role in this project:</strong> Lead of the project.
     tags:
-      - Socialcomputing
+      - Social Computing
+      - Lead
       - Cocurricular
     description: "Adapted PageRank with MapReduce to analyze and identify key characters in fiction novels."
 
@@ -135,9 +141,12 @@ project:
       <strong>My role in this project:</strong> Solo research project as project lead finished with a research talk at K-Vis 2023.
     tags:
       - Visualization
-      - Research
-      - Visualperception
+      - Researcher
+      - Lead
+      - Modeling
+      - Perception
       - Internship
+      - D3
     description: "Investigated how scatterplot size affects perception of data clusters, with findings presented at K-Vis 2023."
 
   - title: "Simulating Multiracial Community Dynamics Using the Schelling Model"
@@ -149,7 +158,9 @@ project:
       <p>In this project, I utilized the Schelling model, a renowned agent-based simulation, to explore the movement and interaction patterns within multiracial communities. This model, which incorporates varying preferences for neighborhood racial compositions, helps to demonstrate how individual biases can lead to significant levels of residential segregation, even when those preferences are relatively mild. By adjusting parameters related to tolerance and neighborhood satisfaction thresholds, the simulation provides insights into how subtle changes in individual behaviors can influence the broader community structure. This study not only sheds light on the underlying mechanisms of segregation but also assists in understanding potential strategies for fostering more integrated communities.</p>
       <strong>My role in this project:</strong> Solo Project.
     tags:
-      - Socialcomputing
+      - Social Computing
+      - Lead
+      - Modeling
       - Curricular
     description: "Used the Schelling model to simulate and analyze residential segregation in multiracial communities."
 
@@ -163,9 +174,11 @@ project:
       <p>This project is a statistical analysis and data visualization exploration using the Datasaurus Dozen, a modern take on Anscombe's Quartet that demonstrates the limitations of relying solely on statistical summaries. By employing the Datasaurus Dozen datasets, which consist of dinosaur-shaped data points and other configurations that share identical statistical properties yet display visually distinct patterns. This solo project involves creating and analyzing visual representations with D3 to vividly illustrate how different datasets can appear despite having the same statistical measures, thus highlighting the necessity of graphical analysis in visualization.</p>
       <strong>My role in this project:</strong> Solo Project.
     tags:
-      - Curricular
       - Visualization
-      - d3
+      - Lead
+      - Developer
+      - Curricular
+      - D3
     description: "Analyzed the Datasaurus Dozen to emphasize the need for visual representation alongside statistical summaries."
 
   - title: "Causeway: Enhancing Real-World Contributions in Web Development Learning using Micro-Role Hierarchies and Subgoal Labels"
@@ -178,11 +191,12 @@ project:
       <p>The "Causeway: Scaling Situated Learning with Micro-Role Hierarchies" project innovatively addresses the challenge of scaling situated learning in web development. This system employs micro-role hierarchies to enable novices to make meaningful contributions to real-world projects. By dividing complex tasks into manageable micro-roles, each taking approximately two hours, we facilitate a learning process that mimics ascending an organizational hierarchy. This model was implemented through the Causeway platform, where learners collaborate to build websites for non-profit organizations. In our proof-of-concept study, participants successfully created static websites for refugee resettlement agencies, demonstrating the effectiveness of micro-roles in providing practical and educational value. As the project lead, I managed a diverse team of fifteen graduate and undergraduate students to expand on the previous work (Causeway: Scaling Situated Learning with Micro-Role Hierarchies) that received an honorable mention at CHI 2019. My role involved coordinating the development and integration of micro-role hierarchies within the Causeway platform, enhancing its capability to support web development education through structured, real-world contributions. This project not only highlighted the potential of micro-role hierarchies to transform educational approaches in technical fields but also reinforced the importance of practical experience in learning environments.</p>
       <strong>My role in this project:</strong> Project lead with 15 other graduate/undergraduate students.
     tags:
-      - Coding
-      - Research
-      - Lead
+      - HCI
       - Learning
+      - Lead
+      - Researcher
       - Systembuilding
+      - Developer
       - Internship
     description: "Developed micro-role hierarchy system for web development learning, facilitating real-world contributions."
 
@@ -195,7 +209,7 @@ project:
       <p>I compared the disease progression in South Korea and the United States, using this compartmental epidemiological model to categorize the population into Susceptible, Exposed, Infected, and Recovered groups. The study highlighted the effectiveness of South Korea's rapid containment strategies, evidenced by a quick peak and decline in infection rates, in contrast to the prolonged infection period in the U.S., suggesting delays in containment and a higher number of susceptible individuals. By calibrating the model with real-time data and adjusting parameters like transmission, incubation, and recovery rates, the project provides critical insights into how different public health responses affect disease outcomes, offering valuable guidance for policymakers to manage pandemic interventions effectively.</p>
       <strong>My role in this project:</strong> Solo project.
     tags:
-      - SocialComputing
+      - Social Computing
       - Curricular
       - Modeling
       - Lead
@@ -211,12 +225,12 @@ project:
       <p>I developed an interactive visualization system using D3 and React to explore the effectiveness of various visual encodings in data representation. This system allows users to dynamically assign different data attributes—such as movie genres, ratings, and revenue—to visual channels like position, color, opacity, and size. By manipulating these visual properties through an intuitive interface, users can analyze how changes in marks and channels impact the clarity and efficiency of data presentation. The goal was to provide a hands-on tool for examining the expressiveness and effectiveness of visual idioms in real-time, using a dataset of movie reviews to demonstrate how different visualization approaches can reveal or obscure patterns in the data. This solo project enhanced my skills as visualization and project designer but also helped me give an idea for my future visualization research of how different visualization strategies can be optimized for specific analytical tasks.</p>
       <strong>My role in this project:</strong> Solo project.
     tags:
-      - Curricular
       - Visualization
-      - d3
-      - Lead
+      - Curricular
+      - D3
       - Designer
       - Developer
+      - Perception
     description: "Created an interactive system to study the effectiveness of different visual encodings in data representation."
 
   - title: "Star Coordinates & CheckViz"
@@ -229,9 +243,11 @@ project:
       <p>I developed a visualization system to effectively represent high-dimensional data in a comprehensible two-dimensional format using the Star Coordinates algorithm. This system enables users to dynamically adjust axis vectors via mouse interactions, offering a live update of data projections that enhances understanding of complex datasets. Additionally, I implemented CheckViz, a component that visualizes distortions such as Missing and False Neighbors, using a color-coded Voronoi diagram to indicate the level of distortion for each data point. This approach not only provides insights into the data integrity after projection but also helps in assessing the trustworthiness of the multidimensional projection. By integrating these tools into a user-friendly interface with real-time feedback and a clear legend for distortion interpretation, the project successfully simplifies the complexity of high-dimensional data analysis, making it accessible and actionable for users.</p>
       <strong>My role in this project:</strong> Solo project.
     tags:
-      - Curricular
       - Visualization
-      - d3
+      - Curricular
+      - Developer
+      - Designer
+      - D3
     description: "Developed a visualization system using Star Coordinates and CheckViz to analyze high-dimensional data."
 
   - title: "UMATO: Two-phase Manifold Approximation for Accurate, Scalable, and Stable Dimensionality Reduction"
@@ -245,9 +261,11 @@ project:
       <strong>My role in this project:</strong> Third author that helped evaluate the DR algorithm and demo to show the effectiveness of the DR algorithm.
     tags:
       - Visualization
-      - d3
-      - Research
+      - Researcher
+      - Developer
       - DimensionalityReduction
+      - D3
+      - Work in Progress
     description: "Evaluated the UMATO algorithm and developed a demo for real-time exploration of its effectiveness."
 
   - title: "Enhancing AR Experiences: Benchmarking Handtracking for Samsung's Vision AR Goggles"
@@ -259,6 +277,7 @@ project:
       <p>As an intern at Samsung, we aimed at advance mobile interactivity within augmented reality. My role was to develop and benchmark InputOVR handtracking for Samsung's yet-to-be-released Vision AR goggles. This initiative involved the integration of handtracking cameras and passthrough functionalities, crucial for creating immersive and intuitive user interactions. I was responsible for back-end operations using vulkan api to include the implementation of the handtracking technology and testing phases to ensure performance.</p>
       <strong>My role in this project:</strong> Developer and Tester.
     tags:
+      - HCI
       - Internship
       - AR/VR
       - Developer
@@ -274,9 +293,9 @@ project:
       <p>During my service as a social service agent, I contributed to the development of a critical alert service designed to protect minors by notifying them of any nearby sex offenders. This service utilizes map data and information provided by the Ministry of Gender Equality and Family to deliver timely alerts. As a frontend designer and developer in the early stages of this project, I played a pivotal role in crafting the user interface and ensuring the platform was both user-friendly and effective. My responsibilities also extended to conducting user testing, which was crucial in refining the system to meet the specific safety needs of its users, ultimately enhancing community safety and peace of mind.</p>
       <strong>My role in this project:</strong> Designer and developer during the platform’s early stages.
     tags:
-      - Design
-      - Develop
       - Systembuilding
       - Cocurricular
-      - Socialservice
+      - Social Service
+      - Designer
+      - Developer
     description: "Developed a critical alert service to notify minors of nearby sex offenders, enhancing community safety."

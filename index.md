@@ -24,8 +24,6 @@ layout: homepage
 <div id="projects-content" style="display:none;">
   {% include projects.html %}
 
-</div>
-
 <div id="fun-content" style="display:none;">
 
 {% include fun.html %}

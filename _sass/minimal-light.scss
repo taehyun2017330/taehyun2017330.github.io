@@ -215,11 +215,19 @@ papertitle {
       width: 8.00em;
     }
 
-    h3, h4, h5, h6 {
+    h3, h4, h6 {
       font-size:120%;
       font-weight: 300;
       color:var(--global-theme-color);
       margin:0 0 20px;
+    }
+
+h5{
+      font-size:80%;
+      font-weight: 300;
+      color:var(--global-theme-color);
+      margin:0 0 !important;
+      
     }
 
 

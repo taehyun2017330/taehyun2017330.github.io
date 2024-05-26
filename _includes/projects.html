@@ -1,222 +1,346 @@
 {% assign projects = site.data.project.project %} {% assign all_tags = "" %} {%
-for proj in site.data.project.project %} {% for tag in proj.tags %} {% unless
-all_tags contains tag %} {% assign all_tags = all_tags | append: tag | append:
-"," %} {% endunless %} {% endfor %} {% endfor %} {% assign all_tags = all_tags |
-split: "," %}
-
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-
-<!-- Include Bootstrap Bundle JS (includes Popper) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<div class="container py-4">
-  <h3 style="font-weight: 500 !important; text-align: center">
-    Interesting projects I have done in and out of classes 🧑🏻‍💻
-  </h3>
-  <div class="tags">
-    {% for tag in all_tags %}
-    <a class="project-tag filter-tag" href="#" data-tag="{{ tag }}"
-      >{{ tag }}</a
-    >
-    {% endfor %}
-    <button
-      id="reset-filter"
-      style="
-        background-color: red;
-        color: white;
-        border: none;
-        padding: 4px 7px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 0.5rem;
-      "
-    >
-      Reset X
-    </button>
-  </div>
-
-  <div class="row mt-3 g-3 grid">
-    {% for proj in projects %}
-    <div class="col-12 col-sm-6 col-md-4 col-lg-4 grid-item">
-      <div
-        class="archive-container"
-        data-bs-toggle="modal"
-        data-bs-target="#modal{{ forloop.index }}"
-      >
-        <img
-          class="archive-img"
-          src="{{ proj.image | prepend: '/assets/images/project/' | relative_url }}"
-        />
-        <div class="archive-container-inner">
-          <p class="archive-title">{{ proj.title }}</p>
-          <p class="archive-description">{{ proj.description }}</p>
-          <div class="tags">
-            <p>
-              {% for tag in proj.tags %}
-              <a class="project-tag" href="#" data-tag="{{ tag }}">{{ tag }}</a>
-              {% endfor %}
-            </p>
-          </div>
-        </div>
+  for proj in site.data.project.project %} {% for tag in proj.tags %} {% unless
+  all_tags contains tag %} {% assign all_tags = all_tags | append: tag | append:
+  "," %} {% endunless %} {% endfor %} {% endfor %} {% assign all_tags = all_tags |
+  split: "," %}
+  
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+  
+  <!-- Include Bootstrap Bundle JS (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <div class="container py-4">
+    <h3 style="font-weight: 500 !important; text-align: center">
+      Interesting projects I have done in and out of classes 🧑🏻‍💻
+    </h3>
+    <!-- Fields Section -->
+    <div class="category">
+      <h5>Primary Fields</h5>
+      <div class="tags">
+        <a class="project-tag" href="#" data-tag="Visualization">Visualization</a>
+        <a class="project-tag" href="#" data-tag="HCI">HCI</a>
+        <a class="project-tag" href="#" data-tag="Learning">Learning</a>
+        <a class="project-tag" href="#" data-tag="HAI">HAI</a>
+        <a class="project-tag" href="#" data-tag="Social Computing">Social Computing</a>
       </div>
     </div>
-    <div
-      class="modal fade"
-      id="modal{{ forloop.index }}"
-      tabindex="-1"
-      aria-labelledby="exampleModal{{ forloop.index }}"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <div style="display: block !important">
-              <h5 class="modal-title" id="exampleModalLabel">
-                {{ proj.title }}
-              </h5>
-              <p class="modal-description">{{ proj.description }}</p>
-              <p class="modal-link">
-                {% if proj.paper %}<a
-                  href="{% if proj.paper contains 'http' %} {{ proj.paper }} {% else %} /assets/pdf/{{ proj.paper }} {% endif %}"
-                  ><i class="fas fa-book"></i>&nbsp; Paper</a
-                >
-                &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.video %}<a
-                  href="{{ proj.video }}"
-                  ><i class="fas fa-play"></i>&nbsp; Video</a
-                >
-                &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.slide %}<a
-                  href="/assets/pdf/{{ proj.slide }}"
-                  ><i class="fas fa-poll-h"></i>&nbsp; Slide</a
-                >
-                &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.appstore %}<a
-                  href="{{ proj.appstore }}"
-                  ><i class="fab fa-app-store-ios"></i>&nbsp; App Store</a
-                >
-                &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.code %}<a
-                  href="{{ proj.code }}"
-                  ><i class="fab fa-github"></i>&nbsp; Code</a
-                >
-                &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.link %}<a
-                  href="{{ proj.link }}"
-                  ><i class="fas fa-external-link"></i>&nbsp; Link</a
-                >{% endif %}
+  
+    <!-- Tools Section -->
+    <div class="category">
+      <h5>Secondary</h5>
+      <div class="tags">
+        <a class="project-tag" href="#" data-tag="LLM">LLM</a>
+        <a class="project-tag" href="#" data-tag="Systembuilding">Systembuilding</a>
+        <a class="project-tag" href="#" data-tag="Perception">Perception</a>
+        <a class="project-tag" href="#" data-tag="Modeling">Modeling</a>
+        <a class="project-tag" href="#" data-tag="D3">D3</a>
+        <a class="project-tag" href="#" data-tag="DimensionalityReduction">DimensionalityReduction</a>
+        <a class="project-tag" href="#" data-tag="Social Service">Social Service</a>
+        <a class="project-tag" href="#" data-tag="Work in Progress">Work in Progress</a>
+        <a class="project-tag" href="#" data-tag="AR/VR">AR/VR</a>
+  
+        <!-- Add other tags similarly -->
+      </div>
+    </div>
+  
+    <div class="category">
+      <h5>Roles</h5>
+      <div class="tags">
+        <a class="project-tag" href="#" data-tag="Lead">Lead</a>
+        <a class="project-tag" href="#" data-tag="Researcher">Researcher</a>
+        <a class="project-tag" href="#" data-tag="Designer">Designer</a>
+        <a class="project-tag" href="#" data-tag="Developer">Developer</a>
+      </div>
+    </div>
+  
+    <!-- Locations Section -->
+    <div class="category">
+      <h5>Setting</h5>
+      <div class="tags">
+        <a class="project-tag" href="#" data-tag="Internship">Internship</a>
+        <a class="project-tag" href="#" data-tag="Cocurricular">Cocurricular</a>
+        <a class="project-tag" href="#" data-tag="Curricular">Curricular</a>
+      </div>
+    </div>
+  
+    <!-- Roles Section -->
+  
+  
+    <!-- Reset Button -->
+    <div class="tags">
+      <button id="reset-filter" style="background-color: red; color: white; border: none; padding: 4px 7px; border-radius: 5px; cursor: pointer; font-size: 0.5rem;">
+        Reset X
+      </button>
+    </div>
+  </div>
+  
+    <div class="row mt-3 g-3 grid">
+      {% for proj in projects %}
+      <div class="col-12 col-sm-6 col-md- col-lg-4 grid-item">
+        <div
+          class="archive-container"
+          data-bs-toggle="modal"
+          data-bs-target="#modal{{ forloop.index }}"
+        >
+          <img
+            class="archive-img"
+            src="{{ proj.image | prepend: '/assets/images/project/' | relative_url }}"
+          />
+          <div class="archive-container-inner">
+            <p class="archive-title">{{ proj.title }}</p>
+            <p class="archive-description">{{ proj.description }}</p>
+            <div class="tags">
+              <p>
+                {% for tag in proj.tags %}
+                <a class="project-tag" href="#" data-tag="{{ tag }}">{{ tag }}</a>
+                {% endfor %}
               </p>
             </div>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            {{ proj.detail | replace: 'site.baseurl', site.baseurl }}
           </div>
         </div>
       </div>
+      <div
+        class="modal fade"
+        id="modal{{ forloop.index }}"
+        tabindex="-1"
+        aria-labelledby="exampleModal{{ forloop.index }}"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div style="display: block !important">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  {{ proj.title }}
+                </h5>
+                <p class="modal-description">{{ proj.description }}</p>
+                <p class="modal-link">
+                  {% if proj.paper %}<a
+                    href="{% if proj.paper contains 'http' %} {{ proj.paper }} {% else %} /assets/pdf/{{ proj.paper }} {% endif %}"
+                    ><i class="fas fa-book"></i>&nbsp; Paper</a
+                  >
+                  &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.video %}<a
+                    href="{{ proj.video }}"
+                    ><i class="fas fa-play"></i>&nbsp; Video</a
+                  >
+                  &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.slide %}<a
+                    href="/assets/pdf/{{ proj.slide }}"
+                    ><i class="fas fa-poll-h"></i>&nbsp; Slide</a
+                  >
+                  &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.appstore %}<a
+                    href="{{ proj.appstore }}"
+                    ><i class="fab fa-app-store-ios"></i>&nbsp; App Store</a
+                  >
+                  &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.code %}<a
+                    href="{{ proj.code }}"
+                    ><i class="fab fa-github"></i>&nbsp; Code</a
+                  >
+                  &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.link %}<a
+                    href="{{ proj.link }}"
+                    ><i class="fas fa-external-link"></i>&nbsp; Link</a
+                  >{% endif %}
+                </p>
+              </div>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              {{ proj.detail | replace: 'site.baseurl', site.baseurl }}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
-</div>
-
-<script>
-  var grid = document.querySelector(".grid");
-  var msnry = new Masonry(grid, {
-    percentPosition: true,
-    itemSelector: ".grid-item",
-  });
-  imagesLoaded(grid).on("progress", function () {
-    msnry.layout();
-  });
-</script>
-
-<script type="module">
-  import { Toast } from "bootstrap.esm.min.js";
-
-  Array.from(document.querySelectorAll(".toast")).forEach(
-    (toastNode) => new Toast(toastNode)
-  );
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const filterTags = document.querySelectorAll(".filter-tag"); // Select filter tags
-    const projects = document.querySelectorAll(".grid-item");
-    const grid = document.querySelector(".grid");
-    const msnry = new Masonry(grid, {
-      itemSelector: ".grid-item",
-      percentPosition: true,
+  
+  <script>
+  var grid = document.querySelector('.grid');
+  var msnry;
+  
+  // Initialize Masonry after all images have loaded
+  imagesLoaded(grid, function() {
+    msnry = new Masonry(grid, {
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-item',
+      percentPosition: true
     });
-    const resetButton = document.getElementById("reset-filter");
-
-    console.log("Filter tags found: ", filterTags.length);
-    console.log("Projects found: ", projects.length);
-
-    filterTags.forEach((tag) => {
-      tag.addEventListener("click", function (e) {
-        e.preventDefault();
-        const selectedTag = this.getAttribute("data-tag").trim();
-        console.log("Selected tag: ", selectedTag);
-
-        let anyVisible = false;
-        projects.forEach((project) => {
-          console.log(project.style.display);
-          const projectTags = Array.from(
-            project.querySelectorAll(".project-tag")
-          ).map((el) => el.getAttribute("data-tag").trim());
-          if (projectTags.includes(selectedTag)) {
-            project.style.display = "block";
-
-            anyVisible = true;
+   setTimeout(() => {
+    msnry.layout();
+  }, 100); // Delay can depend on your specific situation
+  });
+  
+  
+  </script>
+  
+  <script type="module">
+    import { Toast } from "bootstrap.esm.min.js";
+  
+    Array.from(document.querySelectorAll(".toast")).forEach(
+      (toastNode) => new Toast(toastNode)
+    );
+  </script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const tags = document.querySelectorAll('.project-tag');
+      const projects = document.querySelectorAll('.grid-item');
+      let activeTags = new Set();
+    
+      tags.forEach(tag => {
+        tag.addEventListener('click', function(event) {
+          event.preventDefault();
+          const tagValue = this.getAttribute('data-tag');
+    
+          if (this.classList.contains('active')) {
+            this.classList.remove('active');
+            activeTags.delete(tagValue);
+            console.log("Tag deactivated:", tagValue);
           } else {
-            project.style.display = "none";
+            this.classList.add('active');
+            activeTags.add(tagValue);
+            console.log("Tag activated:", tagValue);
           }
+  
+    
+          filterProjects();
         });
+      });
+    
+      function filterProjects() {
+        console.log(msnry);
+        console.log("Filtering projects...");
+        console.log("Active tags:", Array.from(activeTags));
+        projects.forEach(project => {
+          const projectTags = Array.from(project.querySelectorAll('.project-tag')).map(tag => tag.getAttribute('data-tag'));
+          const showProject = Array.from(activeTags).every(tag => projectTags.includes(tag));
+          project.style.display = showProject ? '' : 'none';
+        });
+    
+        updateAvailableTags();
+        requestAnimationFrame(() => {
+      layoutMasonry();
+    });
+      }
+    
+      function updateAvailableTags() {
+    let visibleTags = new Set();
+    projects.forEach(project => {
+        if (project.style.display !== 'none') {
+            project.querySelectorAll('.project-tag').forEach(tag => {
+                visibleTags.add(tag.getAttribute('data-tag'));
+            });
+        }
+    });
 
-        console.log("Any project visible after filter? ", anyVisible);
+    tags.forEach(tag => {
+        if (visibleTags.has(tag.getAttribute('data-tag'))) {
+            tag.style.opacity = '1';
+            tag.style.transform = 'translateX(0px)';  // Reset any previous transformation
+        } else {
+            tag.style.opacity = '0';
+            // Move the tag left by its own width to simulate disappearing
+            tag.style.transform = 'translateX(-' + tag.offsetWidth + 'px)';
+        }
+    });
 
-        // Re-layout Masonry after filtering
+    // After a delay, adjust display for non-visible tags
+    setTimeout(() => {
+        tags.forEach(tag => {
+            if (!visibleTags.has(tag.getAttribute('data-tag'))) {
+                tag.style.display = 'none';
+            } else {
+                tag.style.display = 'inline-block';
+            }
+        });
+    }, 500);  // Match this delay with the CSS transition time
+}
+
+document.getElementById('reset-filter').addEventListener('click', function() {
+    activeTags.clear();
+    tags.forEach(tag => {
+        tag.classList.remove('active');
+        tag.style.display = 'inline-block';  // Ensure all tags are visible
+        tag.style.opacity = '1';
+        tag.style.transform = 'translateX(0px)';  // Reset transformation
+    });
+  
+    // Animate items back to visible before resetting Masonry
+    projects.forEach(project => {
+      project.style.opacity = '0'; // Start by hiding them
+    });
+  
+    setTimeout(() => {
+      projects.forEach(project => {
+        project.style.display = '';
+        project.style.opacity = '1'; // Animate back to full visibility
+      });
+  
+      // Destroy the existing Masonry instance if it exists
+      if (msnry) {
+        msnry.destroy();
+      }
+  
+      // Reinitialize Masonry after all items are visible
+      imagesLoaded(grid, function() {
+        msnry = new Masonry(grid, {
+          itemSelector: '.grid-item',
+          columnWidth: '.grid-item',
+          percentPosition: true
+        });
+  
         setTimeout(() => {
           msnry.layout();
-        }, 50); // Delay of 50 ms
-        forceRepaint(project);
-
-        // Update visible tags based on the visible projects
-        updateVisibleTags();
+        }, 10); // Allow time for items to settle in their new positions
       });
-    });
-
-    resetButton.addEventListener("click", () => {
-      projects.forEach((project) => {
-        project.style.display = "block";
-      });
-
-      // Reset Masonry layout
-      msnry.layout();
-
-      // Show all tags
-      filterTags.forEach((tag) => (tag.style.display = "inline-block"));
-      console.log("Reset applied, all projects and tags should be visible.");
-    });
-
-    function updateVisibleTags() {
-      const activeTags = new Set();
-      document
-        .querySelectorAll(".grid-item[style='display: block;'] .project-tag")
-        .forEach((tag) => {
-          activeTags.add(tag.getAttribute("data-tag").trim());
+  
+    }, 300); // This delay should match or exceed the CSS opacity transition time
+  });
+  
+  
+  
+    
+  function layoutMasonry() {
+    if (msnry) {
+      var gridWidth = grid.clientWidth;
+      var columnWidth = gridWidth / 3; // Adjust this ratio based on your design
+      msnry.options.columnWidth = columnWidth;
+  
+      // Fully refresh Masonry items and layout
+      requestAnimationFrame(() => {
+        msnry.reloadItems();
+        msnry.layout();
+        console.log("Masonry layout recalculated.");
+  
+        // Log each visible grid item's position and title
+        document.querySelectorAll('.grid-item').forEach(item => {
+          if (item.style.display !== 'none') {
+            const title = item.querySelector('.archive-title').textContent;
+            const rect = item.getBoundingClientRect();
+            console.log('Item position:', rect, 'Title:', title);
+          }
         });
-
-      console.log("Active tags after filter: ", Array.from(activeTags));
-
-      filterTags.forEach((tag) => {
-        tag.style.display = activeTags.has(tag.getAttribute("data-tag").trim())
-          ? "inline-block"
-          : "none";
       });
     }
-  });
-</script>
+  }
+    
+    });
+    </script>
+    <style>
+ .grid-item {
+    transition: opacity 0.3s ease-in-out;
+}
+  .tags a.project-tag {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: inline-block;  
+    opacity: 1;            
+}
 
-<style></style>
+  
+    </style>
