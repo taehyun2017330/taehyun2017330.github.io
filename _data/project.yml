@@ -222,6 +222,22 @@ Follow-up Queries with User Satisfaction"
       - Cocurricular
     description: "Analyzed social media data to compare user sentiment towards 'MapleStory' and 'Overwatch'."
 
+  - title: "Star Coordinates & CheckViz"
+    image: "checkviz.png"
+    link: "https://github.com/taehyun2017330/Visualizations/tree/main/Checkviz"
+    detail: >
+      <div style="text-align: center;">
+        <img src='site.baseurl/assets/images/project_detail/checkviz.png' class='img-responsive'>
+      </div>
+      <p>I developed a visualization system to effectively represent high-dimensional data in a comprehensible two-dimensional format using the Star Coordinates algorithm. This system enables users to dynamically adjust axis vectors via mouse interactions, offering a live update of data projections that enhances understanding of complex datasets. Additionally, I implemented CheckViz, a component that visualizes distortions such as Missing and False Neighbors, using a color-coded Voronoi diagram to indicate the level of distortion for each data point. This approach not only provides insights into the data integrity after projection but also helps in assessing the trustworthiness of the multidimensional projection. By integrating these tools into a user-friendly interface with real-time feedback and a clear legend for distortion interpretation, the project successfully simplifies the complexity of high-dimensional data analysis, making it accessible and actionable for users.</p>
+      <strong>My role in this project:</strong> Solo project.
+    tags:
+      - Visualization
+      - Curricular
+      - Developer
+      - Designer
+      - D3
+    description: "Developed a visualization system using Star Coordinates and CheckViz to analyze high-dimensional data."
 
 
   - title: "Modeling Character interactions using graph theory analysis: Summarizing key character relationships in Les Miserables"
@@ -303,24 +319,6 @@ Follow-up Queries with User Satisfaction"
       - Perception
     description: "Created an interactive system to study the effectiveness of different visual encodings in data representation."
 
-
-
-  - title: "Star Coordinates & CheckViz"
-    image: "checkviz.png"
-    link: "https://github.com/taehyun2017330/Visualizations/tree/main/Checkviz"
-    detail: >
-      <div style="text-align: center;">
-        <img src='site.baseurl/assets/images/project_detail/checkviz.png' class='img-responsive'>
-      </div>
-      <p>I developed a visualization system to effectively represent high-dimensional data in a comprehensible two-dimensional format using the Star Coordinates algorithm. This system enables users to dynamically adjust axis vectors via mouse interactions, offering a live update of data projections that enhances understanding of complex datasets. Additionally, I implemented CheckViz, a component that visualizes distortions such as Missing and False Neighbors, using a color-coded Voronoi diagram to indicate the level of distortion for each data point. This approach not only provides insights into the data integrity after projection but also helps in assessing the trustworthiness of the multidimensional projection. By integrating these tools into a user-friendly interface with real-time feedback and a clear legend for distortion interpretation, the project successfully simplifies the complexity of high-dimensional data analysis, making it accessible and actionable for users.</p>
-      <strong>My role in this project:</strong> Solo project.
-    tags:
-      - Visualization
-      - Curricular
-      - Developer
-      - Designer
-      - D3
-    description: "Developed a visualization system using Star Coordinates and CheckViz to analyze high-dimensional data."
 
   - title: "Enhancing AR Experiences: Benchmarking Handtracking for Samsung's Vision AR Goggles"
     image: "samsung.png"
