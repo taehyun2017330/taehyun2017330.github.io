@@ -142,8 +142,11 @@ nav {
 }
 
 .project-tag.active {
-  background-color: var(--global-theme-color); /* Blue background for active state */
-  color: white;
+  background-color: var(--global-theme-color) ; /* Blue background for active state */
+  color: white ;
+}
+.project-tag.active[data-tag="Highlighted Work"]{
+  background-color: #fbb113!important;
 }
 
 
@@ -307,6 +310,10 @@ nav ul li a, nav ul li a:hover{
   color: black; /* Ensures text inside the container is black */
 }
 
+.archive-container.highlighted-work {
+  border: 3px solid #f7e09d; /* Change color and thickness of the border */
+}
+
 .archive-title {
   font-weight: bold;
   color: #002D72; /* Makes title text black */
@@ -316,7 +323,8 @@ nav ul li a, nav ul li a:hover{
   font-weight: 500;
 }
 .modal-description{
-  font-size: 80%;
+  font-size: 90%;
+  font-weight: 500;
 }
 
 .modal-description,
@@ -349,10 +357,18 @@ nav ul li a, nav ul li a:hover{
 .tags a::before {
   content: "#"; /* Adds # before each tag */
 }
+.tags a[data-tag="Highlighted Work"] {
+  background-color: #ffd75e; /* Light red background for Highlighted Work tag */
+  color: black; /* Ensure text color is readable */
+}
+
 @media (min-width: 960px) {
   .container.py-4 {
     width: 120%;
     margin-left: -20px;
+  }
+  .row.mt-3.g-3.grid{
+    width: 130%;
   }
 }
 

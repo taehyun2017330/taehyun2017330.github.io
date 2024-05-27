@@ -1,53 +1,135 @@
 project:
-  - title: "Do VIS Researchers Report (and Optimize) their Hyperparameters?"
-    image: "vis.png"
+
+  - title: "Improving trust in AI Audits: The Role of Human-AI Interaction in Decision-Making"
+    image: 
+    detail: >
+      <p>As AI auditing in hiring processes gains importance, New York City now requires companies to audit their AI systems for bias. However, the novelty of this requirement has led to several challenges, including loopholes and employee resistance, stemming largely from the autonomy companies have to self-audit and report results.<br></p>
+    
+      <p>My research investigates the perspectives of lawmakers, managers, and AI system builders on AI auditing in HR. I aim to enhance trust in these systems by improving transparency, interpretability, privacy, and by adding human intervention into the algorithms. This relatively unexplored area offers a significant opportunity for impactful research.<br></p>
+    
+      <p>Currently discussing opportunities with several professors in the intersection of HCI, Business, and Law.</p>
+    tags:
+      - Highlighted Work
+      - HAI
+      - Work in Progress
+      - Researcher
+      - Lead
+      - Cocurricular
+      
+    description: "Currently on going project to investigate how human-AI interaction affects trust in AI audits."
+
+  - title: "The Bigger They Are, The Finer We See: Exploring Scatterplot Size and Cluster granularity"
+    image: "granularity.png"
+    link: "https://taehyun2017330.github.io/ClusterGranularity_ClusterDemo-/"
     detail: >
       <div style="text-align: center;">
-        <img src='site.baseurl/assets/images/project_detail/vis.png' class='img-responsive'>
+        <img src='site.baseurl/assets/images/project_detail/granularity.png' class='img-responsive'>
       </div>
-      <p>In our project, we conducted a comprehensive analysis of papers published in VIS venues to assess whether researchers report and optimize their hyperparameters, a critical practice for ensuring the reproducibility, transparency, and credibility of machine learning-based research. Despite the essential nature of this practice, preliminary observations suggest a lack of consistent reporting and optimization within the community. As the third author, my role was pivotal in developing evaluation criteria for the trustworthiness of machine-learning techniques and creating an automated system to detect the presence of hyperparameter reporting and optimization in these academic papers. This project highlights significant gaps in current research practices and aims to encourage more rigorous standards in the VIS community.</p>
-      <strong>My role in this project:</strong> Third author in helping build evaluation to what it means to trust a machine-learning techniques and automatically detect them in papers.
+      
+      <p>This project attempts to enhancing human task performance in performing clustering tasks by addressing the perceptual biases introduced by variations in scatterplot sizes. It started with my personal goal to reduce bias and help people create more accurate decision-making based on visual data interpretation.<br></p>
+
+      <p>The project'sapproach involved conducting user studies that compared various scatterplot sizes and their effects on clustering assignments. I discovered that larger scatterplot sizes tend to make cluster assignments appear more granular, while smaller sizes often result in a coarser clustering perception. This observation led to the development of strategies to mitigate perceptual biases introduced by geometric scaling.<br></p>
+
+      <p>To address these biases, I created a model to offset the influence of plot size on cluster recognition. Additionally, I developed a system that automatically adjusts scatterplot and point sizes to maintain consistent cluster granularity across different viewing conditions.<br></p>
+
+      <p><span style="font-weight: bold;">I presented these findings and the methods for countering bias in visual data interpretation at K-Vis 2023. The solutions proposed have been further elaborated in a submission as a paper, where we outline how to maintain consistent data interpretation despite variations in display characteristics.</span></p>
+
+      <strong>My role in this project:</strong> First author research project submited to IEEE VIS '24and invited speaker at K-Vis 2023.
     tags:
+      - Highlighted Work
       - Visualization
       - Researcher
-      - Work in Progress
+      - Lead
+      - Modeling
+      - Perception
       - Internship
-      - Cocurricular
-    description: "Analyzed VIS papers to assess hyperparameter reporting and optimization, highlighting gaps in research practices."
+      
+    description: "Investigated how scatterplot size affects perception of data clusters, with findings presented at K-Vis 2023."
 
-  - title: "Question, Answer, and Connect: Creating Easily Digestible Mass Group Chats with AI-Driven Conversation Linking"
+  - title: "Question, Answer, and Connect: Simulating Student Personas to Improve Q&A Chatrooms"
     image: "qac.png"
     detail: >
       <div style="text-align: center;">
         <img src='site.baseurl/assets/images/project_detail/qac.png' class='img-responsive'>
       </div>
-      <p>For the "Question, Answer, and Connect" project, I led the design and implementation of an AI-driven system to streamline mass group chats. I conducted a needs analysis to identify user challenges in asynchronous Q&A environments, designed the system architecture, and selected the technology stack, including React for the frontend and Node.js for the backend. I developed algorithms to automatically link related questions and answers, ensuring contextual coherence. Additionally, I integrated natural language processing (NLP) techniques to enhance the system's ability to understand and match conversational elements, and conducted extensive testing to refine its accuracy and user experience.</p>
+      <p>Question, Answer, and Connect began with personal frustrations regarding how Q&A massive group chats used in courses were extremely uncomfortable. Our initial low-fidelity demo, using Piazza-style bullet-type Q&A boards, revealed that more people preferred real-time chats. To address the problem of asynchronous, untimely, and repetitive questions, we aimed to maintain the real-time, convenient format of chatrooms while solving these issues. <br></p>
+      <p>By analyzing collected data, we used large LLMs to simulate student personas, predict frequently asked questions, and test if these questions were indeed asked.<span style="font-weight: bold;"> I led the design and implementation of the system, conducting preliminary studies and low-fidelity demos, designing prototypes, and refining user experience through iterative testing.</span></p>  
       <strong>My role in this project:</strong> Project lead.
+    link: "https://github.com/ZzeongB/Question-Answer-and-Connect"
     tags:
+      - Highlighted Work
       - HAI
+      - HCI
       - Researcher
       - LLM
       - Systembuilding
       - Lead
-      - Work in Progress
+      
     description: "Developed an AI-driven system to streamline mass group chats by linking related questions and answers."
 
-  - title: "JDnews: Engaging Middle Schoolers with AI-Powered News Summaries"
-    image: "jdnews.png"
+  - title: "Using LLMs to Investigate Correlations of Conversational
+Follow-up Queries with User Satisfaction"
+    image: "classifier.png"
     detail: >
       <div style="text-align: center;">
-        <img src='site.baseurl/assets/images/project_detail/jdnews.png' class='img-responsive'>
+        <img src='site.baseurl/assets/images/project_detail/classifier.png' class='img-responsive'>
       </div>
-      <p>JDnews, which stands for Joong Ding (a humorous way to refer to middle schoolers, similar to the slang term “Zoomer”), was created to address the problem of middle schoolers not being interested in reading newspapers. This project was developed as part of LG AI Camp 2024 mentoring, where I led a group of middle schoolers and taught them React, backend coding, and how to fine-tune an LLM model. The system we built automatically reads newspaper articles from a screenshot or link. The model was further trained with essential middle school-level vocabulary from the Korean traditional dictionary by the National Institute of Korean Language (국립국어원) to generate summaries tailored precisely for middle schoolers. The project received a runner-up award at the camp, giving us the wonderful opportunity to send several students to a summer camp at Stanford. The entire project was created by four amazing students I mentored for six months.</p>
-      <strong>My role in this project:</strong> Advisor, mentor, and project lead.
-    link: "www.jdnews2024.com"
+      <p>Collaborated with <a href="https://www.kixlab.org" target="_blank">KAIST KIXLAB's</a>, <a href="https://hyunwoo.me/" target="_blank">Hyunwoo</a>, <a href="https://www.yoonseochoi.com/" target="_blank">Yoonseo</a>, and <a href="https://cue.search.naver.com/" target="_blank">Naver's Conversation LLM Team</a> to create a taxonomy of conversational follow-up queries, discovering new user interactions from traditional LLM searches. We investigated how users' intent and method of asking the conversational agent correlated with user satisfaction. <br></p>
+      <p><span style="font-weight: bold;">During this research project, I was responsible for conducting thematic analysis for lab data, iterating and coding datasets to create the taxonomy, academic writing, and creating an automatic LLM taxonomy classifier that showed us user interactions we missed.</span> This work was advised by <a href="https://juhokim.com/" target="_blank">Juho Kim</a> submitted to the LLM4Eval workshop at SIGIR 2024.</p>
+      <strong>My role in this project:</strong> Came up with the idea and solved the problem that the research was currently stuck in.
     tags:
+      - Highlighted Work
+      - HAI
+      - HCI
+      - LLM
+      - Researcher
+      - Developer
+      - Internship
+    description: "Developed a taxonomy of conversational queries, created a LLM classifier to observe new interactions, and analyzed user intent, action, and satisfaction."
+    
+  - title: "Causeway: Enhancing Real-World Contributions in Web-Dev Learning using Subgoal Labels"
+    image: "causeway.png"
+    link: "https://causeway.soe.ucsc.edu/#/reference/-comp-data/1"
+    detail: >
+      <div style="text-align: center;">
+        <img src='site.baseurl/assets/images/project_detail/causeway.png' class='img-responsive'>
+      </div>
+      <br><p>This project attempts to invite novices into scaling situated learning in web development, an environment where users can learn while contributing to real-life systems. This system employs <span style="font-weight: bold;">micro-role hierarchies</span> to enable novices to make meaningful contributions to real-world projects. By dividing complex tasks into manageable micro-roles, each taking approximately two hours, we facilitate a learning process that mimics ascending an organizational hierarchy.<br></p>
+
+      <p>This model was implemented through the <span style="font-weight: bold;">Causeway platform</span>, where learners collaborate to build websites for non-profit organizations. In our proof-of-concept study, participants successfully created static websites for refugee resettlement agencies, demonstrating the effectiveness of micro-roles in providing practical and educational value.<br></p>
+
+      <p>As the project lead, I managed a diverse team of fifteen graduate and undergraduate students to expand on the <a href="https://tech4good.soe.ucsc.edu/assets/docs/chi-2019-ca.pdf" target ="_blank">previous work</a> that received an honorable mention at CHI 2019. My responsibilities were to lead the development and integration of <span style="font-weight: bold;">micro-role hierarchies</span> within the Causeway platform, enhancing its capability to support web development education through structured, real-world contributions. To test this system for an actual user study, I had to conduct proto studies, interviews, and thematic analysis to explore how we can encourage novices to contribute while learning. This project not only highlighted the potential of micro-role hierarchies to transform educational approaches in technical fields but also reinforced the importance of practical experience in learning environments.<br></p>
+
+      <strong>My role in this project:</strong> Project lead coordinating small groups of graduate/undergraduate students.
+    tags:
+      - Highlighted Work
       - HCI
       - Learning
       - Lead
-      - LLM
-      - Cocurricular
-    description: "Led a project to create AI-powered news summaries tailored for middle schoolers, winning a runner-up award."
+      - Researcher
+      - Systembuilding
+      - Developer
+      - Internship
+    description: "Lead and developed a learning system for web development novices to explore how we can encourage novices to contribute while learning."
+
+  - title: "UMATO: Two-phase Manifold Approximation for Accurate, Scalable, and Stable Dimensionality Reduction"
+    image: "umato.png"
+    link: "https://taehyun2017330.github.io/Umato_VisualizationDemo/"
+    detail: >
+      <div style="text-align: center;">
+        <img src='site.baseurl/assets/images/project_detail/umato.png' class='img-responsive'>
+      </div>
+      <p>We introduce a novel dimensionality reduction technique designed to address the shortcomings of well-known methods like UMAP and t-SNE. UMATO, or Uniform Manifold Approximation with Two-phase Optimization, enhances accuracy, scalability, and stability in processing high-dimensional data. As the third author, my role involved evaluating the UMATO algorithm and contributing to the development of an interactive demonstration. This demo serves as both a practical and visual supplement to our academic paper, allowing users to explore various datasets and adjust parameters to see the effectiveness of UMATO in real-time. Through this project, we introduced a new dimensionality reduction method, providing a more reliable tool for researchers and data scientists to uncover meaningful patterns in complex data.</p>
+      <strong>My role in this project:</strong> Third author with responsibilities to evaluate the DR algorithm and create a demo to show the effectiveness of the DR algorithm.
+    tags:
+      - Highlighted Work
+      - Visualization
+      - Researcher
+      - Developer
+      - D3
+      - Work in Progress
+    description: "Evaluated the UMATO algorithm and developed a demo for real-time exploration of its effectiveness."
+
 
   - title: "FashionAlign: Multimodal Search System for Fashion Exploration"
     image: "fashionalign.png"
@@ -66,8 +148,64 @@ project:
       - Designer
       - Developer
       - Researcher
-      - D3
     description: "Developed an AI system to enhance fashion search by aligning textual descriptions with visual features."
+    link: "https://github.com/taehyun2017330/Fashion_align"
+
+  - title: "JDnews: Engaging Middle Schoolers with AI-Powered News Summaries"
+    image: "jdnews.png"
+    detail: >
+      <div style="text-align: center;">
+        <img src='site.baseurl/assets/images/project_detail/jdnews.png' class='img-responsive'>
+      </div>
+      <p>JDnews, short for Joong Ding (a playful term for middle schoolers akin to "Zoomer"), was created to engage middle schoolers in reading newspapers. Collaborating with <a href="https://aitimes.com/news/articleView.html?idxno=155093" target="_blank">LG AI Discovery Lab</a>, we created a system that automatically takes newspaper and generates summaries with vocabulary suited for middle schoolers, using data from the Korean traditional dictionary to train and create our own LLM. The project earned a runner-up award at the camp, allowing several students to attend a summer camp at Stanford. <span style="font-weight: bold;"> I led a group of four amazing students and mentored the implementation, design, and ideation process. </span> </p>
+      <strong>My role in this project:</strong> Advisor, mentor, and project lead.
+    link: "https://jdnews2024.com/"
+    tags:
+      - HCI
+      - Learning
+      - Lead
+      - LLM
+      - Cocurricular
+    description: "Led a project to create AI-powered news summaries tailored for middle schoolers, winning a runner-up award."
+
+
+  - title: "Do VIS Researchers Report (and Optimize) their Hyperparameters?"
+    image: 
+    detail: >
+    
+      <p>In this project, we conducted a comprehensive analysis of papers published in VIS venues to assess whether researchers report and optimize their hyperparameters, and to understand the reasons behind their practices. <span style="font-weight: bold;">Along with my co-researcher, I proposed the idea, developed evaluation criteria to assess researchers' trust in hyperparameters, and created an automated system to detect whether researchers have reported them academic papers.</span> This project highlights significant gaps in current research practices and aims to encourage more rigorous standards in the VIS community.</p>
+      <strong>My role in this project:</strong> Third author in creating automatic measurement systems for hyperparameter measures, and creating a writing system that will help people write hyperparameters.
+    tags:
+      - Visualization
+      - Researcher
+      - Work in Progress
+      - Developer
+      - Internship
+      - Cocurricular
+    description: "Analyzed VIS papers to assess hyperparameter reporting and optimization, highlighting gaps in research practices."
+ 
+
+
+  - title: "Datasaurus Dozen"
+    image: "datasaurus.png"
+    link: "https://github.com/taehyun2017330/Visualizations/tree/main/DataSaurus%20Dozen"
+    detail: >
+      <div style="text-align: center;">
+        <img src='site.baseurl/assets/images/project_detail/datasaurus.png' class='img-responsive'>
+      </div>
+      <p>This project is a statistical analysis and data visualization exploration using the Datasaurus Dozen, a modern take on Anscombe's Quartet that demonstrates the limitations of relying solely on statistical summaries. By employing the Datasaurus Dozen datasets, which consist of dinosaur-shaped data points and other configurations that share identical statistical properties yet display visually distinct patterns. This solo project involves creating and analyzing visual representations with D3 to vividly illustrate how different datasets can appear despite having the same statistical measures, thus highlighting the necessity of graphical analysis in visualization.</p>
+      <strong>My role in this project:</strong> Solo Project.
+    tags:
+      - Visualization
+      - Lead
+      - Developer
+      - Curricular
+      - Designer
+      - D3
+      
+    description: "Analyzed the Datasaurus Dozen to emphasize the need for visual representation alongside statistical summaries." 
+
+
 
   - title: "Nostalgia VS Hype? Understanding how user sentiment changes with these features in video games."
     image: "game.png"
@@ -85,21 +223,7 @@ project:
       - Cocurricular
     description: "Analyzed social media data to compare user sentiment towards 'MapleStory' and 'Overwatch'."
 
-  - title: "LLM Taxonomy Classifier"
-    image: "classifier.png"
-    detail: >
-      <div style="text-align: center;">
-        <img src='site.baseurl/assets/images/project_detail/classifier.png' class='img-responsive'>
-      </div>
-      <p>In our research paper on conversational LLM agents, we focused on developing a scalable and accurate LLM Taxonomy Classifier to analyze a large corpus of real and lab conversational data. The project involved iteratively designing and refining a GPT-4 based classifier to automatically categorize each conversational tuple according to our taxonomy, which was derived from existing qualitative coding practices with LLMs. We aimed to optimize the classifier for comprehensive coverage, high accuracy, and efficiency. Initial versions tested against manually coded data revealed gaps, which led us to expand our taxonomy to include overlooked conversational elements like casual chatting. To improve accuracy, we refined taxonomy definitions, prioritized classification types, and utilized few-shot learning with precisely chosen examples to correct frequent misclassifications. Efficiency was enhanced by optimizing prompt lengths and eliminating non-essential elements, ensuring the classifier was suitable for large-scale applications. The refined classifier underwent rigorous testing to confirm its effectiveness, comparing its performance to human-labeled data with a focus on user motivations and patterns of follow-up queries. The final system achieved substantial accuracies of 74.39% and 71.11% in these areas, respectively. This project not only advanced our understanding of LLM-based conversation analysis but also demonstrated the potential of machine learning in enhancing the accuracy and efficiency of qualitative research tools.</p>
-      <strong>My role in this project:</strong> Came up with the idea and solved the problem that the research was currently stuck in.
-    tags:
-      - HAI
-      - LLM
-      - Researcher
-      - Developer
-      - Internship
-    description: "Developed a scalable GPT-4 based classifier for categorizing conversational data, achieving high accuracy."
+
 
   - title: "Modeling Character interactions using graph theory analysis: Summarizing key character relationships in Les Miserables"
     image: "les.png"
@@ -116,6 +240,8 @@ project:
       - Lead
     description: "Used graph theory to analyze character relationships in 'Les Misérables,' revealing key roles and community structures."
 
+    
+
   - title: "Using PageRank and MapReduce to Identify Key Characters in Fiction Novels"
     image: "pagerank.png"
     detail: >
@@ -129,25 +255,6 @@ project:
       - Lead
       - Cocurricular
     description: "Adapted PageRank with MapReduce to analyze and identify key characters in fiction novels."
-
-  - title: "The Bigger They Are, The Finer We See: Exploring Scatterplot Size and Cluster granularity"
-    image: "granularity.png"
-    link: "https://taehyun2017330.github.io/ClusterGranularity_ClusterDemo-/"
-    detail: >
-      <div style="text-align: center;">
-        <img src='site.baseurl/assets/images/project_detail/granularity.png' class='img-responsive'>
-      </div>
-      <p>In the project I explored into how variations in scatterplot sizes and resolutions affect human perception of data clusters. I examined the impact of display characteristics on visual clustering, crucial for interpreting complex data visualizations effectively. By altering different scatterplot features and engaging user groups in a quantitative study, I developed a model to simulate how different visual conditions influence cluster recognition. This approach aimed to optimize how data is visually represented across varying screen sizes, ensuring consistency in data interpretation regardless of the display format. Our findings illuminate significant behaviors and biases in visual data interpretation, highlighting how plot size and resolution can distort perceived cluster granularity. This research, which was presented at K-Vis 2023, contributes valuable recommendations for maintaining consistent cluster granularity.</p>
-      <strong>My role in this project:</strong> Solo research project as project lead finished with a research talk at K-Vis 2023.
-    tags:
-      - Visualization
-      - Researcher
-      - Lead
-      - Modeling
-      - Perception
-      - Internship
-      - D3
-    description: "Investigated how scatterplot size affects perception of data clusters, with findings presented at K-Vis 2023."
 
   - title: "Simulating Multiracial Community Dynamics Using the Schelling Model"
     image: "scheling.png"
@@ -163,42 +270,6 @@ project:
       - Modeling
       - Curricular
     description: "Used the Schelling model to simulate and analyze residential segregation in multiracial communities."
-
-  - title: "Datasaurus Dozen"
-    image: "datasaurus.png"
-    link: "https://github.com/taehyun2017330/Visualizations/tree/main/DataSaurus%20Dozen"
-    detail: >
-      <div style="text-align: center;">
-        <img src='site.baseurl/assets/images/project_detail/datasaurus.png' class='img-responsive'>
-      </div>
-      <p>This project is a statistical analysis and data visualization exploration using the Datasaurus Dozen, a modern take on Anscombe's Quartet that demonstrates the limitations of relying solely on statistical summaries. By employing the Datasaurus Dozen datasets, which consist of dinosaur-shaped data points and other configurations that share identical statistical properties yet display visually distinct patterns. This solo project involves creating and analyzing visual representations with D3 to vividly illustrate how different datasets can appear despite having the same statistical measures, thus highlighting the necessity of graphical analysis in visualization.</p>
-      <strong>My role in this project:</strong> Solo Project.
-    tags:
-      - Visualization
-      - Lead
-      - Developer
-      - Curricular
-      - D3
-    description: "Analyzed the Datasaurus Dozen to emphasize the need for visual representation alongside statistical summaries."
-
-  - title: "Causeway: Enhancing Real-World Contributions in Web Development Learning using Micro-Role Hierarchies and Subgoal Labels"
-    image: "causeway.png"
-    link: "https://causeway.soe.ucsc.edu/#/reference/-comp-data/1"
-    detail: >
-      <div style="text-align: center;">
-        <img src='site.baseurl/assets/images/project_detail/causeway.png' class='img-responsive'>
-      </div>
-      <p>The "Causeway: Scaling Situated Learning with Micro-Role Hierarchies" project innovatively addresses the challenge of scaling situated learning in web development. This system employs micro-role hierarchies to enable novices to make meaningful contributions to real-world projects. By dividing complex tasks into manageable micro-roles, each taking approximately two hours, we facilitate a learning process that mimics ascending an organizational hierarchy. This model was implemented through the Causeway platform, where learners collaborate to build websites for non-profit organizations. In our proof-of-concept study, participants successfully created static websites for refugee resettlement agencies, demonstrating the effectiveness of micro-roles in providing practical and educational value. As the project lead, I managed a diverse team of fifteen graduate and undergraduate students to expand on the previous work (Causeway: Scaling Situated Learning with Micro-Role Hierarchies) that received an honorable mention at CHI 2019. My role involved coordinating the development and integration of micro-role hierarchies within the Causeway platform, enhancing its capability to support web development education through structured, real-world contributions. This project not only highlighted the potential of micro-role hierarchies to transform educational approaches in technical fields but also reinforced the importance of practical experience in learning environments.</p>
-      <strong>My role in this project:</strong> Project lead with 15 other graduate/undergraduate students.
-    tags:
-      - HCI
-      - Learning
-      - Lead
-      - Researcher
-      - Systembuilding
-      - Developer
-      - Internship
-    description: "Developed micro-role hierarchy system for web development learning, facilitating real-world contributions."
 
   - title: "Analysis of SEIR Model for COVID-19 in South Korea and the United States"
     image: "seir.png"
@@ -233,6 +304,8 @@ project:
       - Perception
     description: "Created an interactive system to study the effectiveness of different visual encodings in data representation."
 
+
+
   - title: "Star Coordinates & CheckViz"
     image: "checkviz.png"
     link: "https://github.com/taehyun2017330/Visualizations/tree/main/Checkviz"
@@ -249,24 +322,6 @@ project:
       - Designer
       - D3
     description: "Developed a visualization system using Star Coordinates and CheckViz to analyze high-dimensional data."
-
-  - title: "UMATO: Two-phase Manifold Approximation for Accurate, Scalable, and Stable Dimensionality Reduction"
-    image: "umato.png"
-    link: "https://taehyun2017330.github.io/Umato_VisualizationDemo/"
-    detail: >
-      <div style="text-align: center;">
-        <img src='site.baseurl/assets/images/project_detail/umato.png' class='img-responsive'>
-      </div>
-      <p>We introduce a novel dimensionality reduction technique designed to address the shortcomings of well-known methods like UMAP and t-SNE. UMATO, or Uniform Manifold Approximation with Two-phase Optimization, enhances accuracy, scalability, and stability in processing high-dimensional data. As the third author, my role involved evaluating the UMATO algorithm and contributing to the development of an interactive demonstration. This demo serves as both a practical and visual supplement to our academic paper, allowing users to explore various datasets and adjust parameters to see the effectiveness of UMATO in real-time. Through this project, we introduced a new dimensionality reduction method, providing a more reliable tool for researchers and data scientists to uncover meaningful patterns in complex data.</p>
-      <strong>My role in this project:</strong> Third author that helped evaluate the DR algorithm and demo to show the effectiveness of the DR algorithm.
-    tags:
-      - Visualization
-      - Researcher
-      - Developer
-      - DimensionalityReduction
-      - D3
-      - Work in Progress
-    description: "Evaluated the UMATO algorithm and developed a demo for real-time exploration of its effectiveness."
 
   - title: "Enhancing AR Experiences: Benchmarking Handtracking for Samsung's Vision AR Goggles"
     image: "samsung.png"

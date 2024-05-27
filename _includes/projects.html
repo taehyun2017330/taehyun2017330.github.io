@@ -31,12 +31,12 @@
     <div class="category">
       <h5>Secondary</h5>
       <div class="tags">
+        <a class="project-tag" href="#" data-tag="Highlighted Work">Highlighted Work</a>
         <a class="project-tag" href="#" data-tag="LLM">LLM</a>
         <a class="project-tag" href="#" data-tag="Systembuilding">Systembuilding</a>
         <a class="project-tag" href="#" data-tag="Perception">Perception</a>
         <a class="project-tag" href="#" data-tag="Modeling">Modeling</a>
-        <a class="project-tag" href="#" data-tag="D3">D3</a>
-        <a class="project-tag" href="#" data-tag="DimensionalityReduction">DimensionalityReduction</a>
+        <a class="project-tag" href="#" data-tag="D3">D3</a>    
         <a class="project-tag" href="#" data-tag="Social Service">Social Service</a>
         <a class="project-tag" href="#" data-tag="Work in Progress">Work in Progress</a>
         <a class="project-tag" href="#" data-tag="AR/VR">AR/VR</a>
@@ -84,10 +84,12 @@
           data-bs-toggle="modal"
           data-bs-target="#modal{{ forloop.index }}"
         >
-          <img
-            class="archive-img"
-            src="{{ proj.image | prepend: '/assets/images/project/' | relative_url }}"
-          />
+        {% if proj.image %}
+        <img
+          class="archive-img"
+          src="{{ proj.image | prepend: '/assets/images/project/' | relative_url }}"
+        />
+      {% endif %}
           <div class="archive-container-inner">
             <p class="archive-title">{{ proj.title }}</p>
             <p class="archive-description">{{ proj.description }}</p>
@@ -202,6 +204,15 @@
       const tags = document.querySelectorAll('.project-tag');
       const projects = document.querySelectorAll('.grid-item');
       let activeTags = new Set();
+
+      document.querySelectorAll('.archive-container').forEach(container => {
+    const tags = container.querySelectorAll('.project-tag');
+    tags.forEach(tag => {
+      if (tag.getAttribute('data-tag') === 'Highlighted Work') {
+        container.classList.add('highlighted-work');
+      }
+    });
+  });
     
       tags.forEach(tag => {
         tag.addEventListener('click', function(event) {

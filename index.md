@@ -10,10 +10,10 @@ layout: homepage
   </p>
   I'm passionate about creating meaningful interactions between humans and computers and exploring human behavior. My academic journey in **Computer Science and Engineering** has given me interest for **Data Visualization**, **Social Computing**, and **System Building**
   
-  Currently I am focused on two main topics:
+  Previously, my research was centered on helping human decision-making in data visualization tasks. <strong>Currently, I am focused on helping humans perform better in two new tasks:</strong>
   
-  1. **Exploring Human - AI interaction** to improve decision making in AI auditing systems and help policy makers make reliable decisions.
-  2. **Enhancing the management of mass group chats** in educational and large group settings by addressing the challenges of asynchronous communication.
+  1. <a href="javascript:showContent('projects');" class="nav-link">**Human-AI Interaction**: Enhancing decision-making processes in AI auditing systems to aid policymakers in making reliable decisions.</a>
+  2. <a href="javascript:showContent('projects');" class="nav-link">**Improving Learning Outcomes in Large-Group Settings**: Helping students and TAs learn and teach better in asynchronous environments.</a>
 
 {% include_relative _includes/publications.md %}
 {% include_relative _includes/services.md %}
