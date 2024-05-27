@@ -93,7 +93,7 @@ Follow-up Queries with User Satisfaction"
       <div style="text-align: center;">
         <img src='site.baseurl/assets/images/project_detail/causeway.png' class='img-responsive'>
       </div>
-      <br><p>This project attempts to invite novices into scaling situated learning in web development, an environment where users can learn while contributing to real-life systems. This system employs <span style="font-weight: bold;">micro-role hierarchies</span> to enable novices to make meaningful contributions to real-world projects. By dividing complex tasks into manageable micro-roles, each taking approximately two hours, we facilitate a learning process that mimics ascending an organizational hierarchy.<br></p>
+      <br><p>Collaborated with <a href="https://scholar.google.com/citations?user=NG3F9uwAAAAJ&hl=en" target ="_blank">David Lee</a>from UCSC to lead novices into scaling situated learning in web development, an environment where users can learn while contributing to real-life systems. This system employs <span style="font-weight: bold;">micro-role hierarchies</span> to enable novices to make meaningful contributions to real-world projects. By dividing complex tasks into manageable micro-roles, each taking approximately two hours, we facilitate a learning process that mimics ascending an organizational hierarchy.<br></p>
 
       <p>This model was implemented through the <span style="font-weight: bold;">Causeway platform</span>, where learners collaborate to build websites for non-profit organizations. In our proof-of-concept study, participants successfully created static websites for refugee resettlement agencies, demonstrating the effectiveness of micro-roles in providing practical and educational value.<br></p>
 
