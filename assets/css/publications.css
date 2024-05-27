@@ -160,10 +160,7 @@ nav ul {
   align-items: center; /* Vertically centers the items */
 }
 
-/* Resets border-radius for all states */
-nav, nav ul, nav ul li, nav ul li a {
-  border-radius: 0 !important; /* Forcefully removes any border radius */
-}
+
 
 @media (max-width: 960px) {
   nav ul, nav ul li, nav ul li a {
@@ -285,15 +282,7 @@ nav ul li a {
   }
 
   /* Override any styles for the theme toggle to keep it consistent */
-  nav ul li:theme-toggle:hover,
-  nav ul li:theme-toggle a:hover,
-  nav ul li:theme-toggle:focus-within,
-  nav ul li:theme-toggle a:focus {
-    background-color: black;
-    font-weight: bold;
-    text-decoration: underline;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
+
 }
 
 
