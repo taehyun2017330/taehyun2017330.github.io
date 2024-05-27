@@ -112,9 +112,9 @@
           <div class="modal-content">
             <div class="modal-header">
               <div style="display: block !important">
-                <h5 class="modal-title" id="exampleModalLabel">
+                <h4 class="modal-title" id="exampleModalLabel">
                   {{ proj.title }}
-                </h5>
+                </h4>
                 <p class="modal-description">{{ proj.description }}</p>
                 <p class="modal-link">
                   {% if proj.paper %}<a
@@ -188,6 +188,16 @@
   </script>
   
   <script>
+    function updateTagVisuals(tagValue, isActive) {
+  document.querySelectorAll(`.project-tag[data-tag="${tagValue}"]`).forEach(tag => {
+    if (isActive) {
+      tag.classList.add('active');
+    } else {
+      tag.classList.remove('active');
+    }
+  });
+}
+
     document.addEventListener("DOMContentLoaded", function() {
       const tags = document.querySelectorAll('.project-tag');
       const projects = document.querySelectorAll('.grid-item');
@@ -196,27 +206,35 @@
       tags.forEach(tag => {
         tag.addEventListener('click', function(event) {
           event.preventDefault();
+          event.stopPropagation();
           const tagValue = this.getAttribute('data-tag');
     
           if (this.classList.contains('active')) {
             this.classList.remove('active');
             activeTags.delete(tagValue);
-            console.log("Tag deactivated:", tagValue);
+            
           } else {
             this.classList.add('active');
             activeTags.add(tagValue);
-            console.log("Tag activated:", tagValue);
+        
           }
+          updateTagVisuals(tagValue, this.classList.contains('active'));
   
     
           filterProjects();
+
+          if (activeTags.size === 0) {
+        resetFilter();
+      }
         });
       });
+
+      function resetFilter() {
+    document.getElementById('reset-filter').click();
+  }
     
       function filterProjects() {
-        console.log(msnry);
-        console.log("Filtering projects...");
-        console.log("Active tags:", Array.from(activeTags));
+
         projects.forEach(project => {
           const projectTags = Array.from(project.querySelectorAll('.project-tag')).map(tag => tag.getAttribute('data-tag'));
           const showProject = Array.from(activeTags).every(tag => projectTags.includes(tag));
@@ -259,13 +277,14 @@
                 tag.style.display = 'inline-block';
             }
         });
-    }, 500);  // Match this delay with the CSS transition time
+    }, 200);  // Match this delay with the CSS transition time
 }
 
 document.getElementById('reset-filter').addEventListener('click', function() {
     activeTags.clear();
     tags.forEach(tag => {
         tag.classList.remove('active');
+        updateTagVisuals(tag.getAttribute('data-tag'), false);
         tag.style.display = 'inline-block';  // Ensure all tags are visible
         tag.style.opacity = '1';
         tag.style.transform = 'translateX(0px)';  // Reset transformation
@@ -303,6 +322,19 @@ document.getElementById('reset-filter').addEventListener('click', function() {
     }, 300); // This delay should match or exceed the CSS opacity transition time
   });
   
+  const modals = document.querySelectorAll('.modal'); // Assumption: Each project has a corresponding modal
+
+  // Remove the data-bs-toggle attributes to prevent automatic triggering
+  projects.forEach((project, index) => {
+    const modal = modals[index];
+    project.querySelector('.archive-container').removeAttribute('data-bs-toggle');
+    project.querySelector('.archive-container').addEventListener('click', function(event) {
+      if (!event.target.closest('.project-tag')) { // Check if the click is not from a tag
+        const modalInstance = new bootstrap.Modal(modal);
+        modalInstance.show();
+      }
+    });
+  });
   
   
     
@@ -316,14 +348,14 @@ document.getElementById('reset-filter').addEventListener('click', function() {
       requestAnimationFrame(() => {
         msnry.reloadItems();
         msnry.layout();
-        console.log("Masonry layout recalculated.");
+        
   
         // Log each visible grid item's position and title
         document.querySelectorAll('.grid-item').forEach(item => {
           if (item.style.display !== 'none') {
             const title = item.querySelector('.archive-title').textContent;
             const rect = item.getBoundingClientRect();
-            console.log('Item position:', rect, 'Title:', title);
+            
           }
         });
       });
@@ -337,10 +369,13 @@ document.getElementById('reset-filter').addEventListener('click', function() {
     transition: opacity 0.3s ease-in-out;
 }
   .tags a.project-tag {
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease;
     display: inline-block;  
     opacity: 1;            
 }
+.archive-container:hover {
+    cursor: pointer; /* Adds the cursor pointer on hover */
+  }
 
   
     </style>

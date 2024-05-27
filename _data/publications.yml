@@ -1,19 +1,19 @@
 main:
   - title: "Offsetting Perceptual Bias in Visual Clustering: The Role of Point Size Adjustment in Variable Display Sizes"
-    authors: <strong>Taehyun Yang</strong>, Hyeon Jeon, Jinwook Seo
+    authors: <strong><ss>Taehyun Yang</ss></strong>, Hyeon Jeon, Jinwook Seo
     conference_short: VIS
     conference: Submitted to IEEE Visualization Conference (VIS), 2024.
     image: ./assets/img/figure1.png
 
   - title: "Using LLMs to Investigate Correlations of Conversational Follow-up Queries with User Satisfaction"
-    authors: Hyunwoo Kim, Yoonseo Choi, <strong>Taehyun Yang</strong>, Honggu Lee, Chaneon Park, Yongju Lee, Jinyoung Kim, Juho Kim
+    authors: Hyunwoo Kim, Yoonseo Choi, <strong><ss>Taehyun Yang</ss></strong>, Honggu Lee, Chaneon Park, Yongju Lee, Jinyoung Kim, Juho Kim
     conference_short: SIGIR
     conference: Submitted to ACM SIGIR Conference on Research and Development in Information Retrieval, 2024.
     code: https://github.com/taehyun2017330/LLM-Classifier/tree/main
     image: ./assets/img/figure2.png
 
   - title: "UMATO: Two-phase Manifold Approximation for Accurate, Scalable, and Stable Dimensionality Reduction"
-    authors: Hyeon Jeon, Hyung-Kwon Ko, Soohyun Lee, Jake Hyun, <strong>Taehyun Yang</strong>, Gyehun Go, Jaemin Jo, Jinwook Seo
+    authors: Hyeon Jeon, Hyung-Kwon Ko, Soohyun Lee, Jake Hyun, <strong><ss>Taehyun Yang</ss></strong>, Gyehun Go, Jaemin Jo, Jinwook Seo
     conference_short: TVCG
     conference: Work in progress for IEEE Transactions on Visualization and Computer Graphics (TVCG)
     code: https://github.com/hyungkwonko/umato

@@ -7,7 +7,7 @@
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no;"/>
+    <meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no"/>
     <meta name="description" content="{{ site.description }}">
     <link id="style-dark" rel="stylesheet" href="./assets/css/style.css" disabled>
     <link id="style-publications-dark" rel="stylesheet" href="./assets/css/publications.css" disabled>
@@ -201,9 +201,9 @@ function showContent(section) {
     });
 
     var headerContent = document.querySelector('.header-content');
-    headerContent.style.display = (section !== 'fun') ? 'block' : 'none';
+   //headerContent.style.display = (section !== 'fun') ? 'block' : 'none';
 
-    document.body.style.overflow = (section === 'fun') ? 'hidden' : 'auto';
+    //document.body.style.overflow = (section === 'fun') ? 'hidden' : 'auto';
     if (section === 'fun') {
         window.scrollTo(0, 0);
     }
