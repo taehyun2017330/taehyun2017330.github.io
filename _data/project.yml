@@ -9,7 +9,6 @@ project:
     
       <p>Currently discussing opportunities with several professors in the intersection of HCI, Business, and Law.</p>
     tags:
-      - Highlighted Work
       - HAI
       - Work in Progress
       - Researcher
@@ -32,7 +31,7 @@ project:
 
       <p>To address these biases, I created a model to offset the influence of plot size on cluster recognition. Additionally, I developed a system that automatically adjusts scatterplot and point sizes to maintain consistent cluster granularity across different viewing conditions.<br></p>
 
-      <p><span style="font-weight: bold;">I presented these findings and the methods for countering bias in visual data interpretation at K-Vis 2023. The solutions proposed have been further elaborated in a submission as a paper, where we outline how to maintain consistent data interpretation despite variations in display characteristics.</span></p>
+      <p><span style="font-weight: bold;">I presented these findings and the methods for countering bias in visual data interpretation at K-Vis 2023. The solutions proposed have been further detailed as a paper submission, where we outline how to maintain consistent data interpretation in different screen displays.</span></p>
 
       <strong>My role in this project:</strong> First author research project submited to IEEE VIS '24and invited speaker at K-Vis 2023.
     tags:
