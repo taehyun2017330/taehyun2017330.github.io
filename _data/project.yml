@@ -58,7 +58,7 @@ project:
     tags:
       - Highlighted Work
       - HAI
-      - HCI
+      - Learning
       - Researcher
       - LLM
       - Systembuilding
@@ -93,9 +93,9 @@ Follow-up Queries with User Satisfaction"
       <div style="text-align: center;">
         <img src='site.baseurl/assets/images/project_detail/causeway.png' class='img-responsive'>
       </div>
-      <br><p>Collaborated with <a href="https://scholar.google.com/citations?user=NG3F9uwAAAAJ&hl=en" target ="_blank">David Lee</a>from UCSC to lead novices into scaling situated learning in web development, an environment where users can learn while contributing to real-life systems. This system employs <span style="font-weight: bold;">micro-role hierarchies</span> to enable novices to make meaningful contributions to real-world projects. By dividing complex tasks into manageable micro-roles, each taking approximately two hours, we facilitate a learning process that mimics ascending an organizational hierarchy.<br></p>
+      <br><p>Collaborated with <a href="https://scholar.google.com/citations?user=NG3F9uwAAAAJ&hl=en" target ="_blank">David Lee</a> from UCSC to help web dev novices learn while contributing to real-life systems. This system employs <span style="font-weight: bold;">micro-role hierarchies</span> to enable novices to make meaningful contributions to real-world projects. By dividing complex tasks into manageable micro-roles, we facilitate a learning process that allows novices to contribute to ongoing projects without having to go through the initial tutorials, which can often lead to boredom, fatigue, and loss of passion, as well as unnecessary time and overhead.<br></p>
 
-      <p>This model was implemented through the <span style="font-weight: bold;">Causeway platform</span>, where learners collaborate to build websites for non-profit organizations. In our proof-of-concept study, participants successfully created static websites for refugee resettlement agencies, demonstrating the effectiveness of micro-roles in providing practical and educational value.<br></p>
+      <p>We developed the <span style="font-weight: bold;">Causeway platform</span>, where learners collaborate to build websites for non-profit organizations. In our proof-of-concept study, participants successfully created static websites for refugee resettlement agencies, demonstrating the effectiveness of micro-roles in providing practical and educational value.<br></p>
 
       <p>As the project lead, I managed a diverse team of fifteen graduate and undergraduate students to expand on the <a href="https://tech4good.soe.ucsc.edu/assets/docs/chi-2019-ca.pdf" target ="_blank">previous work</a> that received an honorable mention at CHI 2019. My responsibilities were to lead the development and integration of <span style="font-weight: bold;">micro-role hierarchies</span> within the Causeway platform, enhancing its capability to support web development education through structured, real-world contributions. To test this system for an actual user study, I had to conduct proto studies, interviews, and thematic analysis to explore how we can encourage novices to contribute while learning. This project not only highlighted the potential of micro-role hierarchies to transform educational approaches in technical fields but also reinforced the importance of practical experience in learning environments.<br></p>
 
