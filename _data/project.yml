@@ -174,7 +174,7 @@ Follow-up Queries with User Satisfaction"
       <div style="text-align: center;">
         <img src='site.baseurl/assets/images/project_detail/AlertE.png' class='img-responsive'>
       </div>
-      <p>During my service as a social service agent, I contributed to the development of a critical alert service designed to protect civilians by notifying them of any nearby sex offenders. This service utilizes map data and information provided by the Ministry of Gender Equality and Family to deliver timely alerts. As a frontend designer and developer in the early stages of this project, <span style="font-weight: bold;">I developed and designed the user interface and conduct demo user testing to ensure whether users felt safer and protected with the program.</span></p>
+      <p>During my service as a social service agent, I contributed to the development of a critical alert service designed to protect civilians by notifying them of any nearby sex offenders. This service utilizes map data and information provided by the <a href="http://www.mogef.go.kr/" target="_blank">Ministry of Gender Equality and Family</a> to deliver timely alerts. As a frontend designer and developer in the early stages of this project, <span style="font-weight: bold;">I developed and designed the user interface and conduct demo user testing to ensure whether users felt safer and protected with the program.</span></p>
       <strong>My role in this project:</strong> Designer and developer for the platform.
     tags:
       - Systembuilding
