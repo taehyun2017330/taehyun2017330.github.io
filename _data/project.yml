@@ -93,11 +93,11 @@ Follow-up Queries with User Satisfaction"
       <div style="text-align: center;">
         <img src='site.baseurl/assets/images/project_detail/causeway.png' class='img-responsive'>
       </div>
-      <br><p>Collaborated with <a href="https://scholar.google.com/citations?user=NG3F9uwAAAAJ&hl=en" target ="_blank">David Lee</a> from UCSC to help web dev novices learn while contributing to real-life systems. This system employs <span style="font-weight: bold;">micro-role hierarchies</span> to enable novices to make meaningful contributions to real-world projects. By dividing complex tasks into manageable micro-roles, we facilitate a learning process that allows novices to contribute to ongoing projects without having to go through the initial tutorials, which can often lead to boredom, fatigue, and loss of passion, as well as unnecessary time and overhead.<br></p>
+      <br><p>Collaborated with <a href="https://scholar.google.com/citations?user=NG3F9uwAAAAJ&hl=en" target ="_blank">David Lee</a> from UCSC to help web dev novices learn while contributing to real-life systems. This system employs micro-role hierarchies to enable novices to make meaningful contributions to real-world projects. By dividing complex tasks into manageable micro-roles, we facilitate a learning process that allows novices to contribute to ongoing projects without having to go through the initial tutorials, which can often lead to boredom, fatigue, and loss of passion, as well as unnecessary time and overhead.<br></p>
 
       <p>We developed the <span style="font-weight: bold;">Causeway platform</span>, where learners collaborate to build websites for non-profit organizations. In our proof-of-concept study, participants successfully created static websites for refugee resettlement agencies, demonstrating the effectiveness of micro-roles in providing practical and educational value.<br></p>
 
-      <p>As the project lead, I managed a diverse team of fifteen graduate and undergraduate students to expand on the <a href="https://tech4good.soe.ucsc.edu/assets/docs/chi-2019-ca.pdf" target ="_blank">previous work</a> that received an honorable mention at CHI 2019. My responsibilities were to lead the development and integration of <span style="font-weight: bold;">micro-role hierarchies</span> within the Causeway platform, enhancing its capability to support web development education through structured, real-world contributions. To test this system for an actual user study, I had to conduct proto studies, interviews, and thematic analysis to explore how we can encourage novices to contribute while learning. This project not only highlighted the potential of micro-role hierarchies to transform educational approaches in technical fields but also reinforced the importance of practical experience in learning environments.<br></p>
+      <p>As the project lead, I managed a diverse team of fifteen graduate and undergraduate students to expand on the <a href="https://tech4good.soe.ucsc.edu/assets/docs/chi-2019-ca.pdf" target ="_blank">previous work</a> that received an honorable mention at <span style="font-weight: bold;">CHI 2019</span>. My responsibilities were to lead the development and integration of <span style="font-weight: bold;">micro-role hierarchies</span> within the Causeway platform, enhancing its capability to support web development education through structured, real-world contributions. To test this system for an actual user study, I had to conduct proto studies, interviews, and thematic analysis to explore how we can encourage novices to contribute while learning. This project not only highlighted the potential of micro-role hierarchies to transform educational approaches in technical fields but also reinforced the importance of practical experience in learning environments.<br></p>
 
       <strong>My role in this project:</strong> Project lead coordinating small groups of graduate/undergraduate students.
     tags:
@@ -182,6 +182,21 @@ Follow-up Queries with User Satisfaction"
       - Internship
       - Cocurricular
     description: "Analyzed VIS papers to assess hyperparameter reporting and optimization, highlighting gaps in research practices."
+
+  - title: "Mathematical Simulation of SEIR model for Social Pandemics: Looking at COVID 19 Outbreaks in US and SK"
+    image: "seir.png"
+    detail: >
+      <div style="text-align: center;">
+        <img src='site.baseurl/assets/images/project_detail/seir.png' class='img-responsive'>
+      </div>
+      <p>The SEIR model, a robust mathematical framework, is utilized to simulate various pandemics, from the spread of negativity on social media to the dynamics of COVID-19. <span style="font-weight: bold;">This project applies the SEIR model to compare the progression of COVID-19 in South Korea and the U.S., exploring how different public health responses influenced disease dynamics.</span>  By modeling these scenarios, we can assess whether specific phenomena cascade through populations. The use of the SEIR model calculator enhances our analysis, providing a detailed comparison of the pandemic responses in both countries.</p>
+      <strong>My role in this project:</strong> Solo project.
+    tags:
+      - Social Computing
+      - Curricular
+      - Modeling
+      - Lead
+    description: "Compared COVID-19 progression in South Korea and the U.S. using the SEIR model to analyze public health responses."
  
 
 
@@ -192,7 +207,8 @@ Follow-up Queries with User Satisfaction"
       <div style="text-align: center;">
         <img src='site.baseurl/assets/images/project_detail/datasaurus.png' class='img-responsive'>
       </div>
-      <p>This project is a statistical analysis and data visualization exploration using the Datasaurus Dozen, a modern take on Anscombe's Quartet that demonstrates the limitations of relying solely on statistical summaries. By employing the Datasaurus Dozen datasets, which consist of dinosaur-shaped data points and other configurations that share identical statistical properties yet display visually distinct patterns. This solo project involves creating and analyzing visual representations with D3 to vividly illustrate how different datasets can appear despite having the same statistical measures, thus highlighting the necessity of graphical analysis in visualization.</p>
+      <p>This project is a statistical analysis and data visualization exploration using the Datasaurus Dozen, a modern take on Anscombe's Quartet that demonstrates the limitations of relying solely on statistical summaries.
+       <span style="font-weight: bold;">In this project I created visual representations with D3 to illustrate how different datasets can appear despite having the same statistical measures, highlighting the necessity of graphical analysis in visualization.</span></p>
       <strong>My role in this project:</strong> Solo Project.
     tags:
       - Visualization
@@ -204,23 +220,24 @@ Follow-up Queries with User Satisfaction"
       
     description: "Analyzed the Datasaurus Dozen to emphasize the need for visual representation alongside statistical summaries." 
 
-
-
-  - title: "Nostalgia VS Hype? Understanding how user sentiment changes with these features in video games."
-    image: "game.png"
+  - title: "Importance of Marks & Channels in Representing Data: What Makes a Good Visualization?"
+    image: "movie.png"
+    link: "https://github.com/taehyun2017330/Visualizations/tree/main/Marks%20and%20Channels"
     detail: >
       <div style="text-align: center;">
-        <img src='site.baseurl/assets/images/project_detail/game.png' class='img-responsive'>
+        <img src='site.baseurl/assets/images/project_detail/movie.png' class='img-responsive'>
       </div>
-      <p>"Nostalgia vs. Hype? Understanding User Sentiment in Video Games" was a project born out of a personal bet to determine which video game had a more significant social impact: the classic 'MapleStory' or the more contemporary 'Overwatch'. Conducted in 2016, this study involved analyzing a large corpus of Korean language data sourced from social media to conduct sentiment analysis. The objective was to assess whether nostalgia or hype more strongly influences user sentiment towards these games. This solo project not only fulfilled a personal curiosity but also contributed insights into the dynamics of player engagement and emotional responses within the gaming community.</p>
-      <strong>My role in this project:</strong> Solo project based on my own interest.
+      <p>I developed an interactive visualization system using D3 and React to explore the effectiveness of various visual encodings in data representation. This system allows users to dynamically assign different data attributes—such as movie genres, ratings, and revenue—to visual channels like position, color, opacity, and size. By manipulating these visual properties through an intuitive interface, users can analyze how changes in marks and channels impact the clarity and efficiency of data presentation. The goal was to provide a hands-on tool for examining the expressiveness and effectiveness of visual idioms in real-time, using a dataset of movie reviews to demonstrate how different visualization approaches can reveal or obscure patterns in the data. 
+      <span style="font-weight: bold;">While implementing the system, I explored discrepancies in how different stimuli in visualization features are perceived, which inspired my first solo research topic.</span></p>
+      <strong>My role in this project:</strong> Solo project.
     tags:
-      - Social Computing
-      - LLM
-      - Lead
-      - Researcher
-      - Cocurricular
-    description: "Analyzed social media data to compare user sentiment towards 'MapleStory' and 'Overwatch'."
+      - Visualization
+      - Curricular
+      - D3
+      - Designer
+      - Developer
+      - Perception
+    description: "Created an interactive system to study the effectiveness of different visual encodings in data representation."
 
   - title: "Star Coordinates & CheckViz"
     image: "checkviz.png"
@@ -239,38 +256,6 @@ Follow-up Queries with User Satisfaction"
       - D3
     description: "Developed a visualization system using Star Coordinates and CheckViz to analyze high-dimensional data."
 
-
-  - title: "Modeling Character interactions using graph theory analysis: Summarizing key character relationships in Les Miserables"
-    image: "les.png"
-    detail: >
-      <div style="text-align: center;">
-        <img src='site.baseurl/assets/images/project_detail/les.png' class='img-responsive'>
-      </div>
-      <p>In the project "Modeling Character Interactions Using Graph Theory Analysis," I applied graph theory—originally learned through analyzing social networks on Twitter—to explore the intricate character dynamics in "Les Misérables." Known for its complex and lengthy character interactions, this classic novel provided a rich field for examining how fictional relationships can be systematically mapped and understood. Employing graph theory metrics such as closeness, betweenness, and eigenvector centrality, I was able to identify key characters like Jean Valjean, Marius, and Gavroche, highlighting their crucial roles in connecting and influencing the story's development. This analysis delineated distinct communities within the narrative, such as revolutionary students and authority figures, showcasing how various character groups contribute to the novel's elaborate social dynamics. Through this comprehensive network analysis, I gained deep insights into the structural and thematic components of the narrative, significantly enhancing the understanding of character influence and community interactions within the text. This project demonstrates the utility of graph theory as a powerful tool for unraveling and understanding key interactions in any fictional work, opening avenues for deeper literary analysis and interpretation.</p>
-      <strong>My role in this project:</strong> Lead of project.
-    tags:
-      - Social Computing
-      - Visualization
-      - Curricular
-      - Lead
-    description: "Used graph theory to analyze character relationships in 'Les Misérables,' revealing key roles and community structures."
-
-    
-
-  - title: "Using PageRank and MapReduce to Identify Key Characters in Fiction Novels"
-    image: "pagerank.png"
-    detail: >
-      <div style="text-align: center;">
-        <img src='site.baseurl/assets/images/project_detail/pagerank.png' class='img-responsive'>
-      </div>
-      <p>In this project, I implemented the PageRank algorithm using MapReduce to analyze character significance in fiction novels. By adapting a web page ranking technique to literary analysis, this method allows us to determine the importance of characters based on their interactions within the story. This approach not only highlights which characters are central to the narrative but also provides a scalable, efficient way to handle large datasets, making it suitable for examining complex novels with multiple characters and intricate relationships. This innovative application of PageRank and MapReduce opens new possibilities for deepening our understanding of character dynamics in literature.</p>
-      <strong>My role in this project:</strong> Lead of the project.
-    tags:
-      - Social Computing
-      - Lead
-      - Cocurricular
-    description: "Adapted PageRank with MapReduce to analyze and identify key characters in fiction novels."
-
   - title: "Simulating Multiracial Community Dynamics Using the Schelling Model"
     image: "scheling.png"
     detail: >
@@ -285,40 +270,6 @@ Follow-up Queries with User Satisfaction"
       - Modeling
       - Curricular
     description: "Used the Schelling model to simulate and analyze residential segregation in multiracial communities."
-
-  - title: "Analysis of SEIR Model for COVID-19 in South Korea and the United States"
-    image: "seir.png"
-    detail: >
-      <div style="text-align: center;">
-        <img src='site.baseurl/assets/images/project_detail/seir.png' class='img-responsive'>
-      </div>
-      <p>I compared the disease progression in South Korea and the United States, using this compartmental epidemiological model to categorize the population into Susceptible, Exposed, Infected, and Recovered groups. The study highlighted the effectiveness of South Korea's rapid containment strategies, evidenced by a quick peak and decline in infection rates, in contrast to the prolonged infection period in the U.S., suggesting delays in containment and a higher number of susceptible individuals. By calibrating the model with real-time data and adjusting parameters like transmission, incubation, and recovery rates, the project provides critical insights into how different public health responses affect disease outcomes, offering valuable guidance for policymakers to manage pandemic interventions effectively.</p>
-      <strong>My role in this project:</strong> Solo project.
-    tags:
-      - Social Computing
-      - Curricular
-      - Modeling
-      - Lead
-    description: "Compared COVID-19 progression in South Korea and the U.S. using the SEIR model to analyze public health responses."
-
-  - title: "Importance of Marks & Channels in Representing Data: What does efficiency mean in visualization"
-    image: "movie.png"
-    link: "https://github.com/taehyun2017330/Visualizations/tree/main/Marks%20and%20Channels"
-    detail: >
-      <div style="text-align: center;">
-        <img src='site.baseurl/assets/images/project_detail/movie.png' class='img-responsive'>
-      </div>
-      <p>I developed an interactive visualization system using D3 and React to explore the effectiveness of various visual encodings in data representation. This system allows users to dynamically assign different data attributes—such as movie genres, ratings, and revenue—to visual channels like position, color, opacity, and size. By manipulating these visual properties through an intuitive interface, users can analyze how changes in marks and channels impact the clarity and efficiency of data presentation. The goal was to provide a hands-on tool for examining the expressiveness and effectiveness of visual idioms in real-time, using a dataset of movie reviews to demonstrate how different visualization approaches can reveal or obscure patterns in the data. This solo project enhanced my skills as visualization and project designer but also helped me give an idea for my future visualization research of how different visualization strategies can be optimized for specific analytical tasks.</p>
-      <strong>My role in this project:</strong> Solo project.
-    tags:
-      - Visualization
-      - Curricular
-      - D3
-      - Designer
-      - Developer
-      - Perception
-    description: "Created an interactive system to study the effectiveness of different visual encodings in data representation."
-
 
   - title: "Enhancing AR Experiences: Benchmarking Handtracking for Samsung's Vision AR Goggles"
     image: "samsung.png"
@@ -351,3 +302,51 @@ Follow-up Queries with User Satisfaction"
       - Designer
       - Developer
     description: "Developed a critical alert service to notify minors of nearby sex offenders, enhancing community safety."
+
+  - title: "Modeling Character interactions using Graph Theory: Summarizing Character Relationships in Les Miserables"
+    image: "les.png"
+    detail: >
+      <div style="text-align: center;">
+        <img src='site.baseurl/assets/images/project_detail/les.png' class='img-responsive'>
+      </div>
+      <p>In the project "Modeling Character Interactions Using Graph Theory Analysis," I applied graph theory—originally learned through analyzing social networks on Twitter—to explore the intricate character dynamics in "Les Misérables." Known for its complex and lengthy character interactions, this classic novel provided a rich field for examining how fictional relationships can be systematically mapped and understood. Employing graph theory metrics such as closeness, betweenness, and eigenvector centrality, I was able to identify key characters like Jean Valjean, Marius, and Gavroche, highlighting their crucial roles in connecting and influencing the story's development. This analysis delineated distinct communities within the narrative, such as revolutionary students and authority figures, showcasing how various character groups contribute to the novel's elaborate social dynamics. Through this comprehensive network analysis, I gained deep insights into the structural and thematic components of the narrative, significantly enhancing the understanding of character influence and community interactions within the text. This project demonstrates the utility of graph theory as a powerful tool for unraveling and understanding key interactions in any fictional work, opening avenues for deeper literary analysis and interpretation.</p>
+      <strong>My role in this project:</strong> Lead of project.
+    tags:
+      - Social Computing
+      - Visualization
+      - Curricular
+      - Lead
+    description: "Used graph theory to analyze character relationships in 'Les Misérables,' revealing key roles and community structures."
+
+    
+
+  - title: "Using PageRank and MapReduce to Identify Key Characters in Fiction Novels"
+    image: "pagerank.png"
+    detail: >
+      <div style="text-align: center;">
+        <img src='site.baseurl/assets/images/project_detail/pagerank.png' class='img-responsive'>
+      </div>
+      <p>In this project, I implemented the PageRank algorithm using MapReduce to analyze character significance in fiction novels. By adapting a web page ranking technique to literary analysis, this method allows us to determine the importance of characters based on their interactions within the story. This approach not only highlights which characters are central to the narrative but also provides a scalable, efficient way to handle large datasets, making it suitable for examining complex novels with multiple characters and intricate relationships. This innovative application of PageRank and MapReduce opens new possibilities for deepening our understanding of character dynamics in literature.</p>
+      <strong>My role in this project:</strong> Lead of the project.
+    tags:
+      - Social Computing
+      - Lead
+      - Cocurricular
+    description: "Adapted PageRank with MapReduce to analyze and identify key characters in fiction novels."
+
+
+  - title: "Nostalgia VS Hype? Understanding how user sentiment changes with these features in video games."
+    image: "game.png"
+    detail: >
+      <div style="text-align: center;">
+        <img src='site.baseurl/assets/images/project_detail/game.png' class='img-responsive'>
+      </div>
+      <p>"Nostalgia vs. Hype? Understanding User Sentiment in Video Games" was a project born out of a personal bet to determine which video game had a more significant social impact: the classic 'MapleStory' or the more contemporary 'Overwatch'. Conducted in 2016, this study involved analyzing a large corpus of Korean language data sourced from social media to conduct sentiment analysis. The objective was to assess whether nostalgia or hype more strongly influences user sentiment towards these games. This solo project not only fulfilled a personal curiosity but also contributed insights into the dynamics of player engagement and emotional responses within the gaming community.</p>
+      <strong>My role in this project:</strong> Solo project based on my own interest.
+    tags:
+      - Social Computing
+      - LLM
+      - Lead
+      - Researcher
+      - Cocurricular
+    description: "Analyzed social media data to compare user sentiment towards 'MapleStory' and 'Overwatch'."
