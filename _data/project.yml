@@ -167,21 +167,22 @@ Follow-up Queries with User Satisfaction"
       - Cocurricular
     description: "Led a project to create AI-powered news summaries tailored for middle schoolers, winning a runner-up award."
 
-
-  - title: "Do VIS Researchers Report (and Optimize) their Hyperparameters?"
-    image: 
+  - title: "Sexoffender Alert E service"
+    image: "AlertE.png"
+    link: "https://www.sexoffender.go.kr/indexN.nsc"
     detail: >
-    
-      <p>In this project, we conducted a comprehensive analysis of papers published in VIS venues to assess whether researchers report and optimize their hyperparameters, and to understand the reasons behind their practices. <span style="font-weight: bold;">Along with my co-researcher, I proposed the idea, developed evaluation criteria to assess researchers' trust in hyperparameters, and created an automated system to detect whether researchers have reported them academic papers.</span> This project highlights significant gaps in current research practices and aims to encourage more rigorous standards in the VIS community.</p>
-      <strong>My role in this project:</strong> Third author in creating automatic measurement systems for hyperparameter measures, and creating a writing system that will help people write hyperparameters.
+      <div style="text-align: center;">
+        <img src='site.baseurl/assets/images/project_detail/AlertE.png' class='img-responsive'>
+      </div>
+      <p>During my service as a social service agent, I contributed to the development of a critical alert service designed to protect civilians by notifying them of any nearby sex offenders. This service utilizes map data and information provided by the Ministry of Gender Equality and Family to deliver timely alerts. As a frontend designer and developer in the early stages of this project, <span style="font-weight: bold;">I developed and designed the user interface and conduct demo user testing to ensure whether users felt safer and protected with the program.</span></p>
+      <strong>My role in this project:</strong> Designer and developer for the platform.
     tags:
-      - Visualization
-      - Researcher
-      - Work in Progress
-      - Developer
-      - Internship
+      - Systembuilding
       - Cocurricular
-    description: "Analyzed VIS papers to assess hyperparameter reporting and optimization, highlighting gaps in research practices."
+      - Social Service
+      - Designer
+      - Developer
+    description: "Developed a critical alert service to notify minors of nearby sex offenders, enhancing community safety."
 
   - title: "Mathematical Simulation of SEIR model for Social Pandemics: Looking at COVID 19 Outbreaks in US and SK"
     image: "seir.png"
@@ -286,22 +287,24 @@ Follow-up Queries with User Satisfaction"
       - Developer
     description: "Developed and benchmarked handtracking for Samsung's Vision AR goggles to enhance mobile interactivity."
 
-  - title: "Sexoffender Alert E service"
-    image: "AlertE.png"
-    link: "https://www.sexoffender.go.kr/indexN.nsc"
+
+
+  - title: "Do VIS Researchers Report (and Optimize) their Hyperparameters?"
+    image: 
     detail: >
-      <div style="text-align: center;">
-        <img src='site.baseurl/assets/images/project_detail/AlertE.png' class='img-responsive'>
-      </div>
-      <p>During my service as a social service agent, I contributed to the development of a critical alert service designed to protect minors by notifying them of any nearby sex offenders. This service utilizes map data and information provided by the Ministry of Gender Equality and Family to deliver timely alerts. As a frontend designer and developer in the early stages of this project, I played a pivotal role in crafting the user interface and ensuring the platform was both user-friendly and effective. My responsibilities also extended to conducting user testing, which was crucial in refining the system to meet the specific safety needs of its users, ultimately enhancing community safety and peace of mind.</p>
-      <strong>My role in this project:</strong> Designer and developer during the platform’s early stages.
+    
+      <p>In this project, we conducted a comprehensive analysis of papers published in VIS venues to assess whether researchers report and optimize their hyperparameters, and to understand the reasons behind their practices. <span style="font-weight: bold;">Along with my co-researcher, I proposed the idea, developed evaluation criteria to assess researchers' trust in hyperparameters, and created an automated system to detect whether researchers have reported them academic papers.</span> This project highlights significant gaps in current research practices and aims to encourage more rigorous standards in the VIS community.</p>
+      <strong>My role in this project:</strong> Third author in creating automatic measurement systems for hyperparameter measures, and creating a writing system that will help people write hyperparameters.
     tags:
-      - Systembuilding
-      - Cocurricular
-      - Social Service
-      - Designer
+      - Visualization
+      - Researcher
+      - Work in Progress
       - Developer
-    description: "Developed a critical alert service to notify minors of nearby sex offenders, enhancing community safety."
+      - Internship
+      - Cocurricular
+    description: "Analyzed VIS papers to assess hyperparameter reporting and optimization, highlighting gaps in research practices."
+
+
 
   - title: "Modeling Character interactions using Graph Theory: Summarizing Character Relationships in Les Miserables"
     image: "les.png"
