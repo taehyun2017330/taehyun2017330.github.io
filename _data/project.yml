@@ -31,7 +31,7 @@ project:
 
       <p>To address these biases, I created a model to offset the influence of plot size on cluster recognition. Additionally, I developed a system that automatically adjusts scatterplot and point sizes to maintain consistent cluster granularity across different viewing conditions.<br></p>
 
-      <p><span style="font-weight: bold;">I presented these findings and the methods for countering bias in visual data interpretation at K-Vis 2023. The solutions proposed have been further detailed as a paper submission, where we outline how to maintain consistent data interpretation in different screen displays.</span></p>
+      <p><span style="font-weight: bold;">Advised by <a href="http://hcil.snu.ac.kr/people/jinwook-seo" target="_blank">Jinwook Seo</a> presented these findings and the methods for countering bias in visual data interpretation at K-Vis 2023. The solutions proposed have been further detailed as a paper submission, where we outline how to maintain consistent data interpretation in different screen displays.</span></p>
 
       <strong>My role in this project:</strong> First author research project submited to IEEE VIS '24and invited speaker at K-Vis 2023.
     tags:
