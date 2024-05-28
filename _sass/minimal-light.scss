@@ -277,6 +277,7 @@ a:hover small {
 .wrapper {
   width: 950px;  /* Default width */
   margin: 0 auto;
+  border: 2px solid #000000;
   
 }
 
@@ -291,8 +292,8 @@ section {
 @media (min-width: 960px) {
   .wrapper {
     min-width: 950px;
-    width: 80%; /* This might result in a calculated width of 768px at a 960px viewport */
-    max-width: 1200px;
+    width: 85%; /* This might result in a calculated width of 768px at a 960px viewport */
+    
   }
 
   section {
@@ -302,10 +303,10 @@ section {
   }
 }
 
-/* Further adjustments for larger screens */
-@media (min-width: 1200px) {
+ 
+@media (min-width: 30000000px) {
   .wrapper {
-    width: 75%; /* This might result in a calculated width of 900px at a 1200px viewport */
+    width: 80%; /* This might result in a calculated width of 900px at a 1200px viewport */
     max-width: 1700px;
   }
 
@@ -367,6 +368,7 @@ header {
   -webkit-font-smoothing:subpixel-antialiased;
   padding-top:4.0em;
   text-align:center;
+  
   
 }
 
