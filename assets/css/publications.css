@@ -57,7 +57,7 @@ body, body {
 
 blockquote { background: var(--global-bg-color); border-left: 2px solid var(--global-theme-color); margin: 1.5em 10px; padding: 0.5em 10px; font-size: 1.2rem; }
 
-@media print, screen and (min-width: 480px) {.col-sm-9 {width: 85%;}}
+@media print, screen and (min-width: 480px) {.col-sm-9 {width: 77%;}}
 html, body {
   overscroll-behavior: none; /* Prevents scroll chaining and overscroll effects */
 }
@@ -364,11 +364,9 @@ nav ul li a, nav ul li a:hover{
 
 @media (min-width: 960px) {
   .container.py-4 {
-    width: 120%;
-    margin-left: -20px;
+
   }
   .row.mt-3.g-3.grid{
-    width: 130%;
   }
 }
 

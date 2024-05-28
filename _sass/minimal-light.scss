@@ -275,9 +275,45 @@ a:hover small {
 }
 
 .wrapper {
-  width:1000px;
-  margin:0 auto;
+  width: 950px;  /* Default width */
+  margin: 0 auto;
+  
 }
+
+section {
+  width: 650px; /* Initial fixed width */
+  float: right;
+  padding-top: 4.0em;
+  padding-bottom: 50px;
+}
+
+/* Adjustments begin at 960px screen width */
+@media (min-width: 960px) {
+  .wrapper {
+    min-width: 950px;
+    width: 80%; /* This might result in a calculated width of 768px at a 960px viewport */
+    max-width: 1200px;
+  }
+
+  section {
+    min-width:650px;
+    /* Calculate additional width as a portion of the wrapper's increase from 950px */
+    width: calc(650px + (0.9 * (80vw - 950px))); /* Now using a pixel calculation directly */
+  }
+}
+
+/* Further adjustments for larger screens */
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 75%; /* This might result in a calculated width of 900px at a 1200px viewport */
+    max-width: 1700px;
+  }
+
+  section {
+    width: calc(650px + (0.9 * (75vw - 950px))); /* Consistently using pixel calculations */
+  }
+}
+
 
 blockquote {
   border-left:1px solid #e5e5e5;
@@ -395,12 +431,7 @@ header ul a strong {
   color: var(--global-strong-color);
 }
 
-section {
-  width:650px;
-  float:right;
-  padding-top:4.0em;
-  padding-bottom:50px;
-}
+
 
 small {
   font-size:11px;
