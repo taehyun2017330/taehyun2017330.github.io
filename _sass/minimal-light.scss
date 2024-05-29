@@ -292,14 +292,17 @@ section {
   .wrapper {
     min-width: 950px;
     width: 85%; /* This might result in a calculated width of 768px at a 960px viewport */
-    
+    max-width:1665px
   }
 
   section {
     min-width:650px;
     /* Calculate additional width as a portion of the wrapper's increase from 950px */
     width: calc(650px + (0.9 * (80vw - 950px))); /* Now using a pixel calculation directly */
+    max-width:1200px;
   }
+  
+  
 }
 
  
