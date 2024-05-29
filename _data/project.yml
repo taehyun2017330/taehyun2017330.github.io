@@ -5,7 +5,7 @@ project:
     detail: >
       <p>As AI auditing in hiring processes gains importance, New York City now requires companies to audit their AI systems for bias. However, the novelty of this requirement has led to several challenges, including loopholes and employee resistance, stemming largely from the autonomy companies have to self-audit and report results.<br></p>
     
-      <p>My research investigates the perspectives of lawmakers, managers, and AI system builders on AI auditing in HR. I aim to enhance trust in these systems by improving transparency, interpretability, privacy, and by adding human intervention into the algorithms. This relatively unexplored area offers a significant opportunity for impactful research.<br></p>
+      <p>My research investigates the perspectives of lawmakers, managers, and AI system builders on AI auditing in HR. I aim to enhance trust in these systems by improving transparency, interpretability, and privacy by adding human feedback into the algorithms. This relatively unexplored area offers a significant opportunity for impactful research.<br></p>
     
       <p>Currently discussing opportunities with several professors in the intersection of HCI, Business, and Law.</p>
     tags:
@@ -15,7 +15,7 @@ project:
       - Lead
       - Cocurricular
       
-    description: "Currently on going project to investigate how human-AI interaction affects trust in AI audits."
+    description: "Currently ongoing project to investigate how human-AI interaction affects trust in AI audits."
 
   - title: "The Bigger They Are, The Finer We See: Exploring Scatterplot Size and Cluster granularity"
     image: "granularity.png"
@@ -27,13 +27,13 @@ project:
       
       <p>This project attempts to enhancing human task performance in performing clustering tasks by addressing the perceptual biases introduced by variations in scatterplot sizes. It started with my personal goal to reduce bias and help people create more accurate decision-making based on visual data interpretation.<br></p>
 
-      <p>The project'sapproach involved conducting user studies that compared various scatterplot sizes and their effects on clustering assignments. I discovered that larger scatterplot sizes tend to make cluster assignments appear more granular, while smaller sizes often result in a coarser clustering perception. This observation led to the development of strategies to mitigate perceptual biases introduced by geometric scaling.<br></p>
+      <p>The project's approach involved conducting user studies that compared various scatterplot sizes and their effects on clustering assignments. I discovered that larger scatterplot sizes tend to make cluster assignments appear more granular, while smaller sizes often result in a coarser clustering perception. This observation led to the development of strategies to mitigate perceptual biases introduced by geometric scaling.<br></p>
 
       <p>To address these biases, I created a model to offset the influence of plot size on cluster recognition. Additionally, I developed a system that automatically adjusts scatterplot and point sizes to maintain consistent cluster granularity across different viewing conditions.<br></p>
 
-      <p><span style="font-weight: bold;">Advised by <a href="http://hcil.snu.ac.kr/people/jinwook-seo" target="_blank">Jinwook Seo</a>, we presented these findings for countering bias in visual data interpretation at K-Vis 2023. The solutions proposed have been further detailed as a paper submission, where we outline how to maintain consistent data interpretation in different screen displays.</span></p>
+      <p><span style="font-weight: bold;">Advised by <a href="http://hcil.snu.ac.kr/people/jinwook-seo" target="_blank">Jinwook Seo</a>, we presented these findings for countering bias in visual data interpretation. The solutions proposed have been further detailed as a paper submission (VIS '24), where we outline how to maintain consistent data interpretation in different screen displays.</span></p>
 
-      <strong>My role in this project:</strong> First author research project submited to IEEE VIS '24 and invited speaker at K-Vis 2023.
+      <strong>My role in this project:</strong> First author research project submitted to IEEE VIS '24 and invited speaker at K-VIS 2023.
     tags:
       - Highlighted Work
       - Visualization
@@ -51,8 +51,8 @@ project:
       <div style="text-align: center;">
         <img src='site.baseurl/assets/images/project_detail/qac.png' class='img-responsive'>
       </div>
-      <p>Question, Answer, and Connect began with personal frustrations regarding how Q&A massive group chats used in courses were extremely uncomfortable. Our initial low-fidelity demo, using Piazza-style bullet-type Q&A boards, revealed that more people preferred real-time chats. To address the problem of asynchronous, untimely, and repetitive questions, we aimed to maintain the real-time, convenient format of chatrooms while solving these issues. <br></p>
-      <p>By analyzing collected data, we used large LLMs to simulate student personas, predict frequently asked questions, and test if these questions were indeed asked.<span style="font-weight: bold;"> I led the design and implementation of the system, conducting preliminary studies and low-fidelity demos, designing prototypes, and refining user experience through iterative testing.</span></p>  
+      <p>Question, Answer, and Connect began with personal frustrations regarding how Q&A massive group chats used in courses were extremely uncomfortable. Our initial low-fidelity demo, using Piazza-style bullet-type Q&A boards, revealed that more people preferred real time chats. To address the problem of asynchronous, untimely, and repetitive questions, we aimed to maintain the real time, convenient format of chatrooms while solving these issues. <br></p>
+      <p>By analyzing collected data, we used large LLMs to simulate student personas, predict frequently asked questions, and test if these questions were asked.<span style="font-weight: bold;"> I led the design and implementation of the system, conducting preliminary studies and low-fidelity demos, designing prototypes, and refining user experience through iterative testing.</span></p>  
       <strong>My role in this project:</strong> Project lead.
     link: "https://github.com/ZzeongB/Question-Answer-and-Connect"
     tags:
@@ -109,7 +109,7 @@ Follow-up Queries with User Satisfaction"
       - Systembuilding
       - Developer
       - Internship
-    description: "Lead and developed a learning system for web development novices to explore how we can encourage novices to contribute while learning."
+    description: "Led and developed a learning system for web development novices to explore how we can encourage novices to contribute while learning."
 
   - title: "UMATO: Two-phase Manifold Approximation for Accurate, Scalable, and Stable Dimensionality Reduction"
     image: "umato.png"
@@ -118,7 +118,7 @@ Follow-up Queries with User Satisfaction"
       <div style="text-align: center;">
         <img src='site.baseurl/assets/images/project_detail/umato.png' class='img-responsive'>
       </div>
-      <p>We introduce a novel dimensionality reduction technique designed to address the shortcomings of well-known methods like UMAP and t-SNE. UMATO, or Uniform Manifold Approximation with Two-phase Optimization, enhances accuracy, scalability, and stability in processing high-dimensional data. As the third author, my role involved evaluating the UMATO algorithm and contributing to the development of an interactive demonstration. This demo serves as both a practical and visual supplement to our academic paper, allowing users to explore various datasets and adjust parameters to see the effectiveness of UMATO in real-time. Through this project, we introduced a new dimensionality reduction method, providing a more reliable tool for researchers and data scientists to uncover meaningful patterns in complex data.</p>
+      <p>We introduce a novel dimensionality reduction technique designed to address the shortcomings of well-known methods like UMAP and t-SNE. UMATO, or Uniform Manifold Approximation with Two-phase Optimization, enhances accuracy, scalability, and stability in processing high-dimensional data. As the third author, my role involved evaluating the UMATO algorithm and contributing to the development of an interactive demonstration. This demo serves as both a practical and visual supplement to our academic paper, allowing users to explore various datasets and adjust parameters to see the effectiveness of UMATO in real time. Through this project, we introduced a new dimensionality reduction method, providing a more reliable tool for researchers and data scientists to uncover meaningful patterns in complex data.</p>
       <strong>My role in this project:</strong> Third author with responsibilities to evaluate the DR algorithm and create a demo to show the effectiveness of the DR algorithm.
     tags:
       - Highlighted Work
@@ -127,7 +127,7 @@ Follow-up Queries with User Satisfaction"
       - Developer
       - D3
       - Work in Progress
-    description: "Evaluated the UMATO algorithm and developed a demo for real-time exploration of its effectiveness."
+    description: "Evaluated the UMATO algorithm and developed a demo for real time exploration of its effectiveness."
 
 
   - title: "FashionAlign: Multimodal Search System for Fashion Exploration"
@@ -174,7 +174,7 @@ Follow-up Queries with User Satisfaction"
       <div style="text-align: center;">
         <img src='site.baseurl/assets/images/project_detail/AlertE.png' class='img-responsive'>
       </div>
-      <p>During my service as a social service agent, I contributed to the development of a critical alert service designed to protect civilians by notifying them of any nearby sex offenders. This service utilizes map data and information provided by the <a href="http://www.mogef.go.kr/" target="_blank">Ministry of Gender Equality and Family</a> to deliver timely alerts. As a frontend designer and developer in the early stages of this project, <span style="font-weight: bold;">I developed and designed the user interface and conduct demo user testing to ensure whether users felt safer and protected with the program.</span></p>
+      <p>During my service as a social service agent, I contributed to the development of a critical alert service designed to protect civilians by notifying them of any nearby sex offenders. This service utilizes map data and information provided by the <a href="http://www.mogef.go.kr/" target="_blank">Ministry of Gender Equality and Family</a> to deliver timely alerts. As a front-end designer and developer in the early stages of this project, <span style="font-weight: bold;">I developed and designed the user interface and conducted demo user testing to ensure that users felt safer and protected with the program.</span></p>
       <strong>My role in this project:</strong> Designer and developer for the platform.
     tags:
       - Systembuilding
@@ -209,7 +209,7 @@ Follow-up Queries with User Satisfaction"
         <img src='site.baseurl/assets/images/project_detail/datasaurus.png' class='img-responsive'>
       </div>
       <p>This project is a statistical analysis and data visualization exploration using the Datasaurus Dozen, a modern take on Anscombe's Quartet that demonstrates the limitations of relying solely on statistical summaries.
-       <span style="font-weight: bold;">In this project I created visual representations with D3 to illustrate how different datasets can appear despite having the same statistical measures, highlighting the necessity of graphical analysis in visualization.</span></p>
+       <span style="font-weight: bold;">In this project, I created visual representations with D3 to illustrate how different datasets can appear despite having the same statistical measures, highlighting the necessity of graphical analysis in visualization.</span></p>
       <strong>My role in this project:</strong> Solo Project.
     tags:
       - Visualization
@@ -228,7 +228,7 @@ Follow-up Queries with User Satisfaction"
       <div style="text-align: center;">
         <img src='site.baseurl/assets/images/project_detail/movie.png' class='img-responsive'>
       </div>
-      <p>I developed an interactive visualization system using D3 and React to explore the effectiveness of various visual encodings in data representation. This system allows users to dynamically assign different data attributes—such as movie genres, ratings, and revenue—to visual channels like position, color, opacity, and size. By manipulating these visual properties through an intuitive interface, users can analyze how changes in marks and channels impact the clarity and efficiency of data presentation. The goal was to provide a hands-on tool for examining the expressiveness and effectiveness of visual idioms in real-time, using a dataset of movie reviews to demonstrate how different visualization approaches can reveal or obscure patterns in the data. 
+      <p>I developed an interactive visualization system using D3 and React to explore the effectiveness of various visual encodings in data representation. This system allows users to dynamically assign different data attributes—such as movie genres, ratings, and revenue—to visual channels like position, color, opacity, and size. By manipulating these visual properties through an intuitive interface, users can analyze how changes in marks and channels impact the clarity and efficiency of data presentation. The goal was to provide a hands-on tool for examining the expressiveness and effectiveness of visual idioms in real time, using a dataset of movie reviews to demonstrate how different visualization approaches can reveal or obscure patterns in the data. 
       <span style="font-weight: bold;">While implementing the system, I explored discrepancies in how different stimuli in visualization features are perceived, which inspired my first solo research topic.</span></p>
       <strong>My role in this project:</strong> Solo project.
     tags:
@@ -247,7 +247,7 @@ Follow-up Queries with User Satisfaction"
       <div style="text-align: center;">
         <img src='site.baseurl/assets/images/project_detail/checkviz.png' class='img-responsive'>
       </div>
-      <p>I developed a visualization system to effectively represent high-dimensional data in a comprehensible two-dimensional format using the Star Coordinates algorithm. This system enables users to dynamically adjust axis vectors via mouse interactions, offering a live update of data projections that enhances understanding of complex datasets. Additionally, I implemented CheckViz, a component that visualizes distortions such as Missing and False Neighbors, using a color-coded Voronoi diagram to indicate the level of distortion for each data point. This approach not only provides insights into the data integrity after projection but also helps in assessing the trustworthiness of the multidimensional projection. By integrating these tools into a user-friendly interface with real-time feedback and a clear legend for distortion interpretation, the project successfully simplifies the complexity of high-dimensional data analysis, making it accessible and actionable for users.</p>
+      <p>I developed a visualization system to effectively represent high-dimensional data in a comprehensible two-dimensional format using the Star Coordinates algorithm. This system enables users to dynamically adjust axis vectors via mouse interactions, offering a live update of data projections that enhances understanding of complex datasets. Additionally, I implemented CheckViz, a component that visualizes distortions such as Missing and False Neighbors, using a color-coded Voronoi diagram to indicate the level of distortion for each data point. This approach not only provides insights into the data integrity after projection but also helps in assessing the trustworthiness of the multidimensional projection. By integrating these tools into a user-friendly interface with real time feedback and a clear legend for distortion interpretation, the project successfully simplifies the complexity of high-dimensional data analysis, making it accessible and actionable for users.</p>
       <strong>My role in this project:</strong> Solo project.
     tags:
       - Visualization
