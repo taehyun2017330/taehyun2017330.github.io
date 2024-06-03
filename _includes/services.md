@@ -3,11 +3,11 @@
 ### Research Intern
 
 - Undergraduate Intern, **SNU HCI Lab, Seoul National University**  
-  Topic: **The Bigger They Are, The Finer We See: Exploring Size in Visual Clustering Perception**
+  Topic: **The Bigger They Are, The Finer We See: Exploring Size in Visual Clustering Perception**  
   Advisor: **Jinwook Seo**
 
 - Winter Undergraduate Intern, **KIXLAB, KAIST**  
-  Topic: **Enhancing Conversational Search Through Real World User Interaction Analysis at Scale**
+  Topic: **Enhancing Conversational Search Through Real World User Interaction Analysis at Scale**  
   Advisor: **Juho Kim**
 
 - Summer Undergraduate Intern, **Tech4Good Lab, University of California, Santa Cruz**  
