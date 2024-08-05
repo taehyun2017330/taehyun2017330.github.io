@@ -3,12 +3,14 @@ main:
     authors: Hyunwoo Kim, Yoonseo Choi, <strong><ss>Taehyun Yang</ss></strong>, Honggu Lee, Chaneon Park, Yongju Lee, Jinyoung Kim, Juho Kim
     conference_short: SIGIR
     conference: Accepted to LLM4Eval Workshop at SIGIR 2024
-    code: https://github.com/taehyun2017330/LLM-Classifier/tree/main
+    code: https://github.com/kixlab/searchgpt-classifier
+    pdf: https://arxiv.org/pdf/2407.13166
     image: ./assets/img/figure2.png
 
   - title: "Offsetting Perceptual Bias in Visual Clustering: The Role of Point Size Adjustment in Variable Display Sizes"
     authors: <strong><ss>Taehyun Yang</ss></strong>, Hyeon Jeon, Jinwook Seo
     conference_short: VIS
+    pdf: https://arxiv.org/pdf/2407.16322
     conference: Submitted to IEEE Visualization Conference (VIS), 2024.
     image: ./assets/img/figure1.png
 

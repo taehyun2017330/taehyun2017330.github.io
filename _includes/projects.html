@@ -121,26 +121,32 @@
                 <p class="modal-link">
                   {% if proj.paper %}<a
                     href="{% if proj.paper contains 'http' %} {{ proj.paper }} {% else %} /assets/pdf/{{ proj.paper }} {% endif %}"
-                    ><i class="fas fa-book"></i>&nbsp; Paper</a
+                    target="_blank"
+                    ><i class="fas fa-book"></i>&nbsp; Work</a
                   >
                   &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.video %}<a
                     href="{{ proj.video }}"
+                    target="_blank"
                     ><i class="fas fa-play"></i>&nbsp; Video</a
                   >
                   &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.slide %}<a
                     href="/assets/pdf/{{ proj.slide }}"
+                    target="_blank"
                     ><i class="fas fa-poll-h"></i>&nbsp; Slide</a
                   >
                   &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.appstore %}<a
                     href="{{ proj.appstore }}"
+                    target="_blank"
                     ><i class="fab fa-app-store-ios"></i>&nbsp; App Store</a
                   >
                   &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.code %}<a
                     href="{{ proj.code }}"
+                    target="_blank"
                     ><i class="fab fa-github"></i>&nbsp; Code</a
                   >
                   &nbsp;&nbsp;&nbsp; {% endif %}{% if proj.link %}<a
                     href="{{ proj.link }}"
+                    target="_blank"
                     ><i class="fas fa-external-link"></i>&nbsp; Link</a
                   >{% endif %}
                 </p>
@@ -237,6 +243,7 @@
           if (activeTags.size === 0) {
         resetFilter();
       }
+      layoutMasonry();
         });
       });
 
@@ -387,6 +394,7 @@ document.getElementById('reset-filter').addEventListener('click', function() {
 .archive-container:hover {
     cursor: pointer; /* Adds the cursor pointer on hover */
   }
+  
 
   
     </style>

@@ -1,6 +1,6 @@
 project:
 
-  - title: "Improving trust in AI Audits: The Role of Human-AI Interaction in Decision-Making"
+  - title: "Improving Trust in AI Audits: The Role of Human-AI Interaction in Decision-Making"
     image: 
     detail: >
       <p>As AI auditing in hiring processes gains importance, New York City now requires companies to audit their AI systems for bias. However, the novelty of this requirement has led to several challenges, including loopholes and employee resistance, stemming largely from the autonomy companies have to self-audit and report results.<br></p>
@@ -17,9 +17,30 @@ project:
       
     description: "Currently ongoing project to investigate how human-AI interaction affects trust in AI audits."
 
-  - title: "The Bigger They Are, The Finer We See: Exploring Scatterplot Size and Cluster granularity"
+  - title: "Towards More Reliable Visual Analytics with Dimensionality Reduction"
+    image: "DR.png"
+    detail: >
+      <div style="text-align: center;">
+        <img src='site.baseurl/assets/images/project_detail/DR.png' class='img-responsive'>
+      </div>
+      <p>In this project, we conducted a comprehensive analysis of papers published in VIS venues to assess whether researchers report and optimize their hyperparameters, and to understand the reasons behind their practices. <span style="font-weight: bold;">Along with my co-researcher, I developed evaluation criteria to assess researchers' trust in hyperparameters, and created a system to detect whether researchers have reported them academic papers.</span> This project highlights gaps in current research practices and aims to encourage more rigorous standards in the academic community.</p>
+      <strong>My role in this project:</strong> Third author in creating automatic measurement systems for hyperparameter measures, and creating system that will help people report proper parameters.
+    tags:
+      - Highlighted Work
+      - Visualization
+      - Researcher
+      - Work in Progress
+      - Developer
+      - Internship
+      - Cocurricular
+    description: "Analyzed VIS papers to assess hyperparameter reporting and optimization, created a system to assist people in reporting proper parameters in their writing."
+    
+
+  - title: "Offsetting Perceptual Bias in Visual Clustering: The Role of Point Size Adjustment in Variable Display Sizes"
     image: "granularity.png"
-    link: "https://taehyun2017330.github.io/ClusterGranularity_ClusterDemo-/"
+    paper: "https://arxiv.org/pdf/2407.16322"
+    code: "https://taehyun2017330.github.io/ClusterGranularity_ClusterDemo-/"
+
     detail: >
       <div style="text-align: center;">
         <img src='site.baseurl/assets/images/project_detail/granularity.png' class='img-responsive'>
@@ -27,9 +48,7 @@ project:
       
       <p>This project attempts to enhancing human task performance in performing clustering tasks by addressing the perceptual biases introduced by variations in scatterplot sizes. It started with my personal goal to reduce bias and help people create more accurate decision-making based on visual data interpretation.<br></p>
 
-      <p>The project's approach involved conducting user studies that compared various scatterplot sizes and their effects on clustering assignments. I discovered that larger scatterplot sizes tend to make cluster assignments appear more granular, while smaller sizes often result in a coarser clustering perception. This observation led to the development of strategies to mitigate perceptual biases introduced by geometric scaling.<br></p>
-
-      <p>To address these biases, I created a model to offset the influence of plot size on cluster recognition. Additionally, I developed a system that automatically adjusts scatterplot and point sizes to maintain consistent cluster granularity across different viewing conditions.<br></p>
+      <p>To address these biases, I created a model to offset the influence of plot size on cluster recognition based on human perception experiments. Additionally, I developed a system that automatically adjusts scatterplot and point sizes to maintain consistent cluster granularity across different viewing conditions.<br></p>
 
       <p><span style="font-weight: bold;">Advised by <a href="http://hcil.snu.ac.kr/people/jinwook-seo" target="_blank">Jinwook Seo</a>, we presented these findings for countering bias in visual data interpretation. The solutions proposed have been further detailed as a paper submission (VIS '24), where we outline how to maintain consistent data interpretation in different screen displays.</span></p>
 
@@ -54,7 +73,8 @@ project:
       <p>Question, Answer, and Connect began with personal frustrations regarding how Q&A massive group chats used in courses were extremely uncomfortable. Our initial low-fidelity demo, using Piazza-style bullet-type Q&A boards, revealed that more people preferred real time chats. To address the problem of asynchronous, untimely, and repetitive questions, we aimed to maintain the real time, convenient format of chatrooms while solving these issues. <br></p>
       <p>By analyzing collected data, we used large LLMs to simulate student personas, predict frequently asked questions, and test if these questions were asked.<span style="font-weight: bold;"> I led the design and implementation of the system, conducting preliminary studies and low-fidelity demos, designing prototypes, and refining user experience through iterative testing.</span></p>  
       <strong>My role in this project:</strong> Project lead.
-    link: "https://github.com/ZzeongB/Question-Answer-and-Connect"
+    code: "https://github.com/ZzeongB/Question-Answer-and-Connect"
+    
     tags:
       - Highlighted Work
       - HAI
@@ -69,6 +89,8 @@ project:
   - title: "Using LLMs to Investigate Correlations of Conversational
 Follow-up Queries with User Satisfaction"
     image: "classifier.png"
+    paper: "https://arxiv.org/pdf/2407.13166"
+    code: "https://github.com/kixlab/searchgpt-classifier"
     detail: >
       <div style="text-align: center;">
         <img src='site.baseurl/assets/images/project_detail/classifier.png' class='img-responsive'>
@@ -88,7 +110,7 @@ Follow-up Queries with User Satisfaction"
     
   - title: "Causeway: Enhancing Real-World Contributions in Web-Dev Learning using Subgoal Labels"
     image: "causeway.png"
-    link: "https://causeway.soe.ucsc.edu/#/reference/-comp-data/1"
+    code: "https://causeway.soe.ucsc.edu/#/reference/-comp-data/1"
     detail: >
       <div style="text-align: center;">
         <img src='site.baseurl/assets/images/project_detail/causeway.png' class='img-responsive'>
@@ -113,7 +135,7 @@ Follow-up Queries with User Satisfaction"
 
   - title: "UMATO: Two-phase Manifold Approximation for Accurate, Scalable, and Stable Dimensionality Reduction"
     image: "umato.png"
-    link: "https://taehyun2017330.github.io/Umato_VisualizationDemo/"
+    code: "https://github.com/hyungkwonko/umato"
     detail: >
       <div style="text-align: center;">
         <img src='site.baseurl/assets/images/project_detail/umato.png' class='img-responsive'>
@@ -148,7 +170,9 @@ Follow-up Queries with User Satisfaction"
       - Developer
       - Researcher
     description: "Developed an AI system to enhance fashion search by aligning textual descriptions with visual features."
-    link: "https://github.com/taehyun2017330/Fashion_align"
+    paper: FashionAlign.pdf
+    code: "https://github.com/taehyun2017330/Fashion_align"
+
 
   - title: "JDnews: Engaging Middle Schoolers with AI-Powered News Summaries"
     image: "jdnews.png"
@@ -158,7 +182,8 @@ Follow-up Queries with User Satisfaction"
       </div>
       <p>JDnews, short for Joong Ding (a playful term for middle schoolers akin to "Zoomer"), was created to engage middle schoolers in reading newspapers. Collaborating with <a href="https://aitimes.com/news/articleView.html?idxno=155093" target="_blank">LG AI Discovery Lab</a>, we created a system that automatically takes newspaper and generates summaries with vocabulary suited for middle schoolers, using data from the Korean traditional dictionary to train and create our own LLM. The project earned a runner-up award at the camp, allowing several students to attend a summer camp at Stanford. <span style="font-weight: bold;"> I led a group of four amazing students and mentored the implementation, design, and ideation process. </span> </p>
       <strong>My role in this project:</strong> Advisor, mentor, and project lead.
-    link: "https://jdnews2024.com/"
+    code: "https://jdnews2024.com/"
+    link: "https://www.aitimes.com/news/articleView.html?idxno=155093"
     tags:
       - HCI
       - Learning
@@ -203,7 +228,7 @@ Follow-up Queries with User Satisfaction"
 
   - title: "Datasaurus Dozen"
     image: "datasaurus.png"
-    link: "https://github.com/taehyun2017330/Visualizations/tree/main/DataSaurus%20Dozen"
+    code: "https://github.com/taehyun2017330/Visualizations/tree/main/DataSaurus%20Dozen"
     detail: >
       <div style="text-align: center;">
         <img src='site.baseurl/assets/images/project_detail/datasaurus.png' class='img-responsive'>
@@ -223,7 +248,7 @@ Follow-up Queries with User Satisfaction"
 
   - title: "Importance of Marks & Channels in Representing Data: What Makes a Good Visualization?"
     image: "movie.png"
-    link: "https://github.com/taehyun2017330/Visualizations/tree/main/Marks%20and%20Channels"
+    code: "https://github.com/taehyun2017330/Visualizations/tree/main/Marks%20and%20Channels"
     detail: >
       <div style="text-align: center;">
         <img src='site.baseurl/assets/images/project_detail/movie.png' class='img-responsive'>
@@ -242,7 +267,7 @@ Follow-up Queries with User Satisfaction"
 
   - title: "Star Coordinates & CheckViz"
     image: "checkviz.png"
-    link: "https://github.com/taehyun2017330/Visualizations/tree/main/Checkviz"
+    code: "https://github.com/taehyun2017330/Visualizations/tree/main/Checkviz"
     detail: >
       <div style="text-align: center;">
         <img src='site.baseurl/assets/images/project_detail/checkviz.png' class='img-responsive'>
@@ -286,23 +311,6 @@ Follow-up Queries with User Satisfaction"
       - AR/VR
       - Developer
     description: "Developed and benchmarked handtracking for Samsung's Vision AR goggles to enhance mobile interactivity."
-
-
-
-  - title: "Do VIS Researchers Report (and Optimize) their Hyperparameters?"
-    image: 
-    detail: >
-    
-      <p>In this project, we conducted a comprehensive analysis of papers published in VIS venues to assess whether researchers report and optimize their hyperparameters, and to understand the reasons behind their practices. <span style="font-weight: bold;">Along with my co-researcher, I proposed the idea, developed evaluation criteria to assess researchers' trust in hyperparameters, and created an automated system to detect whether researchers have reported them academic papers.</span> This project highlights significant gaps in current research practices and aims to encourage more rigorous standards in the VIS community.</p>
-      <strong>My role in this project:</strong> Third author in creating automatic measurement systems for hyperparameter measures, and creating a writing system that will help people write hyperparameters.
-    tags:
-      - Visualization
-      - Researcher
-      - Work in Progress
-      - Developer
-      - Internship
-      - Cocurricular
-    description: "Analyzed VIS papers to assess hyperparameter reporting and optimization, highlighting gaps in research practices."
 
 
 
