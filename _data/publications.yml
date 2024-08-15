@@ -10,7 +10,7 @@ main:
     conference_short: SIGIR
     conference: Accepted to LLM4Eval Workshop at SIGIR 2024
     code: https://github.com/kixlab/searchgpt-classifier
-    pdf: https://arxiv.org/pdf/2407.13166
+    pdf: https://kixlab.github.io/website-files/2024/sigir2024-workshop-searchgpt.pdf
     image: ./assets/img/figure2.png
 
   - title: "Offsetting Perceptual Bias in Visual Clustering: The Role of Point Size Adjustment in Variable Display Sizes"
@@ -26,3 +26,4 @@ main:
     conference: Work in progress for IEEE Transactions on Visualization and Computer Graphics (TVCG)
     code: https://github.com/hyungkwonko/umato
     image: ./assets/img/figure3.png
+    page: https://taehyun.me/Umato_VisualizationDemo/
