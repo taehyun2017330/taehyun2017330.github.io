@@ -1,4 +1,10 @@
 main:
+  - title: "Mitigating Tension in AI Audits for HRM: Addressing Socio-Technical Complexities through LLM Agents and DAO"
+    authors: <strong><ss>Taehyun Yang</ss></strong>*, Hyanghee Park*, Daehwan Ahn (* Denotes equal contribution)
+    conference_short: CHI
+    conference: Work in progress for CHI 2025
+    image: ./assets/img/figure4.png
+
   - title: "Using LLMs to Investigate Correlations of Conversational Follow-up Queries with User Satisfaction"
     authors: Hyunwoo Kim, Yoonseo Choi, <strong><ss>Taehyun Yang</ss></strong>, Honggu Lee, Chaneon Park, Yongju Lee, Jinyoung Kim, Juho Kim
     conference_short: SIGIR
@@ -11,7 +17,7 @@ main:
     authors: <strong><ss>Taehyun Yang</ss></strong>, Hyeon Jeon, Jinwook Seo
     conference_short: VIS
     pdf: https://arxiv.org/pdf/2407.16322
-    conference: Submitted to IEEE Visualization Conference (VIS), 2024.
+    conference: Submitted to IEEE Visualization Conference (VIS) 2024.
     image: ./assets/img/figure1.png
 
   - title: "UMATO: Two-phase Manifold Approximation for Accurate, Scalable, and Stable Dimensionality Reduction"
