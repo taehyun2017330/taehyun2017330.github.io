@@ -17,23 +17,23 @@ project:
       
     description: "Currently ongoing project to investigate how human-AI interaction affects trust in AI audits."
 
-  - title: "Towards More Reliable Visual Analytics with Dimensionality Reduction"
-    image: "DR.png"
-    detail: >
-      <div style="text-align: center;">
-        <img src='site.baseurl/assets/images/project_detail/DR.png' class='img-responsive'>
-      </div>
-      <p>In this project, we conducted a comprehensive analysis of papers published in VIS venues to assess whether researchers report and optimize their hyperparameters, and to understand the reasons behind their practices. <span style="font-weight: bold;">Along with my co-researcher, I developed evaluation criteria to assess researchers' trust in hyperparameters, and created a system to detect whether researchers have reported them academic papers.</span> This project highlights gaps in current research practices and aims to encourage more rigorous standards in the academic community.</p>
-      <strong>My role in this project:</strong> Third author in creating automatic measurement systems for hyperparameter measures, and creating system that will help people report proper parameters.
-    tags:
-      - Highlighted Work
-      - Visualization
-      - Researcher
-      - Work in Progress
-      - Developer
-      - Internship
-      - Cocurricular
-    description: "Analyzed VIS papers to assess hyperparameter reporting and optimization, created a system to assist people in reporting proper parameters in their writing."
+  # - title: "Towards More Reliable Visual Analytics with Dimensionality Reduction"
+  #   image: "DR.png"
+  #   detail: >
+  #     <div style="text-align: center;">
+  #       <img src='site.baseurl/assets/images/project_detail/DR.png' class='img-responsive'>
+  #     </div>
+  #     <p>In this project, we conducted a comprehensive analysis of papers published in VIS venues to assess whether researchers report and optimize their hyperparameters, and to understand the reasons behind their practices. <span style="font-weight: bold;">Along with my co-researcher, I developed evaluation criteria to assess researchers' trust in hyperparameters, and created a system to detect whether researchers have reported them academic papers.</span> This project highlights gaps in current research practices and aims to encourage more rigorous standards in the academic community.</p>
+  #     <strong>My role in this project:</strong> Third author in creating automatic measurement systems for hyperparameter measures, and creating system that will help people report proper parameters.
+  #   tags:
+  #     - Highlighted Work
+  #     - Visualization
+  #     - Researcher
+  #     - Work in Progress
+  #     - Developer
+  #     - Internship
+  #     - Cocurricular
+  #   description: "Analyzed VIS papers to assess hyperparameter reporting and optimization, created a system to assist people in reporting proper parameters in their writing."
     
 
   - title: "Offsetting Perceptual Bias in Visual Clustering: The Role of Point Size Adjustment in Variable Display Sizes"
