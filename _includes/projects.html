@@ -104,12 +104,13 @@
         </div>
       </div>
       <div
-        class="modal fade"
-        id="modal{{ forloop.index }}"
-        tabindex="-1"
-        aria-labelledby="exampleModal{{ forloop.index }}"
-        aria-hidden="true"
-      >
+  class="modal fade"
+  id="modal{{ forloop.index }}"
+  tabindex="-1"
+  aria-labelledby="exampleModal{{ forloop.index }}"
+  aria-hidden="true"
+>
+
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
@@ -342,17 +343,7 @@ document.getElementById('reset-filter').addEventListener('click', function() {
   
   const modals = document.querySelectorAll('.modal'); // Assumption: Each project has a corresponding modal
 
-  // Remove the data-bs-toggle attributes to prevent automatic triggering
-  projects.forEach((project, index) => {
-    const modal = modals[index];
-    project.querySelector('.archive-container').removeAttribute('data-bs-toggle');
-    project.querySelector('.archive-container').addEventListener('click', function(event) {
-      if (!event.target.closest('.project-tag')) { // Check if the click is not from a tag
-        const modalInstance = new bootstrap.Modal(modal);
-        modalInstance.show();
-      }
-    });
-  });
+
   
   
     
@@ -382,6 +373,112 @@ document.getElementById('reset-filter').addEventListener('click', function() {
     
     });
     </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hash = window.location.hash;
+  
+    // Initialize Masonry layout after images have loaded
+    const grid = document.querySelector('.grid');
+    let msnry;
+  
+    imagesLoaded(grid, function() {
+      // Initialize Masonry after images have loaded
+      msnry = new Masonry(grid, {
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-item',
+        percentPosition: true
+      });
+  
+      // After Masonry is ready, handle any existing hash
+      if (hash && hash.startsWith('#projects-modal')) {
+        // Make sure the "Projects" section is displayed
+        showContent('projects', () => {
+          handleHashModal(hash);
+        });
+      } else {
+        // Default to home section if no valid hash is present
+        showContent('home');
+      }
+    });
+  
+    // Handle modal opening via clicking on a project
+    const projects = document.querySelectorAll('.grid-item');
+    const modals = document.querySelectorAll('.modal'); // Assuming each project has a corresponding modal
+  
+    projects.forEach((project, index) => {
+      const modal = modals[index];
+      project.querySelector('.archive-container').removeAttribute('data-bs-toggle');
+      project.querySelector('.archive-container').addEventListener('click', function(event) {
+        if (!event.target.closest('.project-tag')) {
+          event.preventDefault(); // Prevent default anchor behavior if any
+          const modalInstance = new bootstrap.Modal(modal);
+          modalInstance.show();
+  
+          // Update the URL to include the modal hash for navigation
+          window.history.pushState(null, null, `#projects-modal${index + 1}`);
+        }
+      });
+    });
+  
+    // Handle URL hash change to show the correct modal
+    window.addEventListener('hashchange', function() {
+      const newHash = window.location.hash;
+      if (newHash.startsWith('#projects-modal')) {
+        showContent('projects', () => {
+          handleHashModal(newHash);
+        });
+      }
+    });
+  
+    // Helper function to handle showing a modal based on the URL hash
+    function handleHashModal(hash) {
+      const modalIndex = hash.split('-modal')[1];
+      if (modalIndex) {
+        const modalElement = document.getElementById(`modal${modalIndex}`);
+        if (modalElement) {
+          // Use a small delay to ensure modal elements are properly loaded
+          setTimeout(() => {
+            const modalInstance = new bootstrap.Modal(modalElement);
+            modalInstance.show();
+          }, 300); // Adjust delay as needed
+        }
+      }
+    }
+  
+    // Function to show the correct section (Home, Projects, Fun, etc.)
+    function showContent(section, callback = null) {
+      const sections = ['home', 'projects', 'fun'];
+      sections.forEach((sec) => {
+        const content = document.getElementById(`${sec}-content`);
+        if (content) {
+          content.style.display = (sec === section) ? 'block' : 'none';
+        }
+      });
+  
+      // If the section to be displayed is 'projects', ensure Masonry is reloaded
+      if (section === 'projects' && grid) {
+        imagesLoaded(grid, function() {
+          msnry.layout();
+          if (callback) {
+            callback(); // Trigger the callback after the section is displayed and layout is done
+          }
+        });
+      } else if (callback) {
+        callback(); // Trigger callback if it's not related to 'projects' layout
+      }
+    }
+  
+    // Reset the URL hash to #projects when the modal is closed
+    modals.forEach(modal => {
+      modal.addEventListener('hidden.bs.modal', function() {
+        window.history.pushState(null, null, '#projects');
+      });
+    });
+  });
+  </script>
+  
+  
+  
     <style>
  .grid-item {
     transition: opacity 0.3s ease-in-out;
