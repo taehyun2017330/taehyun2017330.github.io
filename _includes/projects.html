@@ -391,8 +391,7 @@ document.getElementById('reset-filter').addEventListener('click', function() {
   
       // After Masonry is ready, handle any existing hash
       if (hash && hash.startsWith('#projects-modal')) {
-        // Make sure the "Projects" section is displayed
-        showContent('projects', () => {
+        ensureProjectsVisible(() => {
           handleHashModal(hash);
         });
       } else {
@@ -400,6 +399,19 @@ document.getElementById('reset-filter').addEventListener('click', function() {
         showContent('home');
       }
     });
+  
+    // Function to ensure the "Projects" section is visible, with retry
+    function ensureProjectsVisible(callback) {
+      showContent('projects', () => {
+        // Check if Masonry layout is ready, otherwise retry
+        if (document.querySelector('.grid-item')) {
+          callback();
+        } else {
+          // Retry after a short delay
+          setTimeout(() => ensureProjectsVisible(callback), 200);
+        }
+      });
+    }
   
     // Handle modal opening via clicking on a project
     const projects = document.querySelectorAll('.grid-item');
@@ -424,7 +436,7 @@ document.getElementById('reset-filter').addEventListener('click', function() {
     window.addEventListener('hashchange', function() {
       const newHash = window.location.hash;
       if (newHash.startsWith('#projects-modal')) {
-        showContent('projects', () => {
+        ensureProjectsVisible(() => {
           handleHashModal(newHash);
         });
       }
