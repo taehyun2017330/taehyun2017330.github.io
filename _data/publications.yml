@@ -5,6 +5,15 @@ main:
   #  conference: Work in progress for CHI 2025
   #  image: ./assets/img/figure4.png
 
+  - title: "Unveiling High-dimensional Backstage: A Survey for Reliable Visual Analytics with Dimensionality Reduction"
+    authors: Hyeon Jeon, Hyunwook Lee, Yun-Hsin Kuo, <strong><ss>Taehyun Yang</ss></strong>, Daniel Archambault, Sungahn Ko, Takanori Fujiwara, Kwan-Liu Ma, Jinwook Seo
+    conference_short: CHI
+    conference: To show at CHI 2025
+    code: https://dr-reliability.github.io/demo/
+    page: https://dr-reliability.github.io/guide/
+    pdf: https://arxiv.org/pdf/2501.10168
+    image: ./assets/img/figure4.png
+
   - title: "Using LLMs to Investigate Correlations of Conversational Follow-up Queries with User Satisfaction"
     authors: Hyunwoo Kim, Yoonseo Choi, <strong><ss>Taehyun Yang</ss></strong>, Honggu Lee, Chaneon Park, Yongju Lee, Jinyoung Kim, Juho Kim
     conference_short: SIGIR
@@ -17,13 +26,13 @@ main:
     authors: <strong><ss>Taehyun Yang</ss></strong>, Hyeon Jeon, Jinwook Seo
     conference_short: VIS
     pdf: https://arxiv.org/pdf/2407.16322
-    conference: Submitted to IEEE Visualization Conference (VIS) 2024.
+    conference: Work in Progress for VIS
     image: ./assets/img/figure1.png
 
   - title: "UMATO: Two-phase Manifold Approximation for Accurate, Scalable, and Stable Dimensionality Reduction"
     authors: Hyeon Jeon, Hyung-Kwon Ko, Soohyun Lee, Jake Hyun, <strong><ss>Taehyun Yang</ss></strong>, Gyehun Go, Jaemin Jo, Jinwook Seo
     conference_short: TVCG
-    conference: Work in progress for IEEE Transactions on Visualization and Computer Graphics (TVCG)
+    conference: Under Review for IEEE TVCG
     code: https://github.com/hyungkwonko/umato
     image: ./assets/img/figure3.png
     page: https://taehyun.me/Umato_VisualizationDemo/
