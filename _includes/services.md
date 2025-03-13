@@ -7,7 +7,7 @@
   Advisor: Jinwook Seo
 
 - Undergraduate Intern, **KIXLAB, KAIST**  
-  Topic: Enhancing Conversational Search Through Real World User Interaction Analysis at Scale
+  Topic: Enhancing Conversational Search Through Real World User Interaction Analysis at Scale  
   Advisor: Juho Kim
 
 - Undergraduate Intern, **Tech4Good Lab, University of California, Santa Cruz**  

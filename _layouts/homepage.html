@@ -57,18 +57,7 @@
   <body>
     <div class="wrapper">
       <header >
-        <nav>
-          <ul>
-            <li class="nav-item"><a href="javascript:showContent('home');">Home</a></li>
-            <li class="nav-item"><a href="javascript:showContent('projects');">Other Projects</a></li>
-            <li class="nav-item"><a href="javascript:showContent('fun');">Fun</a></li>
-              <li class="nav-item">
-                  <a href="#" id="theme-toggle" class="theme-toggle">
-                      <i id="theme-icon" class="fas fa-moon"></i> <!-- Set moon as default icon -->
-                  </a>
-              </li>
-          </ul>
-      </nav>
+        
       
       
       
@@ -231,7 +220,7 @@ function showContent(section) {
     }
 
     // Update the URL without reloading the page
-    window.history.pushState(null, null, `#${section}`);
+    
 }
 
 
