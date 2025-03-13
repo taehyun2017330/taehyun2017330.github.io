@@ -4,7 +4,7 @@ layout: homepage
 
 <div id="home-content">
 
-<h1 align="center">Hey there, I'm Taehyun Yang! 👋</h1>
+<h1 align="center">Hey there, I'm Taehyun (Tae) Yang! 👋</h1>
 
 <p align="center">
   📚 Undergraduate at <strong>Seoul National University</strong>, majoring in CS and Business. 
