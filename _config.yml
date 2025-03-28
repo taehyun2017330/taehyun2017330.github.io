@@ -1,11 +1,11 @@
 # Basic Information
-title: Taehyun Yang
-position: Undergraduate Student
-affiliation: Seoul National University
+title: Taehyun (Tae) Yang
+position: Ph.D Student in Computer Science
+affiliation: University of Maryland
 email: >
-  taehyun2017330 at
+  taeyang at
 
-  gmail dot com
+  umd dot com
 
 navigation:
   - title: "Home"
@@ -17,7 +17,7 @@ navigation:
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: Taehyun, HCI, Seoul National University, SNU, Undergraduate Student
+keywords: Taehyun, HCI, Seoul National University, UMD, phd, CS, AI, LLM, University of Maryland
 description: Taehyun's Personal Portfolio
 canonical: https://taehyun2017330.github.io/
 

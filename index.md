@@ -7,12 +7,10 @@ layout: homepage
 <h1 align="center">Hey there, I'm Taehyun (Tae) Yang! 👋</h1>
 
 <p align="center">
-  📚 Undergraduate at <strong>Seoul National University</strong>, majoring in CS and Business. 
-  
-  Previously studied Computer Engineering at <strong>UIUC</strong>.📚
+  📚 Ph.D. Student at <strong>University of Maryland</strong>, Computer Science 
 </p>
 
-Hi! I am a prospective graduate student at Seoul National University, advised by **Jinwook Seo**. Before SNU, I was a research intern at **KAIST KIXLAB**, advised by **Juho Kim**, and at **UCSC Tech4Good Lab**, advised by **David Kim**.
+Hi! I am an upcoming Ph.D. student at University of Maryland, advised by **Fumeng Yang**. Before UMD, I was a research intern at **SNU HCIL** - advised by **Jinwook Seo**, **KAIST KIXLAB** - advised by **Juho Kim**, and at **UCSC Tech4Good Lab** - advised by **David Kim**.
 
 My current research focuses on **Human-AI Interaction**, including but not limited to:
 
