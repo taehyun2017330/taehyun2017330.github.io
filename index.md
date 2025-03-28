@@ -10,7 +10,7 @@ layout: homepage
   📚 Ph.D. Student at <strong>University of Maryland</strong>, Computer Science 
 </p>
 
-Hi! I am an upcoming Ph.D. student at University of Maryland, advised by **Fumeng Yang**. Before UMD, I was a research intern at **SNU HCIL** - advised by **Jinwook Seo**, **KAIST KIXLAB** - advised by **Juho Kim**, and at **UCSC Tech4Good Lab** - advised by **David Kim**.
+Hi! I am an upcoming Ph.D. student in Computer Science at University of Maryland, advised by **Fumeng Yang**. Before UMD, I was a research intern at **SNU HCIL** - advised by **Jinwook Seo**, **KAIST KIXLAB** - advised by **Juho Kim**, and at **UCSC Tech4Good Lab** - advised by **David Kim**.
 
 My current research focuses on **Human-AI Interaction**, including but not limited to:
 
