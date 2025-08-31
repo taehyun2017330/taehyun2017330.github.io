@@ -8,7 +8,7 @@ main:
   - title: "Unveiling High-dimensional Backstage: A Survey for Reliable Visual Analytics with Dimensionality Reduction"
     authors: Hyeon Jeon, Hyunwook Lee, Yun-Hsin Kuo, <strong><ss>Taehyun Yang</ss></strong>, Daniel Archambault, Sungahn Ko, Takanori Fujiwara, Kwan-Liu Ma, Jinwook Seo
     conference_short: CHI
-    conference: To show at CHI 2025
+    conference: Accepted to CHI 2025
     code: https://dr-reliability.github.io/demo/
     page: https://dr-reliability.github.io/guide/
     pdf: https://arxiv.org/pdf/2501.10168
@@ -29,10 +29,11 @@ main:
     conference: Work in Progress for VIS
     image: ./assets/img/figure1.png
 
-  - title: "UMATO: Two-phase Manifold Approximation for Accurate, Scalable, and Stable Dimensionality Reduction"
+  - title: "UMATO: Bridging Local and Global Structures for Reliable Visual Analytics with Dimensionality Reduction"
     authors: Hyeon Jeon, Hyung-Kwon Ko, Soohyun Lee, Jake Hyun, <strong><ss>Taehyun Yang</ss></strong>, Gyehun Go, Jaemin Jo, Jinwook Seo
     conference_short: TVCG
-    conference: Under Review for IEEE TVCG
+    conference: Accepted to IEEE TVCG
+    pdf: https://www.arxiv.org/pdf/2508.16227
     code: https://github.com/hyungkwonko/umato
     image: ./assets/img/figure3.png
     page: https://taehyun.me/Umato_VisualizationDemo/
