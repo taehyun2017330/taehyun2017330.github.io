@@ -4,13 +4,13 @@ layout: homepage
 
 <div id="home-content">
 
-<h1 align="center">Hey there, I'm Taehyun (Tae) Yang! 👋</h1>
+<h1 align="center">Hey there, I'm Danny (Taehyun) Yang! 👋</h1>
 
 <p align="center">
   📚 Ph.D. Student at <strong>University of Maryland</strong>, Computer Science 
 </p>
 
-Hi! I am an upcoming Ph.D. student in Computer Science at University of Maryland, advised by **Fumeng Yang**. Before UMD, I was a research intern at **SNU HCIL** - advised by **Jinwook Seo** and **KAIST KIXLAB** - advised by **Juho Kim**.
+Hi! I a first year Ph.D. student at University of Maryland, advised by **Fumeng Yang**. Before UMD, I was a research intern at **SNU HCIL** - advised by **Jinwook Seo** and **KAIST KIXLAB** - advised by **Juho Kim**.
 
 My current research focuses on **Human-AI Interaction**, including but not limited to:
 
