@@ -1,0 +1,47 @@
+- from: "Seoul"
+  to: "Santa Cruz"
+  count: 1
+
+- from: "Santa Cruz"
+  to: "Seoul"
+  count: 1
+
+- from: "Seoul"
+  to: "Shanghai"
+  count: 1
+
+- from: "Shanghai"
+  to: "Seoul"
+  count: 1
+
+- from: "Seoul"
+  to: "Honolulu"
+  count: 1
+
+- from: "Honolulu"
+  to: "Seoul"
+  count: 1
+
+- from: "Seoul"
+  to: "West Lafayette (Purdue)"
+  count: 1
+
+- from: "West Lafayette (Purdue)"
+  to: "San Francisco"
+  count: 1
+
+- from: "San Francisco"
+  to: "Seoul"
+  count: 1
+
+- from: "Seoul"
+  to: "Yokohama"
+  count: 1
+
+- from: "Yokohama"
+  to: "Seoul"
+  count: 1
+
+- from: "Seoul"
+  to: "College Park"
+  count: 1

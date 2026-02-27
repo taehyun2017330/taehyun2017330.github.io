@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8f0ff"/>
+      <stop offset="100%" stop-color="#c9dbff"/>
+    </linearGradient>
+    <linearGradient id="shape" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e67ff"/>
+      <stop offset="100%" stop-color="#0f327f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <circle cx="650" cy="120" r="90" fill="#ffffff" opacity="0.6"/>
+  <circle cx="180" cy="650" r="140" fill="#ffffff" opacity="0.45"/>
+  <path d="M120 520 C200 380, 350 360, 420 470 C520 620, 680 600, 760 470 L760 760 L120 760 Z" fill="url(#shape)" opacity="0.95"/>
+  <text x="80" y="140" font-family="Geist, Arial, sans-serif" font-size="48" fill="#0a1f52" font-weight="700">Taehyun Yang</text>
+  <text x="80" y="190" font-family="Geist, Arial, sans-serif" font-size="24" fill="#1650c4">Ph.D. Student · UMD</text>
+</svg>

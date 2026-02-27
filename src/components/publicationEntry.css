@@ -1,0 +1,138 @@
+.publication-item:last-child > hr {
+  display: none;
+}
+
+.publication-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600 !important;
+}
+
+.publication-title-link,
+.publication-title-text {
+  color: var(--element-primary-color);
+  font-size: 16px;
+  font-weight: 600 !important;
+}
+
+.publication-title-link:hover,
+.publication-title-link:focus-visible {
+  color: var(--element-primary-color);
+  text-decoration: underline;
+}
+
+.publication-author-list {
+  font-size: 14px;
+  font-weight: 400 !important;
+  color: var(--element-primary-color);
+}
+
+.publication-author-list a {
+  font-weight: 400;
+  color: var(--element-primary-color);
+}
+
+.publication-author-list a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18rem;
+}
+
+.publication-coauthor {
+  font-weight: 400 !important;
+}
+
+.publication-cofirst {
+  font-size: 0.75rem;
+}
+
+.my-name {
+  font-weight: 700 !important;
+  text-decoration: underline;
+  text-decoration-color: rgba(47, 109, 255, 0.6);
+  text-underline-offset: 0.2rem;
+}
+
+.publication-venue {
+  font-size: 14px;
+  font-weight: 500 !important;
+}
+
+.publication-detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.publication-venue-line {
+  margin: 0;
+  font-size: 14px;
+  color: var(--element-primary-color);
+}
+
+.publication-note {
+  font-weight: 400;
+}
+
+.publication-award {
+  margin-top: 0.45rem;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.publication-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  min-height: 30px;
+  align-items: center;
+}
+
+.pub-action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(48, 51, 61, 0.24);
+  color: var(--element-secondary-color);
+  background: #fff;
+}
+
+.pub-action-button svg {
+  width: 15px;
+  height: 15px;
+}
+
+.pub-action-button:hover,
+.pub-action-button:focus-visible {
+  border-color: rgba(67, 112, 220, 0.6);
+  color: var(--element-primary-color);
+}
+
+.publication-links-empty {
+  font-size: 0.78rem;
+  color: var(--element-secondary-color);
+  font-style: italic;
+}
+
+.publication-item > hr {
+  margin: 0.75rem 0 1rem;
+  border: 0;
+  border-top: 1.2px solid rgba(29, 31, 36, 0.36);
+}
+
+@media (max-width: 768px) {
+  .publication-detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .publication-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

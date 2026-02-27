@@ -1,0 +1,95 @@
+- type: publication
+  year: 2025
+  title: "Unveiling High-dimensional Backstage: A Survey for Reliable Visual Analytics with Dimensionality Reduction"
+  conference: "CHI 2025"
+  pdf: "https://arxiv.org/pdf/2501.10168"
+  website: "https://dr-reliability.github.io/demo/"
+  authors:
+    - name: "Hyeon Jeon"
+    - name: "Hyunwook Lee"
+    - name: "Yun-Hsin Kuo"
+    - name: "Taehyun Yang"
+    - name: "Daniel Archambault"
+    - name: "Sungahn Ko"
+    - name: "Takanori Fujiwara"
+    - name: "Kwan-Liu Ma"
+    - name: "Jinwook Seo"
+
+- type: publication
+  year: 2024
+  title: "UMATO: Bridging Local and Global Structures for Reliable Visual Analytics with Dimensionality Reduction"
+  conference: "VIS 2024"
+  pdf: "https://www.arxiv.org/pdf/2508.16227"
+  code: "https://github.com/hyungkwonko/umato"
+  website: "https://taehyun.me/Umato_VisualizationDemo/"
+  authors:
+    - name: "Hyeon Jeon"
+    - name: "Hyung-Kwon Ko"
+    - name: "Soohyun Lee"
+    - name: "Jake Hyun"
+    - name: "Taehyun Yang"
+    - name: "Gyehun Go"
+    - name: "Jaemin Jo"
+    - name: "Jinwook Seo"
+
+- type: preprint
+  year: 2026
+  title: "In the Shadow of Judgment: Mapping Out the Landscape of Human-AI Decision-Making Through a Systematic Review"
+  conference: "Preprint"
+  website: "https://fig-x.github.io/haid/"
+  pdf: "https://d197for5662m48.cloudfront.net/documents/publicationstatus/306345/preprint_pdf/b7def47654d235c2f2702e51da985a37.pdf"
+  authors:
+    - name: "Yixin Bai"
+    - name: "Taehyun Yang"
+    - name: "Zhongzheng Xu"
+    - name: "Dayeon Ki"
+    - name: "Ziyi Wang"
+    - name: "Yu Hou"
+    - name: "Fumeng Yang"
+
+- type: poster
+  year: 2026
+  title: "Trace-Aware Workflows for Co-Creating Branded Content with Generative AI"
+  conference: "CHI 2026"
+  workshop: "Workshop"
+  toappear: true
+  authors:
+    - name: "Taehyun Yang"
+    - name: "Eunhye Kim"
+    - name: "Zhongzheng Xu"
+    - name: "Fumeng Yang"
+
+- type: poster
+  year: 2025
+  title: "Navigating High-Dimensional Backstage: A Guide for Exploring Literature for the Reliable Use of Dimensionality Reduction"
+  conference: "EuroVis 2025"
+  workshop: "Short Paper"
+  website: "https://dr-reliability.github.io/guide/"
+  pdf: "https://arxiv.org/abs/2506.14820"
+  authors:
+    - name: "Hyeon Jeon"
+    - name: "Hyunwook Lee"
+    - name: "Yun-Hsin Kuo"
+    - name: "Taehyun Yang"
+    - name: "Daniel Archambault"
+    - name: "Sungahn Ko"
+    - name: "Takanori Fujiwara"
+    - name: "Kwan-Liu Ma"
+    - name: "Jinwook Seo"
+
+- type: poster
+  year: 2024
+  title: "Using LLMs to Investigate Correlations of Conversational Follow-up Queries with User Satisfaction"
+  conference: "SIGIR 2024"
+  workshop: "Workshop"
+  pdf: "https://kixlab.github.io/website-files/2024/sigir2024-workshop-searchgpt.pdf"
+  code: "https://github.com/kixlab/searchgpt-classifier"
+  authors:
+    - name: "Hyunwoo Kim"
+    - name: "Yoonseo Choi"
+    - name: "Taehyun Yang"
+    - name: "Honggu Lee"
+    - name: "Chaneon Park"
+    - name: "Yongju Lee"
+    - name: "Jinyoung Kim"
+    - name: "Juho Kim"

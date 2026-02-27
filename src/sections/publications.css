@@ -1,0 +1,23 @@
+.publication-list {
+  padding-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.publication-groups {
+  width: 100%;
+}
+
+.publication-year-block {
+  margin-top: 2.5rem;
+}
+
+.publication-year-block:first-child {
+  margin-top: 0;
+}
+
+.publication-year {
+  font-weight: 400;
+  margin-bottom: 1.1rem;
+}

@@ -1,0 +1,39 @@
+- name: Seoul
+  lat: 37.5665
+  lon: 126.9780
+  description: "Bachelors school"
+
+- name: Santa Cruz
+  lat: 36.9741
+  lon: -122.0308
+  description: "Research internship"
+
+- name: Shanghai
+  lat: 31.2304
+  lon: 121.4737
+  description: "Home visit"
+
+- name: Honolulu
+  lat: 21.3069
+  lon: -157.8583
+  description: "CHI 2024"
+
+- name: West Lafayette (Purdue)
+  lat: 40.4237
+  lon: -86.9212
+  description: "Semiconductor workshop"
+
+- name: San Francisco
+  lat: 37.7749
+  lon: -122.4194
+  description: "Semiconductor workshop"
+
+- name: Yokohama
+  lat: 35.4437
+  lon: 139.6380
+  description: "CHI 2025"
+
+- name: College Park
+  lat: 38.9807
+  lon: -76.9369
+  description: "PhD program"

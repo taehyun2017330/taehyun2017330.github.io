@@ -1,0 +1,126 @@
+.travel-map-wrap {
+  margin: 0;
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  overflow: hidden;
+}
+
+.travel-map-viewport {
+  position: relative;
+}
+
+.travel-map-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.travel-map-sphere {
+  fill: #ffffff;
+  stroke: rgba(0, 0, 0, 0.12);
+  stroke-width: 0.8;
+}
+
+.travel-map-country {
+  fill: #d2d7de;
+  stroke: rgba(255, 255, 255, 0.6);
+  stroke-width: 0.65;
+}
+
+.travel-map-routes-layer {
+  pointer-events: none;
+}
+
+.travel-map-route {
+  fill: none;
+  stroke: #8a96a6;
+  stroke-linecap: round;
+  opacity: 0.82;
+}
+
+.travel-map-marker {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #2f6dff;
+  border: 1px solid #ffffff;
+  transform: translate(-50%, -50%);
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  appearance: none;
+}
+
+.travel-map-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  transform: translateX(-50%) translateY(6px);
+  width: max-content;
+  min-width: 0;
+  max-width: 138px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(32, 35, 42, 0.14);
+  border-radius: 4px;
+  padding: 0.26rem 0.34rem;
+  box-shadow: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.16s ease-out, transform 0.16s ease-out;
+  text-align: left;
+  z-index: 3;
+}
+
+.travel-map-tooltip::after {
+  display: none;
+}
+
+.travel-map-tooltip-where {
+  display: block;
+  font-size: 0.67rem;
+  font-weight: 600;
+  color: var(--element-primary-color);
+}
+
+.travel-map-tooltip-when {
+  display: block;
+  margin-top: 1px;
+  font-size: 0.67rem;
+  color: var(--element-secondary-color);
+}
+
+.travel-map-tooltip-desc {
+  display: block;
+  margin-top: 0.12rem;
+  font-size: 0.64rem;
+  line-height: 1.25;
+  color: var(--element-primary-color);
+}
+
+.travel-map-marker:hover .travel-map-tooltip,
+.travel-map-marker:focus-visible .travel-map-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.travel-map-stats {
+  display: block;
+  padding: 0.42rem 0.5rem 0.5rem;
+  font-size: 0.72rem;
+  color: var(--element-secondary-color);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .travel-map-tooltip {
+    max-width: 128px;
+  }
+
+  .travel-map-stats {
+    font-size: 0.68rem;
+  }
+}
