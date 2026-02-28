@@ -25,8 +25,8 @@
   font: inherit;
   cursor: pointer;
   background-image:
-    linear-gradient(rgba(64, 111, 221, 0.72), rgba(64, 111, 221, 0.72)),
-    linear-gradient(rgba(120, 154, 235, 0.42), rgba(120, 154, 235, 0.42));
+    linear-gradient(var(--accent-amber-strong), var(--accent-amber-strong)),
+    linear-gradient(var(--accent-amber-soft), var(--accent-amber-soft));
   background-repeat: no-repeat;
   background-position: 0 100%, 0 100%;
   background-size: 100% 0.11em, 100% 0;
@@ -62,8 +62,8 @@
   padding: 0 0.05em;
   margin: 0 -0.01em;
   background-image:
-    linear-gradient(rgba(64, 111, 221, 0.72), rgba(64, 111, 221, 0.72)),
-    linear-gradient(rgba(120, 154, 235, 0.42), rgba(120, 154, 235, 0.42));
+    linear-gradient(var(--accent-amber-strong), var(--accent-amber-strong)),
+    linear-gradient(var(--accent-amber-soft), var(--accent-amber-soft));
   background-repeat: no-repeat;
   background-position: 0 100%, 0 100%;
   background-size: 100% 0.11em, 100% 0;
@@ -108,8 +108,8 @@
   padding: 0 0.05em;
   margin: 0 -0.01em;
   background-image:
-    linear-gradient(rgba(64, 111, 221, 0.72), rgba(64, 111, 221, 0.72)),
-    linear-gradient(rgba(120, 154, 235, 0.42), rgba(120, 154, 235, 0.42));
+    linear-gradient(var(--accent-amber-strong), var(--accent-amber-strong)),
+    linear-gradient(var(--accent-amber-soft), var(--accent-amber-soft));
   background-repeat: no-repeat;
   background-position: 0 100%, 0 100%;
   background-size: 100% 0.11em, 100% 0;
@@ -184,8 +184,8 @@
 
 .about-social-button:hover,
 .about-social-button:focus-visible {
-  border-color: rgba(67, 112, 220, 0.6);
-  color: var(--element-primary-color);
+  border-color: var(--accent-border-strong);
+  color: var(--accent-amber);
 }
 
 @media (max-width: 767px) {

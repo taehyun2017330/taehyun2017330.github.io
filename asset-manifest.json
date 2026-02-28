@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.fd2e38f8.css",
-    "main.js": "/static/js/main.3f993493.js",
-    "static/media/github.svg": "/static/media/github.2d6433528b3918e169b9d2647110a8db.svg",
-    "static/media/google-scholar.svg": "/static/media/google-scholar.e42a25b638a3afc000767867028e05d1.svg",
+    "main.css": "/static/css/main.5d8cd946.css",
+    "main.js": "/static/js/main.2c1d486d.js",
+    "static/media/github.svg": "/static/media/github.e6d27caa9d8b833806faa36a88c40d36.svg",
     "index.html": "/index.html",
-    "static/media/linkedin.svg": "/static/media/linkedin.cb6fdc4550d40a6dcf9bf1a0856bc9b6.svg",
-    "static/media/x-twitter.svg": "/static/media/x-twitter.7d569591adfcda71f049d2f15b4c18e5.svg",
-    "main.fd2e38f8.css.map": "/static/css/main.fd2e38f8.css.map",
-    "main.3f993493.js.map": "/static/js/main.3f993493.js.map"
+    "static/media/google-scholar.svg": "/static/media/google-scholar.b6e7bf8e7ac6d1c7edf729edc87be263.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.772d22f316c72bb500520b41118f7383.svg",
+    "static/media/x-twitter.svg": "/static/media/x-twitter.0d590f23713f77e8a3cad891372c40d1.svg",
+    "main.5d8cd946.css.map": "/static/css/main.5d8cd946.css.map",
+    "main.2c1d486d.js.map": "/static/js/main.2c1d486d.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd2e38f8.css",
-    "static/js/main.3f993493.js"
+    "static/css/main.5d8cd946.css",
+    "static/js/main.2c1d486d.js"
   ]
 }

@@ -49,7 +49,8 @@
 
 .footer-repo-link:hover,
 .footer-repo-link:focus-visible {
-  border-color: rgba(67, 112, 220, 0.58);
+  border-color: var(--accent-border-strong);
+  color: var(--accent-amber);
 }
 
 @media (max-width: 768px) {

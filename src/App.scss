@@ -3,11 +3,18 @@
 :root {
   --font-family-body: 'Geist', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --element-primary-color: #1d1f24;
-  --element-secondary-color: #606572;
-  --background-primary-color: #ffffff;
-  --border-color: #c9ced8;
-  --highlight-color: rgba(64, 111, 221, 0.2);
+  --element-primary-color: #2b2a23;
+  --element-secondary-color: #636553;
+  --background-primary-color: #fdfdfd;
+  --border-color: #d8d2c6;
+  --highlight-color: rgba(224, 138, 65, 0.3);
+  --accent-olive: #6f7b4b;
+  --accent-forest: #55603b;
+  --accent-amber: #e69147;
+  --accent-amber-strong: rgba(249, 149, 62, 0.82);
+  --accent-amber-soft: rgba(238, 172, 113, 0.45);
+  --accent-border-strong: rgba(224, 138, 65, 0.68);
+  --accent-olive-soft: rgba(111, 123, 75, 0.6);
 }
 
 * {
@@ -32,9 +39,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::selection {
+  background: var(--highlight-color);
+  color: var(--element-primary-color);
+}
+
 .light {
   min-height: 100vh;
-  background: #fff;
+  background: var(--background-primary-color);
 }
 
 .site-header,
@@ -120,9 +132,9 @@ a {
 }
 
 .site-brand-avatar {
-  width: 46px;
-  height: 46px;
-  object-fit: cover;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
   flex: 0 0 auto;
 }
 
@@ -148,7 +160,7 @@ a {
 .desktop-nav-link:hover,
 .desktop-nav-link:focus-visible {
   color: var(--element-primary-color);
-  border-bottom-color: rgba(67, 112, 220, 0.55);
+  border-bottom-color: var(--accent-border-strong);
 }
 
 a.iconLink {
@@ -165,8 +177,8 @@ a.iconLink {
 
 a.iconLink:hover,
 a.iconLink:focus-visible {
-  color: var(--element-primary-color);
-  border-color: rgba(67, 112, 220, 0.6);
+  color: var(--accent-amber);
+  border-color: var(--accent-border-strong);
 }
 
 a.iconLink.large {

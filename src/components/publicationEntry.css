@@ -48,7 +48,7 @@
 .my-name {
   font-weight: 700 !important;
   text-decoration: underline;
-  text-decoration-color: rgba(47, 109, 255, 0.6);
+  text-decoration-color: var(--accent-amber-strong);
   text-underline-offset: 0.2rem;
 }
 
@@ -109,8 +109,8 @@
 
 .pub-action-button:hover,
 .pub-action-button:focus-visible {
-  border-color: rgba(67, 112, 220, 0.6);
-  color: var(--element-primary-color);
+  border-color: var(--accent-border-strong);
+  color: var(--accent-amber);
 }
 
 .publication-links-empty {
