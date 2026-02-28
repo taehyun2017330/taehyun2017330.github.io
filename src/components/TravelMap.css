@@ -19,13 +19,13 @@
 
 .travel-map-sphere {
   fill: var(--background-primary-color);
-  stroke: rgba(66, 58, 44, 0.16);
+  stroke: var(--map-sphere-stroke);
   stroke-width: 0.8;
 }
 
 .travel-map-country {
-  fill: #d2ccb9;
-  stroke: rgba(255, 255, 255, 0.6);
+  fill: var(--map-country-fill);
+  stroke: var(--map-country-stroke);
   stroke-width: 0.65;
 }
 
@@ -35,7 +35,7 @@
 
 .travel-map-route {
   fill: none;
-  stroke: #8f836a;
+  stroke: var(--map-route-stroke);
   stroke-linecap: round;
   opacity: 0.82;
 }
@@ -45,8 +45,8 @@
   width: 7px;
   height: 7px;
   border-radius: 999px;
-  background: var(--accent-olive);
-  border: 1px solid #f8f5ee;
+  background: var(--map-marker-color);
+  border: 1px solid var(--map-marker-border);
   transform: translate(-50%, -50%);
   box-shadow: none;
   padding: 0;
@@ -63,8 +63,8 @@
   width: max-content;
   min-width: 0;
   max-width: 138px;
-  background: rgba(250, 247, 240, 0.98);
-  border: 1px solid rgba(66, 58, 44, 0.2);
+  background: var(--map-tooltip-bg);
+  border: 1px solid var(--map-tooltip-border);
   border-radius: 4px;
   padding: 0.26rem 0.34rem;
   box-shadow: none;

@@ -1,4 +1,8 @@
+import { ACTIVE_THEME_KEY, getThemePreset } from "../config/themePresets";
+
 const Header = () => {
+  const activeTheme = getThemePreset(ACTIVE_THEME_KEY);
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (!section) return;
@@ -10,7 +14,7 @@ const Header = () => {
       <div className="custom-container d-flex align-items-center justify-content-between">
         <a href="/" className="site-brand" aria-label="Taehyun home">
           <img
-            src="/assets/images/profile/avatar1.png"
+            src={activeTheme.assets.headerAvatar}
             alt="Taehyun avatar"
             className="site-brand-avatar"
           />
