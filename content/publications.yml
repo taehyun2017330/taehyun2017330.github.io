@@ -65,7 +65,7 @@
   conference: "EuroVis 2025"
   workshop: "Short Paper"
   website: "https://dr-reliability.github.io/guide/"
-  pdf: "https://arxiv.org/abs/2506.14820"
+  pdf: "https://arxiv.org/pdf/2506.14820"
   authors:
     - name: "Hyeon Jeon"
     - name: "Hyunwook Lee"
@@ -82,7 +82,7 @@
   title: "Using LLMs to Investigate Correlations of Conversational Follow-up Queries with User Satisfaction"
   conference: "SIGIR 2024"
   workshop: "Workshop"
-  pdf: "https://kixlab.github.io/website-files/2024/sigir2024-workshop-searchgpt.pdf"
+  pdf: "https://arxiv.org/pdf/2407.13166"
   code: "https://github.com/kixlab/searchgpt-classifier"
   authors:
     - name: "Hyunwoo Kim"
