@@ -32,7 +32,11 @@
   background-size: 100% 0.11em, 100% 0;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  transition: background-size 0.16s ease-out, color 0.16s ease-out;
+  transition: background-size 0.28s ease-out, color 0.28s ease-out;
+}
+
+html[data-theme-transition="true"] .pronounce-trigger {
+  animation: themeUnderlineDraw 0.56s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .pronounce-trigger:hover,
@@ -67,7 +71,11 @@
   background-repeat: no-repeat;
   background-position: 0 100%, 0 100%;
   background-size: 100% 0.11em, 100% 0;
-  transition: background-size 0.16s ease-out, color 0.16s ease-out;
+  transition: background-size 0.28s ease-out, color 0.28s ease-out;
+}
+
+html[data-theme-transition="true"] .funyuns-word {
+  animation: themeUnderlineDraw 0.56s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .funyuns-icon {
@@ -115,7 +123,11 @@
   background-size: 100% 0.11em, 100% 0;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  transition: background-size 0.16s ease-out, color 0.16s ease-out;
+  transition: background-size 0.28s ease-out, color 0.28s ease-out;
+}
+
+html[data-theme-transition="true"] #about .custom-link {
+  animation: themeUnderlineDraw 0.56s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 #about .custom-link:hover,
@@ -151,10 +163,20 @@
   align-items: flex-end;
 }
 
+.about-photo-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #f8f8f5;
+}
+
 .about-photo {
   width: 100%;
-  height: auto;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  animation: aboutPhotoFade 0.22s ease-out;
 }
 
 .about-social {
@@ -202,5 +224,26 @@
 
   .about-social {
     justify-content: center;
+  }
+}
+
+@keyframes aboutPhotoFade {
+  0% {
+    opacity: 0.78;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes themeUnderlineDraw {
+  0% {
+    background-size: 0 0.11em, 0 0;
+  }
+
+  100% {
+    background-size: 100% 0.11em, 0 0;
   }
 }

@@ -47,9 +47,16 @@
 
 .my-name {
   font-weight: 700 !important;
-  text-decoration: underline;
-  text-decoration-color: var(--accent-amber-strong);
-  text-underline-offset: 0.2rem;
+  text-decoration: none;
+  padding: 0 0.02em;
+  background-image: linear-gradient(var(--accent-amber-strong), var(--accent-amber-strong));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 0.11em;
+}
+
+html[data-theme-transition="true"] .my-name {
+  animation: publicationUnderlineDraw 0.56s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .publication-venue {
@@ -134,5 +141,15 @@
   .publication-actions {
     width: 100%;
     justify-content: flex-end;
+  }
+}
+
+@keyframes publicationUnderlineDraw {
+  0% {
+    background-size: 0 0.11em;
+  }
+
+  100% {
+    background-size: 100% 0.11em;
   }
 }

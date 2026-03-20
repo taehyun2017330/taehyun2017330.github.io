@@ -2,10 +2,10 @@ import About from "../sections/about";
 import Publications from "../sections/publications";
 import Updates from "../sections/updates";
 
-function Home() {
+function Home({ activeTheme }) {
   return (
     <div className="custom-container" style={{ marginTop: "2rem" }}>
-      <About />
+      <About activeTheme={activeTheme} />
       <Publications />
       <Updates />
     </div>

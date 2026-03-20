@@ -3,8 +3,9 @@ export const THEME_PRESETS = {
     id: "autumn",
     label: "Autumn",
     assets: {
-      headerAvatar: "/assets/images/profile/avatar-autumn.png",
+      headerAvatar: "/assets/images/profile/avatar_transparent.png",
       aboutPhoto: "/assets/images/profile/profile-autumn.png",
+      switcherIcon: "/assets/images/profile/fall.png",
     },
     cssVars: {
       "--element-primary-color": "#2b2a23",
@@ -27,14 +28,17 @@ export const THEME_PRESETS = {
       "--map-marker-border": "#f8f5ee",
       "--map-tooltip-bg": "rgba(250, 247, 240, 0.98)",
       "--map-tooltip-border": "rgba(66, 58, 44, 0.2)",
+      "--avatar-floor-color": "#e69147",
+      "--avatar-floor-shadow": "rgba(177, 103, 39, 0.34)",
     },
   },
   blue: {
     id: "blue",
-    label: "Blue",
+    label: "Summer",
     assets: {
-      headerAvatar: "/assets/images/profile/avatar-blue.png",
+      headerAvatar: "/assets/images/profile/avatar_transparent.png",
       aboutPhoto: "/assets/images/profile/profile-blue.png",
+      switcherIcon: "/assets/images/profile/summer.png",
     },
     cssVars: {
       "--element-primary-color": "#1d1f24",
@@ -57,17 +61,19 @@ export const THEME_PRESETS = {
       "--map-marker-border": "#ffffff",
       "--map-tooltip-bg": "rgba(255, 255, 255, 0.98)",
       "--map-tooltip-border": "rgba(32, 35, 42, 0.14)",
+      "--avatar-floor-color": "#2f6dff",
+      "--avatar-floor-shadow": "rgba(31, 77, 175, 0.3)",
     },
   },
 };
 
-export const ACTIVE_THEME_KEY = "autumn";
+export const DEFAULT_THEME_KEY = "autumn";
 
-export function getThemePreset(key = ACTIVE_THEME_KEY) {
-  return THEME_PRESETS[key] || THEME_PRESETS[ACTIVE_THEME_KEY];
+export function getThemePreset(key = DEFAULT_THEME_KEY) {
+  return THEME_PRESETS[key] || THEME_PRESETS[DEFAULT_THEME_KEY];
 }
 
-export function applyThemePreset(key = ACTIVE_THEME_KEY) {
+export function applyThemePreset(key = DEFAULT_THEME_KEY) {
   const preset = getThemePreset(key);
   if (typeof document === "undefined") return preset;
 

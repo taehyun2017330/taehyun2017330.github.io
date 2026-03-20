@@ -3,12 +3,10 @@ import { Col, Row } from "react-bootstrap";
 import { ReactComponent as XIcon } from "../components/icons/x-twitter.svg";
 import { ReactComponent as LinkedinIcon } from "../components/icons/linkedin.svg";
 import { ReactComponent as ScholarIcon } from "../components/icons/google-scholar.svg";
-import { ACTIVE_THEME_KEY, getThemePreset } from "../config/themePresets";
 import "./about.css";
 
-function About() {
+function About({ activeTheme }) {
   const nameAudioRef = useRef(null);
-  const activeTheme = getThemePreset(ACTIVE_THEME_KEY);
 
   useEffect(() => {
     const audio = new Audio("/assets/audio/name.m4a");
@@ -114,11 +112,14 @@ function About() {
 
         <Col xs={12} md={4} className="about-media-col">
           <div className="about-photo-wrap">
-            <img
-              src={activeTheme.assets.aboutPhoto}
-              alt="Taehyun Yang profile"
-              className="about-photo"
-            />
+            <div className="about-photo-frame">
+              <img
+                key={activeTheme.id}
+                src={activeTheme.assets.aboutPhoto}
+                alt="Taehyun Yang profile"
+                className="about-photo"
+              />
+            </div>
             <div className="about-social">
               <a
                 className="about-social-button"

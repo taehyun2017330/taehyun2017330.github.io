@@ -47,6 +47,9 @@ body {
   color-scheme: light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.32s ease-out;
 }
 
 ::selection {
@@ -141,11 +144,160 @@ a {
   color: var(--element-primary-color) !important;
 }
 
-.site-brand-avatar {
+.site-brand-avatar-stack {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.58rem;
+}
+
+.site-brand-avatar-shell {
+  position: relative;
   width: 60px;
   height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.site-brand-avatar-backplate {
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 64px;
+  height: 22px;
+  transform: translateX(-50%);
+  transition: transform 0.42s ease-out;
+}
+
+.site-brand-avatar-pool {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+.site-brand-avatar-pool-glow {
+  fill: color-mix(in srgb, var(--avatar-floor-color) 18%, #ffffff);
+  transition: fill 0.68s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.site-brand-avatar-pool-glow-previous,
+.site-brand-avatar-pool-core {
+  transition: fill 0.68s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.site-brand-avatar-pool-core {
+  fill: var(--accent-amber-strong);
+  filter: drop-shadow(0 6px 10px color-mix(in srgb, var(--avatar-floor-shadow) 70%, transparent));
+}
+
+.site-brand-avatar-pool-glow-previous {
+  opacity: 0;
+}
+
+.site-brand-avatar-pool-core-previous {
+  opacity: 0;
+}
+
+html[data-theme-transition="true"] .site-brand-avatar-pool-glow-previous {
+  animation: siteAvatarPoolFade 0.78s cubic-bezier(0.2, 0.74, 0.24, 1) forwards;
+}
+
+html[data-theme-transition="true"] .site-brand-avatar-pool-core-previous {
+  animation: siteAvatarPoolFade 0.78s cubic-bezier(0.2, 0.74, 0.24, 1) forwards;
+  transition: fill 0.68s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.site-brand-avatar-pool-ripple {
+  fill: none;
+  stroke: color-mix(in srgb, var(--avatar-floor-color) 42%, #ffffff);
+  stroke-width: 2.2;
+  opacity: 0;
+  transform-origin: center;
+}
+
+html[data-theme-transition="true"] .site-brand-avatar-backplate {
+  transform: translateX(-50%) translateY(0.5px) scale(1.02);
+}
+
+html[data-theme-transition="true"] .site-brand-avatar-pool-ripple {
+  animation: siteAvatarRipple 0.92s cubic-bezier(0.18, 0.72, 0.22, 1) forwards;
+}
+
+.site-theme-switcher {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.12rem;
+}
+
+.site-theme-button {
+  position: relative;
+  width: 30px;
+  min-height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--element-secondary-color);
+  transition: transform 0.24s ease-out, opacity 0.2s ease-out, color 0.24s ease-out;
+}
+
+.site-theme-button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.02rem;
+  width: 0;
+  height: 2px;
+  background: var(--accent-amber-strong);
+  transform: translateX(-50%);
+  transition: width 0.28s ease-out;
+}
+
+.site-theme-button:hover,
+.site-theme-button:focus-visible {
+  transform: translateY(-1px);
+  opacity: 0.92;
+  color: var(--element-primary-color);
+}
+
+.site-theme-button:hover::after,
+.site-theme-button:focus-visible::after {
+  width: 82%;
+}
+
+.site-theme-button.is-active {
+  opacity: 1;
+  color: var(--element-primary-color);
+}
+
+.site-theme-button.is-active::after {
+  width: 82%;
+}
+
+.site-theme-button-icon {
+  width: 22px;
+  height: 22px;
+  display: block;
   object-fit: contain;
   flex: 0 0 auto;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.32s ease-out, opacity 0.24s ease-out;
+}
+
+.site-theme-button.theme-blue .site-theme-button-icon {
+  transform: scale(1.03);
+}
+
+.site-theme-button.theme-autumn .site-theme-button-icon {
+  transform: scale(1);
 }
 
 .desktop-nav {
@@ -165,6 +317,7 @@ a {
   margin-left: 1.05rem;
   padding: 0.28rem 0.12rem;
   border-bottom: 1px solid transparent;
+  transition: color 0.28s ease-out, border-bottom-color 0.34s ease-out;
 }
 
 .desktop-nav-link:hover,
@@ -183,6 +336,10 @@ a.iconLink {
   justify-content: center;
   padding: 6px;
   box-shadow: none;
+  transition:
+    color 0.18s ease-out,
+    border-color 0.18s ease-out,
+    background-color 0.25s ease-out;
 }
 
 a.iconLink:hover,
@@ -214,4 +371,39 @@ a.iconLink.large {
 .footer-content a:hover,
 .footer-content a:focus-visible {
   color: var(--element-primary-color);
+}
+
+.site-brand-avatar {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes siteAvatarRipple {
+  0% {
+    opacity: 0.42;
+    transform: scale(1);
+  }
+
+  62% {
+    opacity: 0.16;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.42);
+  }
+}
+
+@keyframes siteAvatarPoolFade {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }

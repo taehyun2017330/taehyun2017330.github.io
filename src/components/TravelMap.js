@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { geoNaturalEarth1, geoPath } from "d3-geo";
+import { geoGraticule10, geoNaturalEarth1, geoPath } from "d3-geo";
 import { feature } from "topojson-client";
 import "./TravelMap.css";
 
@@ -29,6 +29,7 @@ function haversineDistance(fromCoord, toCoord) {
 
 function TravelMap({ locations = [], routes = [] }) {
   const [countries, setCountries] = useState([]);
+  const [activeLocation, setActiveLocation] = useState(null);
 
   useEffect(() => {
     let active = true;
@@ -60,6 +61,7 @@ function TravelMap({ locations = [], routes = [] }) {
 
   const pathGenerator = useMemo(() => geoPath(projection), [projection]);
   const spherePath = useMemo(() => pathGenerator({ type: "Sphere" }), [pathGenerator]);
+  const graticulePath = useMemo(() => pathGenerator(geoGraticule10()), [pathGenerator]);
 
   const markerPositions = useMemo(
     () =>
@@ -146,7 +148,7 @@ function TravelMap({ locations = [], routes = [] }) {
     }, {});
 
     let totalMiles = 0;
-    const geoRoutes = normalizedRoutes.map((route) => {
+    const geoRoutes = normalizedRoutes.map((route, index) => {
       const line = {
         type: "Feature",
         geometry: {
@@ -162,6 +164,11 @@ function TravelMap({ locations = [], routes = [] }) {
         to: route.to,
         pathD: pathGenerator(line) || "",
         strokeWidth: (0.58 * Math.sqrt(pairCounts[route.pairKey] || 1)).toFixed(2),
+        glowWidth: (1.7 + 0.72 * Math.sqrt(pairCounts[route.pairKey] || 1)).toFixed(2),
+        delay: `${180 + index * 120}ms`,
+        isHighlighted:
+          Boolean(activeLocation) &&
+          (route.from === activeLocation || route.to === activeLocation),
       };
     });
 
@@ -172,20 +179,49 @@ function TravelMap({ locations = [], routes = [] }) {
       totalMiles,
       earthLaps,
     };
-  }, [routes, markerPositions, locationByName, pathGenerator]);
+  }, [routes, markerPositions, locationByName, pathGenerator, activeLocation]);
 
   const earthLapsLabel = routeMetrics.earthLaps.toFixed(1);
+  const totalMilesLabel = Math.round(routeMetrics.totalMiles).toLocaleString();
 
   return (
-    <figure className="travel-map-wrap" aria-label="Travel map">
-      <div className="travel-map-viewport">
+    <figure
+      className={`travel-map-wrap${activeLocation ? " is-interacting" : ""}`}
+      aria-label="Travel map"
+    >
+      <div className="travel-map-viewport" onMouseLeave={() => setActiveLocation(null)}>
         <svg
           viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
           className="travel-map-svg"
           role="img"
           aria-label="World map"
         >
+          <defs>
+            <linearGradient id="travel-map-route-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style={{ stopColor: "var(--accent-olive)", stopOpacity: 0.4 }} />
+              <stop
+                offset="52%"
+                style={{ stopColor: "var(--map-route-stroke)", stopOpacity: 0.94 }}
+              />
+              <stop offset="100%" style={{ stopColor: "var(--accent-amber)", stopOpacity: 0.62 }} />
+            </linearGradient>
+            <linearGradient
+              id="travel-map-route-gradient-active"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
+              <stop offset="0%" style={{ stopColor: "var(--accent-olive)", stopOpacity: 0.52 }} />
+              <stop
+                offset="48%"
+                style={{ stopColor: "var(--accent-amber)", stopOpacity: 0.98 }}
+              />
+              <stop offset="100%" style={{ stopColor: "var(--accent-amber)", stopOpacity: 0.72 }} />
+            </linearGradient>
+          </defs>
           <path d={spherePath || undefined} className="travel-map-sphere" />
+          <path d={graticulePath || undefined} className="travel-map-graticule" />
           <g>
             {countries.map((country, index) => (
               <path
@@ -198,10 +234,45 @@ function TravelMap({ locations = [], routes = [] }) {
           <g className="travel-map-routes-layer">
             {routeMetrics.routes.map((route, index) => (
               <path
+                key={`route-glow-${route.from ?? "from"}-${route.to ?? "to"}-${index}`}
+                d={route.pathD}
+                pathLength={100}
+                className={`travel-map-route travel-map-route-glow${
+                  activeLocation ? (route.isHighlighted ? " is-highlighted" : " is-dimmed") : ""
+                }`}
+                style={{
+                  strokeWidth: route.glowWidth,
+                  "--route-delay": route.delay,
+                }}
+              />
+            ))}
+            {routeMetrics.routes.map((route, index) => (
+              <path
+                key={`route-trail-${route.from ?? "from"}-${route.to ?? "to"}-${index}`}
+                d={route.pathD}
+                pathLength={100}
+                className={`travel-map-route travel-map-route-trail${
+                  activeLocation ? (route.isHighlighted ? " is-highlighted" : " is-dimmed") : ""
+                }`}
+                style={{
+                  strokeWidth: route.strokeWidth,
+                  "--route-delay": route.delay,
+                  "--route-flow-delay": `${540 + index * 160}ms`,
+                }}
+              />
+            ))}
+            {routeMetrics.routes.map((route, index) => (
+              <path
                 key={`route-${route.from ?? "from"}-${route.to ?? "to"}-${index}`}
                 d={route.pathD}
-                className="travel-map-route"
-                style={{ strokeWidth: route.strokeWidth }}
+                pathLength={100}
+                className={`travel-map-route${
+                  activeLocation ? (route.isHighlighted ? " is-highlighted" : " is-dimmed") : ""
+                }`}
+                style={{
+                  strokeWidth: route.strokeWidth,
+                  "--route-delay": route.delay,
+                }}
               />
             ))}
           </g>
@@ -211,10 +282,20 @@ function TravelMap({ locations = [], routes = [] }) {
           <button
             key={`marker-${loc.name ?? "loc"}-${index}`}
             type="button"
-            className="travel-map-marker"
-            style={{ left: `${loc.leftPercent}%`, top: `${loc.topPercent}%` }}
+            className={`travel-map-marker${
+              activeLocation === loc.name ? " is-active" : ""
+            }${activeLocation && activeLocation !== loc.name ? " is-dimmed" : ""}`}
+            style={{
+              left: `${loc.leftPercent}%`,
+              top: `${loc.topPercent}%`,
+              "--marker-delay": `${360 + index * 140}ms`,
+            }}
             aria-label={`${loc.name}${loc.when ? `, ${loc.when}` : ""}`}
+            onMouseEnter={() => setActiveLocation(loc.name)}
+            onFocus={() => setActiveLocation(loc.name)}
+            onBlur={() => setActiveLocation(null)}
           >
+            <span className="travel-map-marker-core" aria-hidden="true" />
             <span className="travel-map-tooltip" role="tooltip">
               <span className="travel-map-tooltip-where">{loc.name}</span>
               {loc.when ? <span className="travel-map-tooltip-when">{loc.when}</span> : null}
@@ -227,7 +308,11 @@ function TravelMap({ locations = [], routes = [] }) {
       </div>
 
       <figcaption className="travel-map-stats">
-        {`Miles flown: ${Math.round(routeMetrics.totalMiles).toLocaleString()} mi (${earthLapsLabel} laps around 🌍)`}
+        <span className="travel-map-stats-metric">{`${totalMilesLabel} mi in the air`}</span>
+        <span className="travel-map-stats-divider" aria-hidden="true">
+          /
+        </span>
+        <span className="travel-map-stats-note">{`${earthLapsLabel} laps around earth`}</span>
       </figcaption>
     </figure>
   );

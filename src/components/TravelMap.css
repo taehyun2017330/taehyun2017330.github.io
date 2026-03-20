@@ -1,10 +1,10 @@
 .travel-map-wrap {
+  position: relative;
+  isolation: isolate;
   margin: 0;
   width: 100%;
   border: 0;
-  border-radius: 8px;
   background: transparent;
-  overflow: hidden;
 }
 
 .travel-map-viewport {
@@ -12,6 +12,8 @@
 }
 
 .travel-map-svg {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   height: auto;
@@ -21,6 +23,14 @@
   fill: var(--background-primary-color);
   stroke: var(--map-sphere-stroke);
   stroke-width: 0.8;
+}
+
+.travel-map-graticule {
+  fill: none;
+  stroke: rgba(66, 58, 44, 0.08);
+  stroke-width: 0.58;
+  stroke-dasharray: 1.8 3.6;
+  opacity: 0.65;
 }
 
 .travel-map-country {
@@ -35,92 +45,272 @@
 
 .travel-map-route {
   fill: none;
-  stroke: var(--map-route-stroke);
+  stroke: url(#travel-map-route-gradient);
   stroke-linecap: round;
-  opacity: 0.82;
+  opacity: 0.84;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: travel-map-route-draw 1.7s cubic-bezier(0.21, 0.88, 0.3, 1) forwards;
+  animation-delay: var(--route-delay, 0ms);
+  transition: opacity 0.22s ease-out, stroke 0.22s ease-out, stroke-width 0.22s ease-out;
+}
+
+.travel-map-route-glow {
+  stroke: var(--accent-amber);
+  opacity: 0.14;
+  filter: blur(3.4px);
+}
+
+.travel-map-route-trail {
+  stroke: rgba(255, 255, 255, 0.72);
+  stroke-linecap: round;
+  opacity: 0.32;
+  stroke-dasharray: 10 90;
+  stroke-dashoffset: 96;
+  animation:
+    travel-map-route-draw 1.7s cubic-bezier(0.21, 0.88, 0.3, 1) forwards,
+    travel-map-route-flow 4.8s linear infinite;
+  animation-delay: var(--route-delay, 0ms), var(--route-flow-delay, 0ms);
+}
+
+.travel-map-route.is-dimmed,
+.travel-map-route-glow.is-dimmed,
+.travel-map-route-trail.is-dimmed {
+  opacity: 0.12;
+}
+
+.travel-map-route.is-highlighted {
+  stroke: url(#travel-map-route-gradient-active);
+  opacity: 0.98;
+}
+
+.travel-map-route-glow.is-highlighted {
+  opacity: 0.32;
+}
+
+.travel-map-route-trail.is-highlighted {
+  opacity: 0.5;
 }
 
 .travel-map-marker {
   position: absolute;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  appearance: none;
+  z-index: 2;
+  transition: opacity 0.18s ease-out, transform 0.18s ease-out;
+}
+
+.travel-map-marker::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 999px;
+  border: 1px solid var(--accent-olive-soft);
+  opacity: 0;
+  transform: scale(0.7);
+  animation: travel-map-marker-pulse 2.8s ease-out infinite;
+  animation-delay: var(--marker-delay, 0ms);
+}
+
+.travel-map-marker-core {
   width: 7px;
   height: 7px;
   border-radius: 999px;
   background: var(--map-marker-color);
   border: 1px solid var(--map-marker-border);
-  transform: translate(-50%, -50%);
-  box-shadow: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  appearance: none;
+  box-shadow: 0 0 0 0 var(--accent-olive-soft);
+  transition:
+    transform 0.18s ease-out,
+    box-shadow 0.18s ease-out,
+    background-color 0.18s ease-out,
+    opacity 0.18s ease-out;
+}
+
+.travel-map-marker.is-dimmed {
+  opacity: 0.42;
+}
+
+.travel-map-marker:hover,
+.travel-map-marker:focus-visible,
+.travel-map-marker.is-active {
+  z-index: 4;
+}
+
+.travel-map-marker:hover .travel-map-marker-core,
+.travel-map-marker:focus-visible .travel-map-marker-core,
+.travel-map-marker.is-active .travel-map-marker-core {
+  transform: scale(1.18);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-olive-soft) 52%, transparent);
 }
 
 .travel-map-tooltip {
   position: absolute;
   left: 50%;
-  bottom: calc(100% + 10px);
+  bottom: calc(100% + 12px);
   transform: translateX(-50%) translateY(6px);
   width: max-content;
   min-width: 0;
-  max-width: 138px;
+  max-width: 154px;
   background: var(--map-tooltip-bg);
   border: 1px solid var(--map-tooltip-border);
-  border-radius: 4px;
-  padding: 0.26rem 0.34rem;
-  box-shadow: none;
+  border-radius: 9px;
+  padding: 0.42rem 0.5rem 0.45rem;
+  box-shadow: 0 10px 28px rgba(43, 42, 35, 0.08);
+  backdrop-filter: blur(10px);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.16s ease-out, transform 0.16s ease-out;
+  transition:
+    opacity 0.16s ease-out,
+    transform 0.16s ease-out,
+    box-shadow 0.16s ease-out;
   text-align: left;
   z-index: 3;
 }
 
 .travel-map-tooltip::after {
-  display: none;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 9px;
+  height: 9px;
+  background: var(--map-tooltip-bg);
+  border-right: 1px solid var(--map-tooltip-border);
+  border-bottom: 1px solid var(--map-tooltip-border);
+  transform: translateX(-50%) rotate(45deg);
 }
 
 .travel-map-tooltip-where {
   display: block;
-  font-size: 0.67rem;
+  font-size: 0.68rem;
   font-weight: 600;
   color: var(--element-primary-color);
+  letter-spacing: 0.01em;
 }
 
 .travel-map-tooltip-when {
   display: block;
-  margin-top: 1px;
-  font-size: 0.67rem;
+  margin-top: 0.08rem;
+  font-size: 0.66rem;
   color: var(--element-secondary-color);
 }
 
 .travel-map-tooltip-desc {
   display: block;
-  margin-top: 0.12rem;
+  margin-top: 0.22rem;
   font-size: 0.64rem;
-  line-height: 1.25;
+  line-height: 1.35;
   color: var(--element-primary-color);
 }
 
 .travel-map-marker:hover .travel-map-tooltip,
-.travel-map-marker:focus-visible .travel-map-tooltip {
+.travel-map-marker:focus-visible .travel-map-tooltip,
+.travel-map-marker.is-active .travel-map-tooltip {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
 
 .travel-map-stats {
-  display: block;
-  padding: 0.42rem 0.5rem 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.34rem;
+  padding: 0.62rem 0.15rem 0.12rem;
   font-size: 0.72rem;
   color: var(--element-secondary-color);
-  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+.travel-map-stats-metric {
+  color: var(--element-primary-color);
+  font-weight: 520;
+}
+
+.travel-map-stats-divider {
+  color: var(--map-tooltip-border);
+}
+
+.travel-map-stats-note {
+  color: var(--element-secondary-color);
+}
+
+@keyframes travel-map-route-draw {
+  0% {
+    stroke-dashoffset: 100;
+    opacity: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes travel-map-route-flow {
+  0% {
+    stroke-dashoffset: 96;
+  }
+
+  100% {
+    stroke-dashoffset: -36;
+  }
+}
+
+@keyframes travel-map-marker-pulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.72);
+  }
+
+  20% {
+    opacity: 0.38;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.18);
+  }
 }
 
 @media (max-width: 768px) {
   .travel-map-tooltip {
-    max-width: 128px;
+    max-width: 140px;
   }
 
   .travel-map-stats {
     font-size: 0.68rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .travel-map-route,
+  .travel-map-route-trail,
+  .travel-map-marker::before,
+  .travel-map-tooltip,
+  .travel-map-marker,
+  .travel-map-marker-core,
+  .travel-map-viewport::before {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .travel-map-route {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+  }
+
+  .travel-map-marker::before {
+    opacity: 0.16;
+    transform: scale(1);
   }
 }

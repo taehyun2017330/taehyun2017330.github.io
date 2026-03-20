@@ -30,3 +30,18 @@ Keep YAML references as absolute public paths, e.g.:
 - `/assets/images/logos/adobe.png`
 - `/assets/audio/name.m4a`
 - `/assets/docs/Taehyun_CV.pdf`
+
+## Visitor Counter
+
+The footer supports a GoatCounter-based visitor count, which works on GitHub Pages.
+
+1. Create a GoatCounter site.
+2. Set your GoatCounter site code in `src/config/analytics.js`:
+
+```js
+export const GOATCOUNTER_CODE = "your-site-code";
+```
+
+3. In GoatCounter settings, enable `Allow adding visitor counts on your website`.
+
+If `GOATCOUNTER_CODE` is left blank, the footer shows `Visitors: --`.

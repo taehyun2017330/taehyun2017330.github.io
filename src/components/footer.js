@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import "./footer.scss";
 import { ReactComponent as GithubIcon } from "./icons/github.svg";
+import {
+  getGoatCounterCountUrl,
+  getGoatCounterTotalUrl,
+} from "../config/analytics";
 
 const REPO_COMMIT_API =
   "https://api.github.com/repos/taehyun2017330/taehyun2017330.github.io/commits/main";
@@ -15,6 +19,7 @@ function formatLabel(isoDate) {
 
 const Footer = () => {
   const [lastUpdated, setLastUpdated] = useState("Last Updated: --");
+  const [visitorCount, setVisitorCount] = useState(null);
 
   useEffect(() => {
     let active = true;
@@ -51,9 +56,40 @@ const Footer = () => {
     };
   }, []);
 
+  useEffect(() => {
+    let active = true;
+    const countUrl = getGoatCounterCountUrl();
+    const totalUrl = getGoatCounterTotalUrl();
+
+    if (!countUrl || !totalUrl) return () => {};
+
+    const existingScript = document.querySelector("script[data-goatcounter]");
+
+    if (!existingScript) {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = "https://gc.zgo.at/count.js";
+      script.dataset.goatcounter = countUrl;
+      document.body.appendChild(script);
+    }
+
+    fetch(totalUrl, { cache: "no-store" })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((data) => {
+        if (!active || typeof data?.count !== "string") return;
+        setVisitorCount(data.count);
+      })
+      .catch(() => {});
+
+    return () => {
+      active = false;
+    };
+  }, []);
+
   return (
     <footer className="footer-container">
       <div className="custom-container footer-content">
+        <span>{visitorCount ? `Visitors: ${visitorCount}` : "Visitors: --"}</span>
         <div className="footer-created">
           <span>Created by Taehyun</span>
           <a
