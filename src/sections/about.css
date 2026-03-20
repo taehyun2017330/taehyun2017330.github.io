@@ -35,10 +35,6 @@
   transition: background-size 0.28s ease-out, color 0.28s ease-out;
 }
 
-html[data-theme-transition="true"] .pronounce-trigger {
-  animation: themeUnderlineDraw 0.56s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
 .pronounce-trigger:hover,
 .pronounce-trigger:focus-visible {
   color: var(--element-primary-color);
@@ -72,10 +68,6 @@ html[data-theme-transition="true"] .pronounce-trigger {
   background-position: 0 100%, 0 100%;
   background-size: 100% 0.11em, 100% 0;
   transition: background-size 0.28s ease-out, color 0.28s ease-out;
-}
-
-html[data-theme-transition="true"] .funyuns-word {
-  animation: themeUnderlineDraw 0.56s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .funyuns-icon {
@@ -126,10 +118,6 @@ html[data-theme-transition="true"] .funyuns-word {
   transition: background-size 0.28s ease-out, color 0.28s ease-out;
 }
 
-html[data-theme-transition="true"] #about .custom-link {
-  animation: themeUnderlineDraw 0.56s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
 #about .custom-link:hover,
 #about .custom-link:focus-visible {
   color: var(--element-primary-color);
@@ -164,19 +152,40 @@ html[data-theme-transition="true"] #about .custom-link {
 }
 
 .about-photo-frame {
+  position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.12);
-  background: #f8f8f5;
+  background: #ffffff;
 }
 
 .about-photo {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  animation: aboutPhotoFade 0.22s ease-out;
+  will-change: opacity;
+}
+
+.about-photo-current {
+  z-index: 2;
+  opacity: 1;
+}
+
+.about-photo-frame.is-transitioning .about-photo-current {
+  animation: aboutPhotoCrossfadeIn 0.32s ease-out;
+}
+
+.about-photo-previous {
+  z-index: 1;
+  opacity: 1;
+}
+
+.about-photo-frame.is-transitioning .about-photo-previous {
+  animation: aboutPhotoCrossfadeOut 0.32s ease-out forwards;
 }
 
 .about-social {
@@ -227,9 +236,9 @@ html[data-theme-transition="true"] #about .custom-link {
   }
 }
 
-@keyframes aboutPhotoFade {
+@keyframes aboutPhotoCrossfadeIn {
   0% {
-    opacity: 0.78;
+    opacity: 0;
   }
 
   100% {
@@ -237,13 +246,12 @@ html[data-theme-transition="true"] #about .custom-link {
   }
 }
 
-
-@keyframes themeUnderlineDraw {
+@keyframes aboutPhotoCrossfadeOut {
   0% {
-    background-size: 0 0.11em, 0 0;
+    opacity: 1;
   }
 
   100% {
-    background-size: 100% 0.11em, 0 0;
+    opacity: 0;
   }
 }

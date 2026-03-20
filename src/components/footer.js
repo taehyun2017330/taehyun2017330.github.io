@@ -114,7 +114,7 @@ const Footer = () => {
   return (
     <footer className="footer-container">
       <div className="custom-container footer-content">
-        <span>{visitorCount ? `Visits: ${visitorCount}` : "Visits: --"}</span>
+        <span>{visitorCount ? `Guests Visited: ${visitorCount}` : "Guests Visited: --"}</span>
         <div className="footer-created">
           <span>Created by Taehyun</span>
           <a

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { ReactComponent as XIcon } from "../components/icons/x-twitter.svg";
 import { ReactComponent as LinkedinIcon } from "../components/icons/linkedin.svg";
@@ -7,6 +7,10 @@ import "./about.css";
 
 function About({ activeTheme }) {
   const nameAudioRef = useRef(null);
+  const photoTransitionTimerRef = useRef(null);
+  const [currentPhoto, setCurrentPhoto] = useState(activeTheme.assets.aboutPhoto);
+  const [previousPhoto, setPreviousPhoto] = useState(null);
+  const [isPhotoTransitioning, setIsPhotoTransitioning] = useState(false);
 
   useEffect(() => {
     const audio = new Audio("/assets/audio/name.m4a");
@@ -18,6 +22,51 @@ function About({ activeTheme }) {
       nameAudioRef.current = null;
     };
   }, []);
+
+  useEffect(() => {
+    const nextPhoto = activeTheme.assets.aboutPhoto;
+
+    if (nextPhoto === currentPhoto) return;
+
+    const preloadImage = new Image();
+    preloadImage.src = nextPhoto;
+
+    const runTransition = () => {
+      setPreviousPhoto(currentPhoto);
+      setCurrentPhoto(nextPhoto);
+      setIsPhotoTransitioning(true);
+
+      if (photoTransitionTimerRef.current) {
+        window.clearTimeout(photoTransitionTimerRef.current);
+      }
+
+      photoTransitionTimerRef.current = window.setTimeout(() => {
+        setPreviousPhoto(null);
+        setIsPhotoTransitioning(false);
+        photoTransitionTimerRef.current = null;
+      }, 320);
+    };
+
+    if (preloadImage.complete) {
+      runTransition();
+      return undefined;
+    }
+
+    preloadImage.onload = runTransition;
+
+    return () => {
+      preloadImage.onload = null;
+    };
+  }, [activeTheme.assets.aboutPhoto, currentPhoto]);
+
+  useEffect(
+    () => () => {
+      if (photoTransitionTimerRef.current) {
+        window.clearTimeout(photoTransitionTimerRef.current);
+      }
+    },
+    []
+  );
 
   const handlePronounce = () => {
     const audio = nameAudioRef.current;
@@ -112,12 +161,21 @@ function About({ activeTheme }) {
 
         <Col xs={12} md={4} className="about-media-col">
           <div className="about-photo-wrap">
-            <div className="about-photo-frame">
+            <div
+              className={`about-photo-frame${isPhotoTransitioning ? " is-transitioning" : ""}`}
+            >
+              {previousPhoto ? (
+                <img
+                  src={previousPhoto}
+                  alt=""
+                  aria-hidden="true"
+                  className="about-photo about-photo-previous"
+                />
+              ) : null}
               <img
-                key={activeTheme.id}
-                src={activeTheme.assets.aboutPhoto}
+                src={currentPhoto}
                 alt="Taehyun Yang profile"
-                className="about-photo"
+                className="about-photo about-photo-current"
               />
             </div>
             <div className="about-social">

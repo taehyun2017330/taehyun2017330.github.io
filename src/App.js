@@ -46,6 +46,8 @@ function App() {
     if (isInitialThemeMount.current) {
       isInitialThemeMount.current = false;
     } else {
+      document.documentElement.removeAttribute("data-theme-transition");
+      void document.documentElement.offsetWidth;
       document.documentElement.setAttribute("data-theme-transition", "true");
       themeTransitionTimerRef.current = window.setTimeout(() => {
         document.documentElement.removeAttribute("data-theme-transition");
