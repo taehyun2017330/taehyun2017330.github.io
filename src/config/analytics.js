@@ -1,4 +1,4 @@
-export const GOATCOUNTER_CODE = "";
+export const GOATCOUNTER_CODE = "taehyun";
 
 export function getGoatCounterBaseUrl() {
   return GOATCOUNTER_CODE ? `https://${GOATCOUNTER_CODE}.goatcounter.com` : "";
