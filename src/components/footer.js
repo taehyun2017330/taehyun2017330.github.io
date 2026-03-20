@@ -60,8 +60,26 @@ const Footer = () => {
     let active = true;
     const countUrl = getGoatCounterCountUrl();
     const totalUrl = getGoatCounterTotalUrl();
+    let retryTimeouts = [];
 
     if (!countUrl || !totalUrl) return () => {};
+
+    const loadVisitorCount = () =>
+      fetch(totalUrl, { cache: "no-store" })
+        .then((response) => (response.ok ? response.json() : null))
+        .then((data) => {
+          if (!active || typeof data?.count !== "string" || !data.count) return false;
+          setVisitorCount(data.count);
+          return true;
+        })
+        .catch(() => false);
+
+    const scheduleRetry = (delayMs) => {
+      const timeoutId = window.setTimeout(() => {
+        loadVisitorCount();
+      }, delayMs);
+      retryTimeouts.push(timeoutId);
+    };
 
     const existingScript = document.querySelector("script[data-goatcounter]");
 
@@ -71,18 +89,25 @@ const Footer = () => {
       script.src = "https://gc.zgo.at/count.js";
       script.dataset.goatcounter = countUrl;
       document.body.appendChild(script);
+
+      script.addEventListener("load", () => {
+        scheduleRetry(2500);
+        scheduleRetry(8000);
+      });
+    } else {
+      scheduleRetry(2500);
     }
 
-    fetch(totalUrl, { cache: "no-store" })
-      .then((response) => (response.ok ? response.json() : null))
-      .then((data) => {
-        if (!active || typeof data?.count !== "string") return;
-        setVisitorCount(data.count);
-      })
-      .catch(() => {});
+    loadVisitorCount().then((didLoad) => {
+      if (!didLoad) {
+        scheduleRetry(12000);
+      }
+    });
 
     return () => {
       active = false;
+      retryTimeouts.forEach((timeoutId) => window.clearTimeout(timeoutId));
+      retryTimeouts = [];
     };
   }, []);
 
