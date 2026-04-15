@@ -176,6 +176,9 @@ function About({ activeTheme }) {
                 src={currentPhoto}
                 alt="Taehyun Yang profile"
                 className="about-photo about-photo-current"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
               />
             </div>
             <div className="about-social">

@@ -8,6 +8,7 @@ import Home from "./pages/home";
 import Footer from "./components/footer";
 import {
   DEFAULT_THEME_KEY,
+  THEME_PRESETS,
   applyThemePreset,
   getThemePreset,
 } from "./config/themePresets";
@@ -33,6 +34,32 @@ function App() {
     setPreviousTheme(activeTheme);
     setActiveThemeKey(nextThemeKey);
   };
+
+  useEffect(() => {
+    const assetUrls = Array.from(
+      new Set(
+        Object.values(THEME_PRESETS).flatMap((theme) => [
+          theme.assets.headerAvatar,
+          theme.assets.aboutPhoto,
+          theme.assets.switcherIcon,
+        ])
+      )
+    );
+
+    const preloadedImages = assetUrls.map((src) => {
+      const image = new Image();
+      image.decoding = "async";
+      image.src = src;
+      return image;
+    });
+
+    return () => {
+      preloadedImages.forEach((image) => {
+        image.onload = null;
+        image.onerror = null;
+      });
+    };
+  }, []);
 
   useEffect(() => {
     applyThemePreset(activeThemeKey);
