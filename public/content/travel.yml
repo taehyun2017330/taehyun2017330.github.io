@@ -37,3 +37,8 @@
   lat: 38.9807
   lon: -76.9369
   description: "PhD program"
+
+- name: Barcelona
+  lat: 41.3874
+  lon: 2.1686
+  description: "CHI 2026"

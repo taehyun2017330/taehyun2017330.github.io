@@ -45,3 +45,7 @@
 - from: "Seoul"
   to: "College Park"
   count: 1
+
+- from: "College Park"
+  to: "Barcelona"
+  count: 1
