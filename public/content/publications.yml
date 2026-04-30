@@ -53,6 +53,7 @@
   conference: "CHI 2026"
   workshop: "Workshop"
   toappear: true
+  website: "/trace-aware-workflows/"
   pdf: "https://arxiv.org/pdf/2604.09583"
   authors:
     - name: "Taehyun Yang"
