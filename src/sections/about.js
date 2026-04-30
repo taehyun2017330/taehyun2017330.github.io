@@ -5,12 +5,48 @@ import { ReactComponent as LinkedinIcon } from "../components/icons/linkedin.svg
 import { ReactComponent as ScholarIcon } from "../components/icons/google-scholar.svg";
 import "./about.css";
 
+const PHD_START_YEAR = 2025;
+const ACADEMIC_YEAR_ROLLOVER_MONTH_INDEX = 8;
+const ACADEMIC_YEAR_ROLLOVER_DAY = 1;
+
+function getOrdinalWord(value) {
+  const ordinals = [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth",
+    "seventh",
+    "eighth",
+    "ninth",
+    "tenth",
+  ];
+
+  return ordinals[value - 1] || `${value}th`;
+}
+
+function getPhdYearLabel(currentDate = new Date()) {
+  const rolloverDate = new Date(
+    currentDate.getFullYear(),
+    ACADEMIC_YEAR_ROLLOVER_MONTH_INDEX,
+    ACADEMIC_YEAR_ROLLOVER_DAY
+  );
+
+  const academicYear =
+    currentDate >= rolloverDate ? currentDate.getFullYear() : currentDate.getFullYear() - 1;
+  const yearNumber = Math.max(1, academicYear - PHD_START_YEAR + 1);
+
+  return `${getOrdinalWord(yearNumber)}-year`;
+}
+
 function About({ activeTheme }) {
   const nameAudioRef = useRef(null);
   const photoTransitionTimerRef = useRef(null);
   const [currentPhoto, setCurrentPhoto] = useState(activeTheme.assets.aboutPhoto);
   const [previousPhoto, setPreviousPhoto] = useState(null);
   const [isPhotoTransitioning, setIsPhotoTransitioning] = useState(false);
+  const phdYearLabel = getPhdYearLabel();
 
   useEffect(() => {
     const audio = new Audio("/assets/audio/name.m4a");
@@ -113,7 +149,7 @@ function About({ activeTheme }) {
           </div>
 
           <p>
-            I&apos;m a first-year Ph.D. student in the Department of Computer Science at the{" "}
+            I&apos;m a {phdYearLabel} Ph.D. student in the Department of Computer Science at the{" "}
             <a className="custom-link" href="https://www.umd.edu/" target="_blank" rel="noreferrer">
               University of Maryland College Park
             </a>
