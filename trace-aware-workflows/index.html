@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="light" />
+    <meta name="author" content="Taehyun Yang" />
+    <meta
+      name="description"
+      content="Trace-Aware Workflows for Co-Creating Branded Content with Generative AI"
+    />
+    <meta
+      property="og:title"
+      content="Trace-Aware Workflows for Co-Creating Branded Content with Generative AI"
+    />
+    <meta property="og:description" content="CHI 2026 Workshop poster by Taehyun Yang and collaborators" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>Trace-Aware Workflows | Taehyun Yang</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #ffffff;
+        --fg: #20211c;
+        --muted: #66695b;
+        --border: rgba(28, 29, 24, 0.12);
+        --accent: rgba(249, 149, 62, 0.82);
+        --accent-soft: rgba(238, 172, 113, 0.38);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: Geist, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        overflow: hidden;
+      }
+
+      body {
+        padding: 0;
+      }
+
+      .page {
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+      }
+
+      .viewer {
+        width: 100%;
+        height: 100vh;
+        border: 0;
+        background: #fff;
+        overflow: hidden;
+      }
+
+      .viewer object {
+        width: 100%;
+        height: 100vh;
+        border: 0;
+        display: block;
+      }
+
+      .fallback {
+        padding: 22px;
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.7;
+      }
+
+      .fallback a {
+        color: inherit;
+      }
+
+      @media (max-width: 720px) {
+        .viewer,
+        .viewer object {
+          height: 100vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="viewer" aria-label="Poster viewer">
+        <object
+          data="/assets/docs/trace-aware-workflows-poster.pdf#toolbar=0&navpanes=0&scrollbar=0"
+          type="application/pdf"
+          aria-label="Trace-Aware Workflows poster"
+        >
+          <div class="fallback">
+            This browser could not display the embedded PDF.
+            <a href="/assets/docs/trace-aware-workflows-poster.pdf" target="_blank" rel="noreferrer">
+              Open the poster directly
+            </a>
+            instead.
+          </div>
+        </object>
+      </section>
+    </main>
+  </body>
+</html>
