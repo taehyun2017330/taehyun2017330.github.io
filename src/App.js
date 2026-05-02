@@ -7,19 +7,14 @@ import Header from "./components/header";
 import Home from "./pages/home";
 import Footer from "./components/footer";
 import {
-  DEFAULT_THEME_KEY,
   THEME_PRESETS,
   applyThemePreset,
+  getSeasonThemeKeyForDate,
   getThemePreset,
 } from "./config/themePresets";
 
-const THEME_STORAGE_KEY = "taehyun-active-theme";
-
 function getInitialThemeKey() {
-  if (typeof window === "undefined") return DEFAULT_THEME_KEY;
-
-  const storedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
-  return storedTheme || DEFAULT_THEME_KEY;
+  return getSeasonThemeKeyForDate();
 }
 
 function App() {
@@ -63,7 +58,6 @@ function App() {
 
   useEffect(() => {
     applyThemePreset(activeThemeKey);
-    window.localStorage.setItem(THEME_STORAGE_KEY, activeThemeKey);
 
     if (themeTransitionTimerRef.current) {
       window.clearTimeout(themeTransitionTimerRef.current);

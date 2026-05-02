@@ -1,9 +1,12 @@
-import { THEME_PRESETS } from "../config/themePresets";
+import { SEASON_THEME_ORDER, THEME_PRESETS } from "../config/themePresets";
 
-const themeSwitcherOrder = ["autumn", "blue"];
-
-const Header = ({ activeTheme, activeThemeKey, onThemeChange, previousTheme }) => {
-  const themeOptions = themeSwitcherOrder.map((key) => THEME_PRESETS[key]).filter(Boolean);
+const Header = ({
+  activeTheme,
+  activeThemeKey,
+  onThemeChange,
+  previousTheme,
+}) => {
+  const themeOptions = SEASON_THEME_ORDER.map((key) => THEME_PRESETS[key]).filter(Boolean);
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -75,7 +78,7 @@ const Header = ({ activeTheme, activeThemeKey, onThemeChange, previousTheme }) =
               />
             </span>
           </a>
-          <span className="site-theme-switcher" aria-label="Seasonal theme switcher">
+          <span className="season-grid" role="group" aria-label="Choose seasonal theme">
             {themeOptions.map((theme) => {
               const isActive = theme.id === activeThemeKey;
 
@@ -83,12 +86,15 @@ const Header = ({ activeTheme, activeThemeKey, onThemeChange, previousTheme }) =
                 <button
                   key={theme.id}
                   type="button"
-                  className={`site-theme-button theme-${theme.id}${isActive ? " is-active" : ""}`}
+                  className={`season-grid-button season-${theme.id}${isActive ? " is-active" : ""}`}
                   onClick={() => onThemeChange(theme.id)}
-                  aria-label={`Switch to ${theme.label.toLowerCase()} theme`}
-                  title={theme.label}
+                  aria-label={
+                    isActive
+                      ? `Selected season: ${theme.label}`
+                      : `Switch to ${theme.label.toLowerCase()} theme`
+                  }
                 >
-                  <img src={theme.assets.switcherIcon} alt="" className="site-theme-button-icon" />
+                  <img src={theme.assets.switcherIcon} alt="" className="season-grid-icon" />
                 </button>
               );
             })}

@@ -3,44 +3,54 @@
 @property --accent-amber-strong {
   syntax: "<color>";
   inherits: true;
-  initial-value: rgba(249, 149, 62, 0.82);
+  initial-value: rgba(236, 125, 170, 0.74);
 }
 
 @property --accent-amber-soft {
   syntax: "<color>";
   inherits: true;
-  initial-value: rgba(238, 172, 113, 0.45);
+  initial-value: rgba(247, 187, 210, 0.44);
 }
 
 @property --accent-border-strong {
   syntax: "<color>";
   inherits: true;
-  initial-value: rgba(224, 138, 65, 0.68);
+  initial-value: rgba(224, 124, 164, 0.58);
 }
 
 :root {
   --font-family-body: 'Geist', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --element-primary-color: #2b2a23;
-  --element-secondary-color: #636553;
+  --element-primary-color: #292326;
+  --element-secondary-color: #6d5f65;
   --background-primary-color: #ffffff;
-  --border-color: #d8d2c6;
-  --highlight-color: rgba(224, 138, 65, 0.3);
-  --accent-olive: #6f7b4b;
-  --accent-forest: #55603b;
-  --accent-amber: #e69147;
-  --accent-amber-strong: rgba(249, 149, 62, 0.82);
-  --accent-amber-soft: rgba(238, 172, 113, 0.45);
-  --accent-border-strong: rgba(224, 138, 65, 0.68);
-  --accent-olive-soft: rgba(111, 123, 75, 0.6);
-  --map-sphere-stroke: rgba(66, 58, 44, 0.16);
-  --map-country-fill: #d2ccb9;
-  --map-country-stroke: rgba(255, 255, 255, 0.6);
-  --map-route-stroke: #8f836a;
-  --map-marker-color: #6f7b4b;
-  --map-marker-border: #f8f5ee;
-  --map-tooltip-bg: rgba(250, 247, 240, 0.98);
-  --map-tooltip-border: rgba(66, 58, 44, 0.2);
+  --border-color: #dfd2d8;
+  --highlight-color: rgba(236, 138, 176, 0.24);
+  --accent-olive: #7b9868;
+  --accent-forest: #4f6d43;
+  --accent-amber: #e982ad;
+  --accent-amber-strong: rgba(236, 125, 170, 0.74);
+  --accent-amber-soft: rgba(247, 187, 210, 0.44);
+  --accent-border-strong: rgba(224, 124, 164, 0.58);
+  --accent-olive-soft: rgba(123, 152, 104, 0.48);
+  --map-sphere-stroke: rgba(105, 122, 97, 0.13);
+  --map-graticule-stroke: rgba(123, 152, 104, 0.1);
+  --map-country-fill: #e3e6df;
+  --map-country-stroke: rgba(255, 255, 255, 0.68);
+  --map-route-start: #9dad8f;
+  --map-route-stroke: #b99aa6;
+  --map-route-end: #d88fab;
+  --map-route-active: #cf7fa1;
+  --map-route-glow: #d88fab;
+  --map-route-trail-stroke: rgba(255, 255, 255, 0.74);
+  --map-marker-color: #d88fab;
+  --map-marker-border: #ffffff;
+  --map-marker-ring: rgba(216, 143, 171, 0.42);
+  --map-tooltip-bg: rgba(255, 252, 253, 0.98);
+  --map-tooltip-border: rgba(123, 152, 104, 0.16);
+  --map-tooltip-shadow: rgba(75, 85, 66, 0.08);
+  --avatar-floor-color: #e982ad;
+  --avatar-floor-shadow: rgba(198, 93, 136, 0.25);
   transition:
     --accent-amber-strong 0.38s cubic-bezier(0.22, 1, 0.36, 1),
     --accent-amber-soft 0.38s cubic-bezier(0.22, 1, 0.36, 1),
@@ -169,7 +179,7 @@ a {
 .site-brand-avatar-stack {
   display: inline-flex;
   align-items: center;
-  gap: 0.58rem;
+  gap: 0.46rem;
 }
 
 .site-brand-avatar-shell {
@@ -247,74 +257,87 @@ html[data-theme-transition="true"] .site-brand-avatar-pool-ripple {
   animation: siteAvatarRipple 0.92s cubic-bezier(0.18, 0.72, 0.22, 1) forwards;
 }
 
-.site-theme-switcher {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.12rem;
+.season-grid {
+  position: relative;
+  width: 66px;
+  height: 66px;
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  gap: 0;
+  margin-left: 0.02rem;
+  padding: 7px;
 }
 
-.site-theme-button {
+.season-grid-button {
   position: relative;
-  width: 30px;
-  min-height: 28px;
+  width: 26px;
+  height: 26px;
   padding: 0;
   border: 0;
-  border-radius: 0;
+  border-radius: 999px;
   background: transparent;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--element-secondary-color);
-  transition: transform 0.24s ease-out, opacity 0.2s ease-out, color 0.24s ease-out;
+  justify-self: center;
+  opacity: 0.66;
+  transform: translateY(0) scale(1);
+  transform-origin: center;
+  transition:
+    opacity 0.2s ease-out,
+    transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.site-theme-button::after {
+.season-grid-button::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -0.02rem;
+  bottom: -1px;
   width: 0;
-  height: 2px;
+  height: 1.5px;
   background: var(--accent-amber-strong);
   transform: translateX(-50%);
-  transition: width 0.28s ease-out;
+  transition:
+    width 0.24s ease-out,
+    background-color 0.32s ease-out;
 }
 
-.site-theme-button:hover,
-.site-theme-button:focus-visible {
-  transform: translateY(-1px);
+.season-grid-button:hover,
+.season-grid-button:focus-visible {
   opacity: 0.92;
-  color: var(--element-primary-color);
+  transform: translateY(-1px) scale(1.04);
 }
 
-.site-theme-button.is-active {
+.season-grid-button:focus-visible {
+  outline: 1px solid var(--accent-border-strong);
+  outline-offset: 3px;
+}
+
+.season-grid-button.is-active {
   opacity: 1;
-  color: var(--element-primary-color);
 }
 
-.site-theme-button.is-active::after {
-  width: 82%;
+.season-grid-button.is-active::after {
+  width: 52%;
 }
 
-.site-theme-button-icon {
-  width: 22px;
-  height: 22px;
+.season-grid-icon {
+  width: 20px;
+  height: 20px;
   display: block;
   object-fit: contain;
   flex: 0 0 auto;
-  position: relative;
-  z-index: 1;
-  transition: transform 0.32s ease-out, opacity 0.24s ease-out;
+  transition: transform 0.22s ease-out;
 }
 
-.site-theme-button.theme-blue .site-theme-button-icon {
-  transform: scale(1.03);
-}
-
-.site-theme-button.theme-autumn .site-theme-button-icon {
-  transform: scale(1);
+.season-grid-button:hover .season-grid-icon,
+.season-grid-button:focus-visible .season-grid-icon {
+  transform: scale(1.04);
 }
 
 .desktop-nav {

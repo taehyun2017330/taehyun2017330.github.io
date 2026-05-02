@@ -198,12 +198,12 @@ function TravelMap({ locations = [], routes = [] }) {
         >
           <defs>
             <linearGradient id="travel-map-route-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: "var(--accent-olive)", stopOpacity: 0.4 }} />
+              <stop offset="0%" style={{ stopColor: "var(--map-route-start)", stopOpacity: 0.4 }} />
               <stop
                 offset="52%"
                 style={{ stopColor: "var(--map-route-stroke)", stopOpacity: 0.94 }}
               />
-              <stop offset="100%" style={{ stopColor: "var(--accent-amber)", stopOpacity: 0.62 }} />
+              <stop offset="100%" style={{ stopColor: "var(--map-route-end)", stopOpacity: 0.62 }} />
             </linearGradient>
             <linearGradient
               id="travel-map-route-gradient-active"
@@ -212,12 +212,12 @@ function TravelMap({ locations = [], routes = [] }) {
               x2="100%"
               y2="100%"
             >
-              <stop offset="0%" style={{ stopColor: "var(--accent-olive)", stopOpacity: 0.52 }} />
+              <stop offset="0%" style={{ stopColor: "var(--map-route-start)", stopOpacity: 0.52 }} />
               <stop
                 offset="48%"
-                style={{ stopColor: "var(--accent-amber)", stopOpacity: 0.98 }}
+                style={{ stopColor: "var(--map-route-active)", stopOpacity: 0.98 }}
               />
-              <stop offset="100%" style={{ stopColor: "var(--accent-amber)", stopOpacity: 0.72 }} />
+              <stop offset="100%" style={{ stopColor: "var(--map-route-end)", stopOpacity: 0.72 }} />
             </linearGradient>
           </defs>
           <path d={spherePath || undefined} className="travel-map-sphere" />
