@@ -48,35 +48,38 @@ function renderNewsTitle(item) {
   );
 }
 
-function Updates() {
-  const [newsItems, setNewsItems] = useState([]);
-  const [travelLocations, setTravelLocations] = useState([]);
-  const [travelRoutes, setTravelRoutes] = useState([]);
+function sortNews(items) {
+  return items
+    .map((item, index) => ({ ...item, _originalIndex: index }))
+    .sort((a, b) => {
+      const timeDiff = getSortableTime(b.date) - getSortableTime(a.date);
+      return timeDiff || a._originalIndex - b._originalIndex;
+    })
+    .slice(0, 3);
+}
+
+const EMPTY_CONTENT = {};
+
+function Updates({ initialContent = EMPTY_CONTENT }) {
+  const [newsItems, setNewsItems] = useState(() => sortNews(initialContent.news || []));
+  const [travelLocations, setTravelLocations] = useState(initialContent.travelLocations || []);
+  const [travelRoutes, setTravelRoutes] = useState(initialContent.travelRoutes || []);
 
   useEffect(() => {
     let active = true;
 
-    loadYamlContent("/content/news.yml", []).then((items) => {
+    loadYamlContent("/content/news.yml", initialContent.news || []).then((items) => {
       if (!active || !Array.isArray(items)) return;
 
-      const sorted = items
-        .map((item, index) => ({ ...item, _originalIndex: index }))
-        .sort((a, b) => {
-          const timeDiff = getSortableTime(b.date) - getSortableTime(a.date);
-          if (timeDiff !== 0) return timeDiff;
-          return a._originalIndex - b._originalIndex;
-        })
-        .slice(0, 3);
-
-      setNewsItems(sorted);
+      setNewsItems(sortNews(items));
     });
 
-    loadYamlContent("/content/travel.yml", []).then((items) => {
+    loadYamlContent("/content/travel.yml", initialContent.travelLocations || []).then((items) => {
       if (!active || !Array.isArray(items)) return;
       setTravelLocations(items);
     });
 
-    loadYamlContent("/content/travel-routes.yml", []).then((items) => {
+    loadYamlContent("/content/travel-routes.yml", initialContent.travelRoutes || []).then((items) => {
       if (!active || !Array.isArray(items)) return;
       setTravelRoutes(items);
     });
@@ -84,7 +87,7 @@ function Updates() {
     return () => {
       active = false;
     };
-  }, []);
+  }, [initialContent]);
 
   return (
     <section id="updates" className="custom-section updates-section">

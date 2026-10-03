@@ -46,13 +46,17 @@ function normalizePublicationItem(item = {}, index = 0) {
   };
 }
 
-function Publications() {
-  const [allPublications, setAllPublications] = useState([]);
+const EMPTY_ITEMS = [];
+
+function Publications({ initialItems = EMPTY_ITEMS }) {
+  const [allPublications, setAllPublications] = useState(
+    () => initialItems.map(normalizePublicationItem)
+  );
 
   useEffect(() => {
     let active = true;
 
-    loadYamlContent("/content/publications.yml", []).then((items) => {
+    loadYamlContent("/content/publications.yml", initialItems).then((items) => {
       if (!active || !Array.isArray(items)) return;
       setAllPublications(items.map((item, index) => normalizePublicationItem(item, index)));
     });
@@ -60,7 +64,7 @@ function Publications() {
     return () => {
       active = false;
     };
-  }, []);
+  }, [initialItems]);
 
   const groupedPublications = useMemo(() => {
     const groups = new Map();

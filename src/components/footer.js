@@ -17,8 +17,8 @@ function formatLabel(isoDate) {
   }).format(new Date(isoDate));
 }
 
-const Footer = () => {
-  const [lastUpdated, setLastUpdated] = useState("Last Updated: --");
+const Footer = ({ initialLastUpdated }) => {
+  const [lastUpdated, setLastUpdated] = useState(`Last Updated: ${initialLastUpdated || "--"}`);
   const [visitorCount, setVisitorCount] = useState(null);
 
   useEffect(() => {

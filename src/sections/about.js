@@ -26,7 +26,7 @@ function getOrdinalWord(value) {
   return ordinals[value - 1] || `${value}th`;
 }
 
-function getPhdYearLabel(currentDate = new Date()) {
+export function getPhdYearLabel(currentDate = new Date()) {
   const rolloverDate = new Date(
     currentDate.getFullYear(),
     ACADEMIC_YEAR_ROLLOVER_MONTH_INDEX,
@@ -40,13 +40,19 @@ function getPhdYearLabel(currentDate = new Date()) {
   return `${getOrdinalWord(yearNumber)}-year`;
 }
 
-function About({ activeTheme }) {
+function About({ activeTheme, initialPhdYearLabel }) {
   const nameAudioRef = useRef(null);
   const photoTransitionTimerRef = useRef(null);
   const [currentPhoto, setCurrentPhoto] = useState(activeTheme.assets.aboutPhoto);
   const [previousPhoto, setPreviousPhoto] = useState(null);
   const [isPhotoTransitioning, setIsPhotoTransitioning] = useState(false);
-  const phdYearLabel = getPhdYearLabel();
+  const [phdYearLabel, setPhdYearLabel] = useState(
+    () => initialPhdYearLabel || getPhdYearLabel()
+  );
+
+  useEffect(() => {
+    setPhdYearLabel(getPhdYearLabel());
+  }, []);
 
   useEffect(() => {
     const audio = new Audio("/assets/audio/name.m4a");
@@ -214,7 +220,7 @@ function About({ activeTheme }) {
                 className="about-photo about-photo-current"
                 loading="eager"
                 decoding="async"
-                fetchPriority="high"
+                fetchpriority="high"
               />
             </div>
             <div className="about-social">

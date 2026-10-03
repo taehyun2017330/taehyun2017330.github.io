@@ -17,12 +17,19 @@ function getInitialThemeKey() {
   return getSeasonThemeKeyForDate();
 }
 
-function App() {
-  const [activeThemeKey, setActiveThemeKey] = useState(getInitialThemeKey);
+function App({ Router = BrowserRouter, initialState = {} }) {
+  const [activeThemeKey, setActiveThemeKey] = useState(
+    () => initialState.themeKey || getInitialThemeKey()
+  );
   const activeTheme = useMemo(() => getThemePreset(activeThemeKey), [activeThemeKey]);
   const [previousTheme, setPreviousTheme] = useState(null);
   const isInitialThemeMount = useRef(true);
   const themeTransitionTimerRef = useRef(null);
+
+  useEffect(() => {
+    // Hydrate the build's theme first, then account for a later season.
+    setActiveThemeKey(getInitialThemeKey());
+  }, []);
 
   const handleThemeChange = (nextThemeKey) => {
     if (nextThemeKey === activeThemeKey) return;
@@ -76,9 +83,6 @@ function App() {
         themeTransitionTimerRef.current = null;
       }, 780);
     }
-
-    if (!window.location.hash) return;
-    window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
   }, [activeThemeKey]);
 
   useEffect(
@@ -93,7 +97,7 @@ function App() {
   );
 
   return (
-    <BrowserRouter>
+    <Router>
       <div className="light">
         <Header
           activeTheme={activeTheme}
@@ -102,12 +106,12 @@ function App() {
           previousTheme={previousTheme}
         />
         <Switch>
-          <Route exact path="/" render={() => <Home activeTheme={activeTheme} />} />
+          <Route exact path="/" render={() => <Home activeTheme={activeTheme} initialState={initialState} />} />
           <Redirect path="*" to="/" />
         </Switch>
-        <Footer />
+        <Footer initialLastUpdated={initialState.lastUpdatedLabel} />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 

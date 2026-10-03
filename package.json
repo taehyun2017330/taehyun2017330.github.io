@@ -16,13 +16,16 @@
     "react-scripts": "5.0.1",
     "sass": "^1.63.3",
     "sass-loader": "^13.3.2",
-    "topojson-client": "^3.1.0"
+    "topojson-client": "^3.1.0",
+    "yaml": "^1.10.2"
   },
   "scripts": {
     "prestart": "node scripts/generate-last-updated.js",
     "start": "react-scripts start",
     "prebuild": "node scripts/generate-last-updated.js",
     "build": "react-scripts build",
+    "postbuild": "node scripts/prerender.js && npm run verify:seo",
+    "verify:seo": "node scripts/verify-seo.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -32,6 +35,11 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!(d3-geo|d3-array|internmap)/)"
     ]
   },
   "browserslist": {
@@ -47,6 +55,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "jsdom": "^16.7.0"
   }
 }

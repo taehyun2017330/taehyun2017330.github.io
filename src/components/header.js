@@ -8,12 +8,6 @@ const Header = ({
 }) => {
   const themeOptions = SEASON_THEME_ORDER.map((key) => THEME_PRESETS[key]).filter(Boolean);
 
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (!section) return;
-    section.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
   return (
     <header className="site-header">
       <div className="custom-container d-flex align-items-center justify-content-between">
@@ -102,16 +96,15 @@ const Header = ({
         </div>
 
         <nav className="desktop-nav" aria-label="Main navigation">
-          <button type="button" className="desktop-nav-link" onClick={() => scrollToSection("about")}>
+          <a className="desktop-nav-link" href="#about">
             home
-          </button>
-          <button
-            type="button"
+          </a>
+          <a
             className="desktop-nav-link"
-            onClick={() => scrollToSection("publications")}
+            href="#publications"
           >
             publication
-          </button>
+          </a>
           <a
             href="/assets/docs/Taehyun_CV.pdf"
             target="_blank"

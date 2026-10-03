@@ -182,7 +182,7 @@ function TravelMap({ locations = [], routes = [] }) {
   }, [routes, markerPositions, locationByName, pathGenerator, activeLocation]);
 
   const earthLapsLabel = routeMetrics.earthLaps.toFixed(1);
-  const totalMilesLabel = Math.round(routeMetrics.totalMiles).toLocaleString();
+  const totalMilesLabel = Math.round(routeMetrics.totalMiles).toLocaleString("en-US");
 
   return (
     <figure
